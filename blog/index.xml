@@ -6,10 +6,20 @@
     <description>Recent content in Blog on Pablo M. Pareja</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 31 Mar 2018 11:59:16 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 31 Mar 2018 12:32:00 +0200</lastBuildDate>
     
 	<atom:link href="https://mopa.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[LaTeX] Capítulo 1: Compiladores</title>
+      <link>https://mopa.github.io/blog/latex-cap%C3%ADtulo-1-compiladores/</link>
+      <pubDate>Sat, 31 Mar 2018 12:32:00 +0200</pubDate>
+      
+      <guid>https://mopa.github.io/blog/latex-cap%C3%ADtulo-1-compiladores/</guid>
+      <description>Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
+(Post en contrucción)</description>
+    </item>
     
     <item>
       <title>Hello World</title>
