@@ -1027,7 +1027,7 @@ margin-left: -4%;
                     
                         
                     
-                    <div class="reading-time middot">2 minute read</div>
+                    <div class="reading-time middot">3 minute read</div>
                     <div class="tags">
                         <ul>
                           
@@ -1056,11 +1056,15 @@ margin-left: -4%;
 
 <p>Esto es como definió Donald Knuth (su creador) que era TeX en el libro <em>The TeXbook</em>. Es la base de todo el sistema y lo primero que se creó allá por 1978.</p>
 
-<p>El programa original tomaba un documento en texto plano y lo transformaba en un documento tipográfico. Knuth fue muy cuidadoso en la composición tipográfica y en la atención a que los detalles fuesen claros.</p>
+<p>TeX es un lenguaje basado en <a href="https://en.wikipedia.org/wiki/Macro_(computer_science)">macros</a> y <a href="https://en.wikipedia.org/wiki/Token_(parser)">tokens</a>. Tiene un conocimiento preciso de los tamaños de todos los caracteres y símbolos, y usando esta información calcula la disposición óptima de letras por línea y líneas por página.</p>
+
+<p>Cuando compilamos (por ejemplo por una CLI con <code>tex example.tex</code>) el resultado es un fichero <a href="https://en.wikipedia.org/wiki/DVI_file_format">DVI</a> que contiene la localización final de todos los caracteres. Este fichero se puede convertir a otros formatos o directamente imprimir.</p>
+
+<p>El sistema base contiene unos 300 comandos llamados <em>primitivos</em>. Son comandos de bajo nivel, pero la mayor parte de la funcionalidad es proporcionada por archivos de formato. El formato por defecto original de Knuth, que añade unos 600 comandos, es Plain TeX.</p>
 
 <h2 id="latex">LaTeX</h2>
 
-<p>Con TeX se podían (y pueden) hacer cosas básicas, por lo que pronto surge la necesidad de realizar cosas más complejas y completas. Entra en escena Leslie Lamport, que crea LaTeX a principios de la década de 1980.</p>
+<p>Con TeX se podían hacer cosas básicas, por lo que pronto surge la necesidad de realizar cosas más complejas y completas. Entra en escena Leslie Lamport, que crea LaTeX a principios de la década de 1980.</p>
 
 <p>LaTeX es un conjunto de comandos definidos en términos de los subyacentes a TeX. De hecho todos los comandos usados en un documento LaTeX son en realidad conjuntos de comandos de TeX. Lo que hace es proporcionarnos un lenguaje de alto nivel que acceda al poder de TeX de una manera más fácil.</p>
 
