@@ -1,4 +1,5 @@
-var options2 = {
+
+var options = {
     responsive: false,
     maintainAspectRatio: true,
     scale: {
@@ -10,29 +11,29 @@ var options2 = {
     },
     title: {
       display: true,
-      text: 'Comparativa por Temporada Regular - En tanto por uno'
+      text: 'Comparativa por Temporada Regular'
     }
 };
 
-var dataLiteracy2 = {
+var dataLiteracy = {
     labels: ["3PA", "3PM", "FGA", "FGM", "PTS","BLK","TO","STL","Def. REB", "Off. REB"],
       datasets: [
         {
           label: "CSKA",
           fill: true,
-          backgroundColor: "rgba(54, 162, 235, 0.2)",
-          borderColor: "rgb(54, 162, 235)",
-          pointBorderColor: "#fff",
-          pointBackgroundColor: "rgb(54, 162, 235)",
-          data: [0.421,0.747,0.605,1.000,1.000,0.700,0.289,1.000,0.450,0.323]
-        }, {
-          label: "Real Madrid",
-          fill: true,
           backgroundColor: "rgba(255,99,132,0.2)",
           borderColor: "rgba(255,99,132,1)",
           pointBorderColor: "#fff",
           pointBackgroundColor: "rgba(255,99,132,1)",
-          data: [0.890,1.000,0.642,0.640,0.739,0.870,0.217,0.704,0.900,0.423]
+          data: [0.775,0.919,0.956,1.000,1.000,0.835,0.853,1.000,0.885,0.772]
+        }, {
+          label: "Real Madrid",
+          fill: true,
+          backgroundColor: "rgba(54, 162, 235, 0.2)",
+          borderColor: "rgb(54, 162, 235)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgb(54, 162, 235)",
+          data: [0.957,1.000,0.960,0.937,0.963,0.928,0.838,0.890,0.979,0.805]
         }, {
           label: "Fenerbahce",
           fill: true,
@@ -40,7 +41,7 @@ var dataLiteracy2 = {
           borderColor: "rgb(255, 202, 40)",
           pointBorderColor: "#fff",
           pointBackgroundColor: "rgb(255, 202, 40)",
-          data: [0.326,0.589,0.004,0.383,0.298,0.635,0.448,0.423,0.469,0.261]
+          data: [0.738,0.868,0.889,0.892,0.902,0.799,0.886,0.786,0.889,0.751]
         }, {
           label: "Zalgiris",
           fill: true,
@@ -48,14 +49,14 @@ var dataLiteracy2 = {
           borderColor: "rgb(46,125,50)",
           pointBorderColor: "#fff",
           pointBackgroundColor: "rgb(46,125,50)",
-          data: [0.000,0.114,0.000,0.499,0.364,0.085,1.000,0.377,0.580,0.293]
+          data: [0.611,0.715,0.889,0.912,0.911,0.496,1.000,0.769,0.912,0.761]
         }
       ]
 };
 
-var ctx2 = document.getElementById("canvas_comp2");
-var myRadarChart2 = new Chart(ctx2, {
+var ctx = document.getElementById("canvas_comp1");
+var myRadarChart = new Chart(ctx, {
     type: 'radar',
-    data: dataLiteracy2,
-    options: options2
+    data: dataLiteracy,
+    options: options
 });
