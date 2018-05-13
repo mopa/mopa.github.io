@@ -6,10 +6,20 @@
     <description>Recent content on Pablo M. Pareja</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 31 Mar 2018 12:32:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 13 May 2018 10:43:48 +0200</lastBuildDate>
     
 	<atom:link href="https://mopa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Estadística y la Final Four de Belgrado</title>
+      <link>https://mopa.github.io/blog/estad%C3%ADstica-y-la-final-four-de-belgrado/</link>
+      <pubDate>Sun, 13 May 2018 10:43:48 +0200</pubDate>
+      
+      <guid>https://mopa.github.io/blog/estad%C3%ADstica-y-la-final-four-de-belgrado/</guid>
+      <description> Ahora que ya tenemos al caer la Final Four de Belgrado, quería echar un vistazo atrás y ver como había sido la temporada para los equipos implicados.
+    </description>
+    </item>
     
     <item>
       <title>[LaTeX] Capítulo 1: Compiladores</title>
