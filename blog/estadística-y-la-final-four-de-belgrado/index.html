@@ -480,7 +480,7 @@ div.main .content {
     width: 100%;
 }
 div.main .content .markdown {
-  font-size: 1.1em;
+  font-size: 0.96em;
   line-height: 1.75em;
   color: #313537;
   font-family: serif;
@@ -1027,7 +1027,7 @@ margin-left: -4%;
                     
                         
                     
-                    <div class="reading-time middot">1 minute read</div>
+                    <div class="reading-time middot">2 minute read</div>
                     <div class="tags">
                         <ul>
                           
@@ -1044,14 +1044,46 @@ margin-left: -4%;
             <div class="markdown">
                 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- Llamamos a ChartJS y centramos los canvas -->
 
-<p>Ahora que ya tenemos al caer la Final Four de Belgrado, vamos echar un vistazo atrás y ver como había sido la temporada para los equipos implicados.</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<style media="screen">
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 500px;
+    height: 400px;
+}
+</style>
 
+<p>Ahora que ya tenemos al caer la <a href="http://www.euroleague.net/final-four/belgrade-2018">Final Four de Belgrado</a> , vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los <em>Playoff</em>. He tomado las siguientes variables:</p>
+
+<div class="tg-wrap"><table><tr><td>3PA</td><td>3-Point Attempted</td><td>3-Puntos Intentados</td></tr><tr><td>3PM</td><td>3-Point Made</td><td>3-Puntos Anotados</td></tr><tr><td>FGA</td><td>Field Goals Attempted</td><td>Tiros de Campo Intentados</td></tr><tr><td>FGM</td><td>Field Goals Made</td><td>Tiros de Campo Anotados</td></tr><tr><td>PTS</td><td>Points</td><td>Puntos</td></tr><tr><td>BLK</td><td>Blocks</td><td>Tapones</td></tr><tr><td>TO</td><td>Turnovers</td><td>Pérdidas</td></tr><tr><td>STL</td><td>Steals</td><td>Robos</td></tr><tr><td>AST</td><td>Assists</td><td>Asistencias</td></tr><tr><td>Def. REB</td><td>Defensive Rebounds</td><td>Rebotes Defensivos</td></tr><tr><td>Off. REB</td><td>Offensive Rebounds</td><td>Rebotes Ofensivos</td></tr></table></div>
+
+<!-- REESCRIBIR COMO UNA PERSONA NORMAL OSTIA!! -->
+<p>He elegido estas porque creo que son bastante representativas a la hora de comparar dos equipos. Tras recoger los datos ofrecidos por la web de la <em>Euroliga</em>, hago una gráfica tipo <em>FIFA</em>, <em>PES</em>, etc. Es lo que se suele llamar una <em>Radar Chart</em>.</p>
+
+<p>Antes de sacar conclusiones voy a explicar que está representado. En ambas gráficas he tomado la media de la temporada regular 2017/2018. Para la primera se han calculado los valores tomando el 100% como el máximo, y sobre este cuanto corresponde los siguientes valores. En la segunda se normalizan los datos, por lo que el máximo es 1 y el mínimo es 0. De esta forma se aprecian mejor las diferencias, pero no queda tan llamativo como la primera gráfica.</p>
+
+<p>(Nota: si se pincha en el color del equipo se oculta dicho equipo)</p>
+
+<!-- Canvas de la Temporada Regular -->
 <canvas id="canvas_comp1" height="400" width="500"></canvas>
-
+<br/><br/>
 <canvas id="canvas_comp2" height="400" width="500"></canvas>
 
+<p>Ahora ya si podemos empezar ha valorar la temporada regular, pero lo haré según los enfrentamiento de semifinales.</p>
+
+<!-- COMPLETAR -->
+<p><strong>CSKA-Real Madrid</strong>. Obviamente el CSKA es el equipo con mayor anotación, tiros de campo anotados y robos por partido. El Real Madrid tiene mayor cantidad de triples anotados pero también intentados, cosa que si lo vemos en el CSKA tienen menos triples anotados pero son más efectivos. Otro aspecto fundamental a favor del Real Madrid son los rebotes defensivos.</p>
+
+<p><strong>Fenerbahce-Zalgiris</strong>. Al ver las gráficas tenderíamos a decir que el Fenerbahce lo tiene "fácil". Pero si hacemos una lectura tranquilamente veremos que los tiros de campo ambos equipos están igualados, y al porcentaje de triples le pasa lo mismo, pero con una salvedad, el Fenerbahce anota algunos más. Con el tipo de baloncesto actual esto puede suponer la victoria.</p>
+
+
+<p>Durante los <em>Playoff</em> los equipos pueden haber perdido/recuperado jugadores importantes, cambiado los esquemas por las eliminatorias u otros factores, por lo que resulta interesante observar si ha habido grandes cambios. </p>
+
+<!-- Scripts de los Radar Charts Temporada Regular -->
 <script src="js/radar_chart_per.js"></script>
 <script src="js/radar_chart_uno.js"></script>
 
