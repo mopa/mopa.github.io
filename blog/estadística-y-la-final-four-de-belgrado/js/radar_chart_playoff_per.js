@@ -11,7 +11,7 @@ var options = {
     },
     title: {
       display: true,
-      text: 'Temporada Regular'
+      text: 'Playoff'
     }
 };
 
@@ -21,19 +21,20 @@ var dataLiteracy = {
         {
           label: "CSKA",
           fill: true,
-          backgroundColor: "rgba(255,99,132,0.2)",
-          borderColor: "rgba(255,99,132,1)",
-          pointBorderColor: "#fff",
-          pointBackgroundColor: "rgba(255,99,132,1)",
-          data: [0.775,0.919,0.956,1.000,1.000,0.835,0.853,1.000,0.885,0.772]
-        }, {
-          label: "Real Madrid",
-          fill: true,
           backgroundColor: "rgba(54, 162, 235, 0.2)",
           borderColor: "rgb(54, 162, 235)",
           pointBorderColor: "#fff",
           pointBackgroundColor: "rgb(54, 162, 235)",
-          data: [0.957,1.000,0.960,0.937,0.963,0.928,0.838,0.890,0.979,0.805]
+          data: [0.845,0.739,0.972,0.878,0.991,0.500,0.946,0.903,0.910,1.000]
+        }, {
+          label: "Real Madrid",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0.2)",
+          borderColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "rgba(255,99,132,1)",
+          pointBorderColor: "#fff",
+          data: [0.759,0.674,0.913,0.846,0.926,0.444,0.893,0.774,0.990,0.655]
         }, {
           label: "Fenerbahce",
           fill: true,
@@ -41,7 +42,7 @@ var dataLiteracy = {
           borderColor: "rgb(255, 202, 40)",
           pointBorderColor: "#fff",
           pointBackgroundColor: "rgb(255, 202, 40)",
-          data: [0.738,0.868,0.889,0.892,0.902,0.799,0.886,0.786,0.889,0.751]
+          data: [0.836,0.870,0.917,0.951,1.000,0.444,0.893,1.000,0.810,0.724]
         }, {
           label: "Zalgiris",
           fill: true,
@@ -49,12 +50,12 @@ var dataLiteracy = {
           borderColor: "rgb(46,125,50)",
           pointBorderColor: "#fff",
           pointBackgroundColor: "rgb(46,125,50)",
-          data: [0.611,0.715,0.889,0.912,0.911,0.496,1.000,0.769,0.912,0.761]
+          data: [0.629,0.696,0.893,0.927,0.955,0.667,0.750,0.677,1.000,0.586]
         }
       ]
 };
 
-var ctx = document.getElementById("canvas_reg_per");
+var ctx = document.getElementById("canvas_play_per");
 var myRadarChart = new Chart(ctx, {
     type: 'radar',
     data: dataLiteracy,

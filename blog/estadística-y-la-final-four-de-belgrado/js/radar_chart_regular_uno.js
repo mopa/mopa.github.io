@@ -10,7 +10,7 @@ var options2 = {
     },
     title: {
       display: true,
-      text: 'Comparativa por Temporada Regular - En tanto por uno'
+      text: 'Temporada Regular - Datos Normalizados'
     }
 };
 
@@ -53,7 +53,7 @@ var dataLiteracy2 = {
       ]
 };
 
-var ctx2 = document.getElementById("canvas_comp2");
+var ctx2 = document.getElementById("radar_chart_regular_uno");
 var myRadarChart2 = new Chart(ctx2, {
     type: 'radar',
     data: dataLiteracy2,
