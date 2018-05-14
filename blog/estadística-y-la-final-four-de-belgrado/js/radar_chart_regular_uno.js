@@ -53,7 +53,7 @@ var dataLiteracy2 = {
       ]
 };
 
-var ctx2 = document.getElementById("radar_chart_regular_uno");
+var ctx2 = document.getElementById("canvas_reg_uno");
 var myRadarChart2 = new Chart(ctx2, {
     type: 'radar',
     data: dataLiteracy2,
