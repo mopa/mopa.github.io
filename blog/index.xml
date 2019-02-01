@@ -6,10 +6,21 @@
     <description>Recent content in Blog on Pablo M. Pareja</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 13 May 2018 10:43:48 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 01 Feb 2019 20:14:19 +0100</lastBuildDate>
     
 	<atom:link href="https://mopa.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Vim] Corrección Ortográfica</title>
+      <link>https://mopa.github.io/blog/vim-correcci%C3%B3n-ortogr%C3%A1fica/</link>
+      <pubDate>Fri, 01 Feb 2019 20:14:19 +0100</pubDate>
+      
+      <guid>https://mopa.github.io/blog/vim-correcci%C3%B3n-ortogr%C3%A1fica/</guid>
+      <description>Poco a poco voy conociendo más cosas sobre Vim, y lo que antes me parecía un tarea ardua ahora lo hago con más rapidez. Cierto es que al principio cuesta y una cosa que echaba de menos era tener un corrector ortográfico (por lo que pudiera pasar). Voy a mostrar varias cositas y trucos para tener lo necesario ante este tema.
+Para activarlo lo hacemos con el comando:
+:setlocal spell  Esto puede (probablemente) no escoja por defecto nuestro idioma, pero tranquilos no pasa nada, lo especificamos tal que</description>
+    </item>
     
     <item>
       <title>Estadística y la Final Four de Belgrado</title>
