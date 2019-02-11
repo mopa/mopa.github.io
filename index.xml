@@ -6,10 +6,19 @@
     <description>Recent content on Pablo M. Pareja</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 01 Feb 2019 20:14:19 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 11 Feb 2019 09:27:37 +0100</lastBuildDate>
     
 	<atom:link href="https://mopa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>License</title>
+      <link>https://mopa.github.io/license/</link>
+      <pubDate>Mon, 11 Feb 2019 09:27:37 +0100</pubDate>
+      
+      <guid>https://mopa.github.io/license/</guid>
+      <description>Este blog se encuentra bajo una licencia de Creative Commons Atribución-No Comercial 4.0 Internacional.</description>
+    </item>
     
     <item>
       <title>[Vim] Corrección Ortográfica</title>
@@ -48,7 +57,7 @@ TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creació
       <pubDate>Sat, 31 Mar 2018 12:09:51 +0200</pubDate>
       
       <guid>https://mopa.github.io/about/</guid>
-      <description></description>
+      <description>Under construction ¯\(ツ)/¯</description>
     </item>
     
     <item>

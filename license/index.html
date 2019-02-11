@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="Pablo M. Pareja" />
 <meta property="og:locale" content="nn_NO" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mopa.github.io/blog/estad%C3%ADstica-y-la-final-four-de-belgrado/" />
-<meta property="og:title" content="Estadística y la Final Four de Belgrado" />
-<meta property="twitter:title" content="Estadística y la Final Four de Belgrado">
+<meta property="og:url" content="https://mopa.github.io/license/" />
+<meta property="og:title" content="License" />
+<meta property="twitter:title" content="License">
 
     <meta property="twitter:card" content="summary">
 
@@ -25,10 +25,10 @@
 <title>
 
 
-     Pablo M. Pareja - Estadística y la Final Four de Belgrado 
+     Pablo M. Pareja - License 
 
 </title>
-<link rel="canonical" href="https://mopa.github.io/blog/estad%C3%ADstica-y-la-final-four-de-belgrado/">
+<link rel="canonical" href="https://mopa.github.io/license/">
 
 
 <style media="screen">
@@ -1009,173 +1009,25 @@ margin-left: -4%;
     </div>
 </div>
 
-
-
-
-<div class="main post non-narrow zero-top-spacing column">
+<div class="main column">
     <div class="container">
         <div class="content">
-            <div class="front-matter">
-                <div class="title-container">
-                    <div class="page-heading">
+            <div class="page-heading">
 
-    Estadística y la Final Four de Belgrado
+    License
 
 </div>
 
-                </div>
-                <div class="meta">
-                    <div class="date" title="Sun 13 May 2018 10:43:48 CET">13 May, 2018</div>
-                    
-                        
-                    
-                    <div class="reading-time middot">3 minute read</div>
-                    <div class="tags">
-                        <ul>
-                          
-                        </ul>
-                    </div>
-                    <div class="tags">
-                        <ul>
-                          
-                          
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div class="markdown">
                 
     
-    <!-- Llamamos a ChartJS y centramos los canvas -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-<style media="screen">
-canvas {
-    padding: 0;
-    margin: auto;
-    display: block;
-    width: 500px;
-    height: 400px;
-}
-</style>
-
-<p>Ahora que ya tenemos al caer la <a href="http://www.euroleague.net/final-four/belgrade-2018">Final Four de Belgrado</a> , vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los <em>Playoff</em>. He tomado las siguientes variables:</p>
-
-<div class="tg-wrap"><table><tr><td>3PA</td><td>3-Point Attempted</td><td>3-Puntos Intentados</td></tr><tr><td>3PM</td><td>3-Point Made</td><td>3-Puntos Anotados</td></tr><tr><td>FGA</td><td>Field Goals Attempted</td><td>Tiros de Campo Intentados</td></tr><tr><td>FGM</td><td>Field Goals Made</td><td>Tiros de Campo Anotados</td></tr><tr><td>PTS</td><td>Points</td><td>Puntos</td></tr><tr><td>BLK</td><td>Blocks</td><td>Tapones</td></tr><tr><td>TO</td><td>Turnovers</td><td>Pérdidas</td></tr><tr><td>STL</td><td>Steals</td><td>Robos</td></tr><tr><td>AST</td><td>Assists</td><td>Asistencias</td></tr><tr><td>Def. REB</td><td>Defensive Rebounds</td><td>Rebotes Defensivos</td></tr><tr><td>Off. REB</td><td>Offensive Rebounds</td><td>Rebotes Ofensivos</td></tr></table></div>
-
-<!-- REESCRIBIR COMO UNA PERSONA NORMAL OSTIA!! -->
-<p>He elegido estas porque creo que son bastante representativas a la hora de comparar dos equipos. Tras recoger los datos ofrecidos por la web de la <em>Euroliga</em>, hago una gráfica tipo <em>FIFA</em>, <em>PES</em>, etc. Es lo que se suele llamar una <em>Radar Chart</em>.</p>
-
-<p>Antes de sacar conclusiones voy a explicar que está representado. En ambas gráficas he tomado la media de la temporada regular 2017/2018. Para la primera se han calculado los valores tomando el 100% como el máximo, y sobre este cuanto corresponde los siguientes valores. En la segunda se normalizan los datos, por lo que el máximo es 1 y el mínimo es 0. De esta forma se aprecian mejor las diferencias, pero no queda tan llamativo como la primera gráfica.</p>
-
-<p>(<span style="text-decoration:underline"><em>Nota</em></span>: si se pincha en el color del equipo en la leyenda se oculta dicho equipo)</p>
-
-<!-- Canvas de la Temporada Regular -->
-<canvas id="canvas_reg_per" height="400" width="500"></canvas>
-<br/><br/>
-<canvas id="canvas_reg_uno" height="400" width="500"></canvas>
-
-<p>Ahora ya si podemos empezar ha valorar la temporada regular, pero lo haré según los enfrentamiento de semifinales.</p>
-
-<!-- COMPLETAR -->
-<p><strong>CSKA-Real Madrid</strong>. Obviamente el CSKA es el equipo con mayor anotación, tiros de campo anotados y robos por partido. El Real Madrid tiene mayor cantidad de triples anotados pero también intentados, cosa que si lo vemos en el CSKA tienen menos triples anotados pero son más efectivos. Otro aspecto fundamental a favor del Real Madrid son los rebotes defensivos.</p>
-
-<p><strong>Fenerbahce-Zalgiris</strong>. Al ver las gráficas tenderíamos a decir que el Fenerbahce lo tiene "fácil". Pero si hacemos una lectura tranquilamente veremos que los tiros de campo ambos equipos están igualados, y al porcentaje de triples le pasa lo mismo, pero con una salvedad, el Fenerbahce anota algunos más. Con el tipo de baloncesto actual esto puede suponer la victoria.</p>
-
-<h2>Playoff</h2>
-<p>Durante los <em>Playoff</em> los equipos pueden haber perdido/recuperado jugadores importantes, cambiado los esquemas por las eliminatorias u otros factores, por lo que resulta interesante observar si ha habido grandes cambios. </p>
-
-<!-- Canvas de la Temporada Regular -->
-<canvas id="canvas_play_per" height="400" width="500"></canvas>
-<br/><br/>
-<canvas id="canvas_play_uno" height="400" width="500"></canvas>
-
-<p><strong>CSKA-Real Madrid</strong>. CSKA mejora en puntos, rebotes ofensivos y tiros de campo, vamos que mejora su parte ofensiva aún dejando un poco atrás el triple. El Real Madrid baja en casi todos los aspectos excepto en el rebote defensivo.</p>
-
-<p><strong>Fenerbahce-Zalgiris</strong>. Fenerbahce ha seguido en su línea pero mejorando en los tiros y anotación, por contra de no coger tantos rebotes como durante la temporada regular. Zalgiris se ha hecho fuerte en defensa, cogienddo más rebotes, perdiendo menos balones además de anotar más aún no siendo el triple su principal baza.</p>
+    <p>Este blog se encuentra bajo una licencia de <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Atribución-No Comercial 4.0 Internacional</a>.</p>
 
 
-<h2>Jugadores</h2>
-<p>Para terminar voy a hacer un gráfico de burbujas (o <em>bubble plot</em>) con algunas de las categorías más relevantes en la estadística. Lo haré para la temporada regular y tomando la media por partido.</p>
-
-<h3>Media en tiros de 2 (en %)</h3>
-<img src="players_grph/Season_2FG.svg" height="400"/>
-
-<h3>Media en tiros de 3 (en %)</h3>
-<img src="players_grph/Season_3FG.svg" height="400"/>
-
-<h3>Media de puntos por partido</h3>
-<img src="players_grph/Season_Puntos.svg" height="400"/>
-
-<h3>Media de rebotes por partido</h3>
-<img src="players_grph/Season_Rebotes.svg" height="400"/>
-
-<h3>Media de asistencias por partido</h3>
-<img src="players_grph/Season_Asistencias.svg" height="400"/>
-
-<h3>Media de robos por partido</h3>
-<img src="players_grph/Season_Robos.svg" height="400"/>
-
-
-
-<!-- Scripts de los Radar Charts Temporada Regular -->
-<script src="js/radar_chart_regular_per.js"></script>
-<script src="js/radar_chart_regular_uno.js"></script>
-
-<!-- Scripts de los Radar Charts Playoff -->
-
-<script src="js/radar_chart_playoff_per.js"></script>
-<script src="js/radar_chart_playoff_uno.js"></script>
-
-
-                <br>
             </div>
-            
-            
-                <div class="navigation">
-                    
-                    <div>
-                        <img class="icon" src="https://mopa.github.io/img/back.svg" alt="back" />
-                        <a href="https://mopa.github.io/blog/latex-cap%C3%ADtulo-1-compiladores/">[LaTeX] Capítulo 1: Compiladores</a>
-                    </div>
-                    
-                    <div style="width: 100%;"></div>
-                    
-                    <div>
-                        <a href="https://mopa.github.io/blog/vim-correcci%C3%B3n-ortogr%C3%A1fica/">[Vim] Corrección Ortográfica</a>
-                        <img class="icon" src="https://mopa.github.io/img/next.svg" alt="next" />
-                    </div>
-                    
-                </div>
-            
-            <br>
-            <div class="disqus">
-                <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "disqus_BAUbKab31a" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-            </div>
-            
         </div>
     </div>
 </div>
-
 <div class="footer column">
     <div class="container">
 
