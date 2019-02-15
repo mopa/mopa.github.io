@@ -6,10 +6,19 @@
     <description>Recent content in Blog on Pablo M. Pareja</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 01 Feb 2019 20:14:19 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 15 Feb 2019 11:07:34 +0100</lastBuildDate>
     
 	<atom:link href="https://mopa.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Estadística y la Copa del Rey ACB 18-19</title>
+      <link>https://mopa.github.io/blog/estad%C3%ADstica-y-la-copa-del-rey-acb-18-19/</link>
+      <pubDate>Fri, 15 Feb 2019 11:07:34 +0100</pubDate>
+      
+      <guid>https://mopa.github.io/blog/estad%C3%ADstica-y-la-copa-del-rey-acb-18-19/</guid>
+      <description>canvas { padding: 0; margin: auto; display: block; width: 600px; height: 500px; }  El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la final four de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo PES, FIFA, etc. Para ello tomamos las siguientes variables: 3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef.</description>
+    </item>
     
     <item>
       <title>[Vim] Corrección Ortográfica</title>
