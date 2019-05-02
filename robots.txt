@@ -1,4 +1,33 @@
 User-agent: *
 
-Allow: /
+
+Disallow: /blog/
+
+Disallow: /blog/2019-0215_copa_acb_18-19/
+
+Disallow: /
+
+Disallow: /tags/
+
+Disallow: /tags/data/
+
+Disallow: /tags/data-science/
+
+Disallow: /tags/deporte/
+
+Disallow: /blog/2019-0201_vim-spell-checking/
+
+Disallow: /tags/vim/
+
+Disallow: /blog/2018-0513_eurol_17-18/
+
+Disallow: /blog/2018-0401_tex-cap01/
+
+Disallow: /tags/latex/
+
+Disallow: /about/
+
+Disallow: /blog/2018-0331_hello-world/
+
+Disallow: /categories/
 
