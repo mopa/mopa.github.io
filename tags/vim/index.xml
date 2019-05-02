@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on Pablo M. | Engineering &amp; Data Science</title>
+    <link>/tags/vim/</link>
+    <description>Recent content in vim on Pablo M. | Engineering &amp; Data Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Creative Commons BY-NC 4.0</copyright>
+    <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Vim] Corrección Ortográfica</title>
+      <link>/blog/2019-0201_vim-spell-checking/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2019-0201_vim-spell-checking/</guid>
+      <description>Poco a poco voy conociendo más cosas sobre Vim, y lo que antes me parecía un tarea ardua ahora lo hago con más rapidez. Cierto es que al principio cuesta y una cosa que echaba de menos era tener un corrector ortográfico (por lo que pudiera pasar). Voy a mostrar varias cositas y trucos para tener lo necesario ante este tema.
+Para activarlo lo hacemos con el comando:
+:setlocal spell  Esto puede (probablemente) no escoja por defecto nuestro idioma, pero tranquilos no pasa nada, lo especificamos tal que</description>
+    </item>
+    
+  </channel>
+</rss>

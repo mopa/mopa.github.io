@@ -3,59 +3,85 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mopa.github.io/blog/estad%C3%ADstica-y-la-copa-del-rey-acb-18-19/</loc>
-    <lastmod>2019-02-15T11:07:34+01:00</lastmod>
+    <loc>/blog/</loc>
+    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mopa.github.io/license/</loc>
-    <lastmod>2019-02-11T09:27:37+01:00</lastmod>
+    <loc>/blog/2019-0215_copa_acb_18-19/</loc>
+    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mopa.github.io/blog/vim-correcci%C3%B3n-ortogr%C3%A1fica/</loc>
-    <lastmod>2019-02-01T20:14:19+01:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mopa.github.io/blog/estad%C3%ADstica-y-la-final-four-de-belgrado/</loc>
-    <lastmod>2018-05-13T10:43:48+02:00</lastmod>
+    <loc>/tags/</loc>
+    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mopa.github.io/blog/latex-cap%C3%ADtulo-1-compiladores/</loc>
-    <lastmod>2018-03-31T12:32:00+02:00</lastmod>
+    <loc>/tags/data/</loc>
+    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mopa.github.io/about/</loc>
+    <loc>/tags/data-science/</loc>
+    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/deporte/</loc>
+    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/2019-0201_vim-spell-checking/</loc>
+    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/vim/</loc>
+    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/2018-0513_eurol_17-18/</loc>
+    <lastmod>2018-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2018-0401_tex-cap01/</loc>
+    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/latex/</loc>
+    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
     <lastmod>2018-03-31T12:09:51+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mopa.github.io/blog/hello-world/</loc>
+    <loc>/blog/2018-0331_hello-world/</loc>
     <lastmod>2018-03-31T11:59:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mopa.github.io/blog/</loc>
-    <lastmod>2019-02-15T11:07:34+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mopa.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mopa.github.io/</loc>
-    <lastmod>2019-02-15T11:07:34+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mopa.github.io/tags/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   

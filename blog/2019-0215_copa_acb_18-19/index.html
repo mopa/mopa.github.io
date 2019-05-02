@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Estadística y la Copa del Rey ACB 18-19 - Pablo M. | Engineering &amp; Data Science</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="">
+    <meta property="og:site_name" content="Pablo M. | Engineering &amp; Data Science" />
+    <meta property="og:locale" content="nn_NO" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="/blog/2019-0215_copa_acb_18-19/" />
+    <meta property="og:title" content="Estadística y la Copa del Rey ACB 18-19" />
+    <meta property="og:image" content="/http://localhost:1313/img/Avatar-Soyuz.png" />
+    <meta property="og:description" content="" />
+
+    
+
+    <meta property="twitter:title" content="Estadística y la Copa del Rey ACB 18-19" />
+    <meta property="twitter:image" content="/http://localhost:1313/img/Avatar-Soyuz.png" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:description" content="" />
+
+    
+
+    <link rel="canonical" href="/blog/2019-0215_copa_acb_18-19/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha256-azvvU9xKluwHFJ0Cpgtf0CYzK7zgtOznnzxV4924X1w=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="/img/favicon.ico">
+
+    
+
+    <noscript>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i" rel="stylesheet">
+    </noscript>
+</head>
+
+<body>
+    
+    <div class="my-4 my-md-5 header">
+    <div class="container">
+        <div class="row">
+            <div class="col-auto offset-md-1 d-none d-md-block">
+                
+                    <a href="/">
+                        <img class="logo" src="http://localhost:1313/img/Avatar-Soyuz.png" alt="logo">
+                    </a>
+                
+            </div>
+            <div class="col-auto align-self-center mr-auto">
+                <a href="/">
+                    <h1 class="font-weight-bold name">Pablo M. | Engineering &amp; Data Science</h1>
+                </a>
+
+                <ul class="nav nav-primary">
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-blog" href="/blog/">
+                                
+                                Blog
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-about" href="/about/">
+                                
+                                About
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+
+                <ul class="nav nav-secondary">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <h1 class="mx-0 mx-md-4">Estadística y la Copa del Rey ACB 18-19</h1>
+
+                    <div class="mb-4 mb-md-5 meta">
+                        <span class="date" title='Fri Feb 15 2019 00:00:00 UTC'>
+                            February 15, 2019
+                        </span>
+
+                        
+                            
+                        
+
+                        <span class="reading-time middot">
+                            6 minutes
+                        </span>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                    <li class="d-inline middot">
+                                        <a href="/tags/data-science">data science</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="/tags/data">data</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="/tags/deporte">deporte</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="markdown">
+                        
+    
+
+
+<!-- Llamamos a ChartJS y centramos los canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<style media="screen">
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 600px;
+    height: 500px;
+}
+</style>
+
+
+<p>El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la <em>final four</em> de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo <em>PES</em>, <em>FIFA</em>, etc. Para ello tomamos las siguientes variables:</p>
+
+<table>
+<thead>
+<tr>
+<th>3PA</th>
+<th>3-Point Attempted</th>
+<th>3-Puntos Intentados</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>3PM</td>
+<td>3-Point Made</td>
+<td>3-Puntos Anotados</td>
+</tr>
+
+<tr>
+<td>FGA</td>
+<td>Field Goals Attempted</td>
+<td>Tiros de Campo Intentados</td>
+</tr>
+
+<tr>
+<td>FGM</td>
+<td>Field Goals Made</td>
+<td>Tiros de Campo Anotados</td>
+</tr>
+
+<tr>
+<td>PTS</td>
+<td>Points</td>
+<td>Puntos</td>
+</tr>
+
+<tr>
+<td>BLK</td>
+<td>Blocks</td>
+<td>Tapones</td>
+</tr>
+
+<tr>
+<td>TO</td>
+<td>Turnovers</td>
+<td>Pérdidas</td>
+</tr>
+
+<tr>
+<td>STL</td>
+<td>Steals</td>
+<td>Robos</td>
+</tr>
+
+<tr>
+<td>AST</td>
+<td>Assists</td>
+<td>Asistencias</td>
+</tr>
+
+<tr>
+<td>Def. REB</td>
+<td>Defensive Rebounds</td>
+<td>Rebotes Defensivos</td>
+</tr>
+
+<tr>
+<td>Off. REB</td>
+<td>Offensive Rebounds</td>
+<td>Rebotes Ofensivos</td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>Estas variables son muy usuales y representativas a la hora de comparar dos equipos de un vistazo y sin entrar en demasiados detalles.</p>
+
+<p>Voy a analizar cada partido, y los datos a representar son la media de la liga regular 2018 /2019 junto con las estadísticas del partido en cuestión. Esto lo hago así para ver lo que se esparaba que hiciera el equipo y lo ha pasado en el partido. No voy a normalizar los datos, si no que tomaré a los dos equipos que se enfrentan en las distintas eliminatorias y sobre la máxima entre la media de liga y los datos del partido hago el baremo. Todos los datos son los ofrecidos por la ACB.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="cuartos-de-final-iberostar-tenerife-unicaja">Cuartos de Final: Iberostar Tenerife - Unicaja</h3>
+
+<p>Primer partido disputado y primera sorpresa. Tras la buena racha que traía Unicaja, se espera otro resultado, veamos la gráfica:</p>
+
+<p>(<em>Nota</em>: si se pincha en el color del equipo en la leyenda se oculta dicho equipo)</p>
+
+<canvas id="cuartos_TEN-UNI" height="500" width="600"></canvas>
+
+<p>Lo que se esperaba: Unicaja a priori estaba un poquito por encima, anota más (mayores tiros de campo convertidos y puntos por partido) y coge más rebotes ofensivos que siempre es un <em>plus</em>. En cambio Iberostar Tenerife defiende mejor y mantiene el mismo porcentaje de 3 y 2 puntos que Unicaja.</p>
+
+<p>Lo que pasó: La solidez y acierto desde el línea de tres del Iberostar Tenerife se impuso al equipo malagueño. Si además de esos factores sumamos como se ve en la gráfica el buen hacer en el rebote tanto defensivo como ofensivo y los tiros de campo convertidos del Tenerife, el Unicaja estuvo casi a merced de los tinerfeños.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="cuartos-de-final-barça-lassa-valencia-basket">Cuartos de Final: Barça Lassa - Valencia Basket</h3>
+
+<p>Segundo partido y los 3 últimos minutos agotaron al Valencia. El Barça llega líder de la liga y su experiencia en este tipo de partidos se impuso a un Valencia que aguantó hasta los minutos finales.</p>
+
+<canvas id="cuartos_BAR-VAL" height="500" width="600"></canvas>
+
+<p>Lo que se esperaba: Un Barça que impusiera su ritmo de principio a fin. Mejores en rebote (defensivo y ofensivo), en porcentaje de tiro de tres, puntos anotados, tiros de campo y defensa.</p>
+
+<p>Lo que pasó: El Valencia salió con más ganas y con un puntito de más en defensa, pero se impuso el acierto en tiros de campo de los catalanes y su experiencia. Cabe destacar las pérdidas en momentos muy importantes del partido por parte del Valencia.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="cuartos-de-final-k-baskonia-d-s-joventut">Cuartos de Final: K. Baskonia - D. S. Joventut</h3>
+
+<p>Tercer partido de copa al ritmo de Nico Laprovittola. Todo el partido estuvo a su merced y se jugaba a lo que él queria. El equipo vitoriano salió a medio gas y terminó a remolque del base argentino del Joventut.</p>
+
+<canvas id="cuartos_BKN-JOV" height="500" width="600"></canvas>
+
+<p>Lo que se esperaba: Un partido competido que se que se decidiera en el último cuarto. Aún con las ausencias de Shengelia y Granger, los baskonistas podían haber ganado, prueba de ello es la defensa que llevan haciendo durante toda la liga junto con la anotación.</p>
+
+<p>Lo que pasó: Laprovittola. Salió con ganas de ganar y hacer historia en la copa y lo consiguió. La <em>penya</em> quiso ganar desde el principio y estuvo por encima en todos los aspectos. Laprovittola junto con Todorovic sentenciaron al Baskonia que desde el primer cuarto salió perdido y sin saber que hacer para ganar.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="cuartos-de-final-real-madrid-m-estudiantes">Cuartos de Final: Real Madrid - M. Estudiantes</h3>
+
+<p>Cuarto partido y último partido de los cuartos de final. Ilusión estudiantil por ganar de nuevo a su eterno rival (como ya hicieron en liga), pero Campazzo, Ayón y compañia pusieron tierra de por medio antes de lo previsto.</p>
+
+<canvas id="cuartos_MAD-EST" height="500" width="600"></canvas>
+
+<p>Lo que se esperaba: Un partido algo más igualado de lo esperado y que el Estudiantes sacara más garra. Por otra parte el Madrid sigue en su línea de juego y control del partido.</p>
+
+<p>Lo que pasó: Un Madrid arrollador que no dió ninguna opción al Estudiantes.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="semifinal-barça-lassa-i-tenerife">Semifinal: Barça Lassa - I. Tenerife</h3>
+
+<p>Primer partido de las semifinales y primera gran polémica de la copa. A priori los catalanes llegan con ventaja en aspectos muy vitales del juego: rebote, anotación y porcentaje en tiros de tres.</p>
+
+<canvas id="semis_BAR-TEN" height="500" width="600"></canvas>
+
+<p>El partido como se preveia lo dominó el Barça con una gran defensa, aprovechando las malas decisiones de tiro por parte del Tenerife junto con una defensa blanda. Pero llegó el último cuarto y con él un arreón de los tinerfeños que los puso a dos posesiones de empatar el partido. Prueba de ello es el rebote ofensivo y el porcentaje de triple. Una técnica muy discutido a falta de un minuto marcó la diferencia y la polémica.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="semifinal-real-madrid-d-s-joventut">Semifinal: Real Madrid - D. S. Joventut</h3>
+
+<p>Segunda semifinal con sabor amargo para el Joventut después del gran partido de cuartos. Se esperaba una mejor defensa de los catalanes, pero la buena defensa vino por parte del Madrid.</p>
+
+<canvas id="semis_MAD-JOV" height="500" width="600"></canvas>
+
+<p>Como se puede apreciar en la gráfica, el partido estuvo marcado por el rebote madrileño y un buen porcentaje de anotación. En cambio, el Joventut no cerró el poste bajo, perdió demasiados balones y a Nico Laprovittola se le estuvo esperando todo el partido; totalmente desconocido respecto a su anterior aparición.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="final-real-madrid-barça-lassa">Final: Real Madrid - Barça Lassa</h3>
+
+<p>Final con un clásico y mucha polémica. El primer y segundo cuarto muy igualados, llegando empatados al descanso. El tercer cuarto pintaba merengue y el Barça despertó en el último cuarto con un Llull haciendo de las suyas. Las decisiones arbitrales tuvieron un peso demasiado importante en el partido.</p>
+
+<canvas id="final_BAR-MAD" height="500" width="600"></canvas>
+
+<p>Hasta la fecha los dos mejores equipos de la liga se encontraban en otra final. Ambos iguales, pero el factor cancha y la defensa del Madrid preveían la victoria a su favor. Lo que nos escontramos en el partido, es un rebote tanto defensivo como ofensivo dominado por el Madrid, mejor acierto en tiro para el Barça y algo que no aprecia en las gráficas, el mal sabor de boca que deja la actuación arbitral.</p>
+
+<p><strong><em>Actualizado el 17/02/2019</em></strong></p>
+
+
+<!-- Scripts de los Radar Charts Cuartos de Final -->
+<script src="/js/copa18-19/cuartos_TEN-UNI.js"></script>
+<script src="/js/copa18-19/cuartos_BAR-VAL.js"></script>
+<script src="/js/copa18-19/cuartos_BKN-JOV.js"></script>
+<script src="/js/copa18-19/cuartos_MAD-EST.js"></script>
+
+<script src="/js/copa18-19/semis_BAR-TEN.js"></script>
+<script src="/js/copa18-19/semis_MAD-JOV.js"></script>
+
+<script src="/js/copa18-19/final_BAR-MAD.js"></script>
+
+
+
+
+                    </div>
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-4 footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-5">
+                <div class="mx-0 mx-md-4 mb-2 text-center text-md-left">
+                    
+                        <div>
+                            <a class="mx-1 mr-md-2 ml-md-0  text-tags" href="/tags/">
+                                
+                                Tags
+                            </a>
+                        </div>
+                    
+
+                    
+                        
+                            <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY-NC 4.0</a>
+                        
+                    
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <div class="mx-0 mx-md-4 text-center text-md-right">
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <a href="/index.xml" class="mx-1 ml-md-2 mr-md-0">
+                            <img class="icon" src="/img/rss.svg" alt="rss" />
+                        </a>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha256-63ld7aiYP6UxBifJWEzz87ldJyVnETUABZAYs5Qcsmc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Raleway:400,600,700', 'Merriweather:300,300i,700,700i']
+            }
+        });
+    </script>
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.initHighlighting();
+            }, true);
+        </script>
+    
+
+    
+
+    
+
+    
+    
+</body>
+
+</html>

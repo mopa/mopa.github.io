@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Pablo M. Pareja</title>
-    <link>https://mopa.github.io/blog/</link>
-    <description>Recent content in Blog on Pablo M. Pareja</description>
+    <title>Blogs on Pablo M. | Engineering &amp; Data Science</title>
+    <link>/blog/</link>
+    <description>Recent content in Blogs on Pablo M. | Engineering &amp; Data Science</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Fri, 15 Feb 2019 11:07:34 +0100</lastBuildDate>
+    <copyright>Creative Commons BY-NC 4.0</copyright>
+    <lastBuildDate>Fri, 15 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mopa.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Estadística y la Copa del Rey ACB 18-19</title>
-      <link>https://mopa.github.io/blog/estad%C3%ADstica-y-la-copa-del-rey-acb-18-19/</link>
-      <pubDate>Fri, 15 Feb 2019 11:07:34 +0100</pubDate>
+      <link>/blog/2019-0215_copa_acb_18-19/</link>
+      <pubDate>Fri, 15 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mopa.github.io/blog/estad%C3%ADstica-y-la-copa-del-rey-acb-18-19/</guid>
-      <description>canvas { padding: 0; margin: auto; display: block; width: 600px; height: 500px; }  El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la final four de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo PES, FIFA, etc. Para ello tomamos las siguientes variables: 3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef.</description>
+      <guid>/blog/2019-0215_copa_acb_18-19/</guid>
+      <description>canvas { padding: 0; margin: auto; display: block; width: 600px; height: 500px; }  El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la final four de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo PES, FIFA, etc. Para ello tomamos las siguientes variables:</description>
     </item>
     
     <item>
       <title>[Vim] Corrección Ortográfica</title>
-      <link>https://mopa.github.io/blog/vim-correcci%C3%B3n-ortogr%C3%A1fica/</link>
-      <pubDate>Fri, 01 Feb 2019 20:14:19 +0100</pubDate>
+      <link>/blog/2019-0201_vim-spell-checking/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mopa.github.io/blog/vim-correcci%C3%B3n-ortogr%C3%A1fica/</guid>
+      <guid>/blog/2019-0201_vim-spell-checking/</guid>
       <description>Poco a poco voy conociendo más cosas sobre Vim, y lo que antes me parecía un tarea ardua ahora lo hago con más rapidez. Cierto es que al principio cuesta y una cosa que echaba de menos era tener un corrector ortográfico (por lo que pudiera pasar). Voy a mostrar varias cositas y trucos para tener lo necesario ante este tema.
 Para activarlo lo hacemos con el comando:
 :setlocal spell  Esto puede (probablemente) no escoja por defecto nuestro idioma, pero tranquilos no pasa nada, lo especificamos tal que</description>
@@ -33,30 +33,30 @@ Para activarlo lo hacemos con el comando:
     
     <item>
       <title>Estadística y la Final Four de Belgrado</title>
-      <link>https://mopa.github.io/blog/estad%C3%ADstica-y-la-final-four-de-belgrado/</link>
-      <pubDate>Sun, 13 May 2018 10:43:48 +0200</pubDate>
+      <link>/blog/2018-0513_eurol_17-18/</link>
+      <pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mopa.github.io/blog/estad%C3%ADstica-y-la-final-four-de-belgrado/</guid>
-      <description>canvas { padding: 0; margin: auto; display: block; width: 500px; height: 400px; }  Ahora que ya tenemos al caer la Final Four de Belgrado , vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los Playoff. He tomado las siguientes variables:
+      <guid>/blog/2018-0513_eurol_17-18/</guid>
+      <description>canvas { padding: 0; margin: auto; display: block; width: 500px; height: 400px; }  Ahora que ya tenemos al caer la Final Four de Belgrado, vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los Playoff. He tomado las siguientes variables:
 3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef.</description>
     </item>
     
     <item>
       <title>[LaTeX] Capítulo 1: Compiladores</title>
-      <link>https://mopa.github.io/blog/latex-cap%C3%ADtulo-1-compiladores/</link>
-      <pubDate>Sat, 31 Mar 2018 12:32:00 +0200</pubDate>
+      <link>/blog/2018-0401_tex-cap01/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mopa.github.io/blog/latex-cap%C3%ADtulo-1-compiladores/</guid>
+      <guid>/blog/2018-0401_tex-cap01/</guid>
       <description>Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
 TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>https://mopa.github.io/blog/hello-world/</link>
+      <link>/blog/2018-0331_hello-world/</link>
       <pubDate>Sat, 31 Mar 2018 11:59:16 +0200</pubDate>
       
-      <guid>https://mopa.github.io/blog/hello-world/</guid>
+      <guid>/blog/2018-0331_hello-world/</guid>
       <description>Hello Everyone!</description>
     </item>
     

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on Pablo M. | Engineering &amp; Data Science</title>
+    <link>/tags/latex/</link>
+    <description>Recent content in latex on Pablo M. | Engineering &amp; Data Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Creative Commons BY-NC 4.0</copyright>
+    <lastBuildDate>Sun, 01 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[LaTeX] Capítulo 1: Compiladores</title>
+      <link>/blog/2018-0401_tex-cap01/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2018-0401_tex-cap01/</guid>
+      <description>Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
+TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo</description>
+    </item>
+    
+  </channel>
+</rss>
