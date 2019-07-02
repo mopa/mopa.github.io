@@ -3,13 +3,19 @@ User-agent: *
 
 Disallow: /blog/
 
-Disallow: /blog/2019-0215_copa_acb_18-19/
-
 Disallow: /
 
 Disallow: /tags/
 
+Disallow: /blog/2019-0503_pandas-truquitos/
+
 Disallow: /tags/data/
+
+Disallow: /tags/pandas/
+
+Disallow: /tags/python/
+
+Disallow: /blog/2019-0215_copa_acb_18-19/
 
 Disallow: /tags/data-science/
 

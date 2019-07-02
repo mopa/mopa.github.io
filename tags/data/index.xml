@@ -6,10 +6,21 @@
     <description>Recent content in data on Pablo M. | Engineering &amp; Data Science</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Creative Commons BY-NC 4.0</copyright>
-    <lastBuildDate>Fri, 15 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/data/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Python/Pandas] Truquitos para ser más ágiles</title>
+      <link>/blog/2019-0503_pandas-truquitos/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2019-0503_pandas-truquitos/</guid>
+      <description>Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien gordo, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.
+read_csv Comando archiconocido, y uno de sus argumentos es nrows. Si añadimos, por ejemplo, nrows=5 como argumento de ese gran fichero, estaremos importando una pequeña porción.
+Si usamos GNU/Linux tenemos el comando head para ver las primeras líneas del documento, e.</description>
+    </item>
     
     <item>
       <title>Estadística y la Copa del Rey ACB 18-19</title>
