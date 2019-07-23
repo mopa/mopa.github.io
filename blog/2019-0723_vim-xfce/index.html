@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Tags - Pablo M. | Engineering &amp; Data Science</title>
+    <title>Abrir con VIM en Xfce - Pablo M. | Engineering &amp; Data Science</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
@@ -12,21 +12,21 @@
     <meta property="og:site_name" content="Pablo M. | Engineering &amp; Data Science" />
     <meta property="og:locale" content="nn_NO" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="/tags/" />
-    <meta property="og:title" content="Tags" />
+    <meta property="og:url" content="/blog/2019-0723_vim-xfce/" />
+    <meta property="og:title" content="Abrir con VIM en Xfce" />
     <meta property="og:image" content="/https://mopa.github.io/img/Avatar-Soyuz.png" />
     <meta property="og:description" content="" />
 
     
 
-    <meta property="twitter:title" content="Tags" />
+    <meta property="twitter:title" content="Abrir con VIM en Xfce" />
     <meta property="twitter:image" content="/https://mopa.github.io/img/Avatar-Soyuz.png" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:description" content="" />
 
     
 
-    <link rel="canonical" href="/tags/">
+    <link rel="canonical" href="/blog/2019-0723_vim-xfce/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha256-azvvU9xKluwHFJ0Cpgtf0CYzK7zgtOznnzxV4924X1w=" crossorigin="anonymous" />
 
@@ -41,8 +41,6 @@
     <link rel="shortcut icon"
         href="/img/favicon.ico">
 
-    
-        <link href="/tags/index.xml" rel="alternate" type="application/rss+xml" title="Pablo M. | Engineering &amp; Data Science" />
     
 
     <noscript>
@@ -101,59 +99,77 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10">
-                    <div class="markdown">
-                        <h1 class="mx-0 mx-md-4">Tags</h1>
+                    <h1 class="mx-0 mx-md-4">Abrir con VIM en Xfce</h1>
 
-                        <p class="h4">
+                    <div class="mb-4 mb-md-5 meta">
+                        <span class="date" title='Tue Jul 23 2019 17:03:39 CEST'>
+                            July 23, 2019
+                        </span>
+
+                        
                             
-                            
-                                <a href="data" class="badge badge-light text-monospace">
-                                    data
-                                    <span class="badge badge-secondary">3</span>
-                                </a>
-                            
-                                <a href="data-science" class="badge badge-light text-monospace">
-                                    data-science
-                                    <span class="badge badge-secondary">2</span>
-                                </a>
-                            
-                                <a href="deporte" class="badge badge-light text-monospace">
-                                    deporte
-                                    <span class="badge badge-secondary">2</span>
-                                </a>
-                            
-                                <a href="latex" class="badge badge-light text-monospace">
-                                    latex
-                                    <span class="badge badge-secondary">1</span>
-                                </a>
-                            
-                                <a href="linux" class="badge badge-light text-monospace">
-                                    linux
-                                    <span class="badge badge-secondary">1</span>
-                                </a>
-                            
-                                <a href="pandas" class="badge badge-light text-monospace">
-                                    pandas
-                                    <span class="badge badge-secondary">1</span>
-                                </a>
-                            
-                                <a href="python" class="badge badge-light text-monospace">
-                                    python
-                                    <span class="badge badge-secondary">1</span>
-                                </a>
-                            
-                                <a href="vim" class="badge badge-light text-monospace">
-                                    vim
-                                    <span class="badge badge-secondary">2</span>
-                                </a>
-                            
-                                <a href="xfce" class="badge badge-light text-monospace">
-                                    xfce
-                                    <span class="badge badge-secondary">1</span>
-                                </a>
-                            
-                        </p>
+                        
+
+                        <span class="reading-time middot">
+                            1 minute
+                        </span>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                    <li class="d-inline middot">
+                                        <a href="/tags/linux">linux</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="/tags/xfce">xfce</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="/tags/vim">vim</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                
+                            </ul>
+                        </div>
                     </div>
+
+                    <div class="markdown">
+                        
+    <p>Suelo usar <strong>Vim</strong> con regularidad junto con <strong>Xfce</strong> como entorno de escritorio. Al hacer la típica operación de <em>Abrir con&hellip;</em> un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve <a href="https://askubuntu.com/questions/788736/open-vim-in-xfce4-terminal-from-thunar">buscando</a> información y lo que encontré es que debemos editar el fichero <code>/usr/share/applications/vim.desktop</code> y cambiar los siguientes valores:</p>
+
+<pre><code class="language-bash">Exec=xfce4-terminal -e &quot;vim %F&quot;
+
+Terminal=false
+</code></pre>
+
+<p>Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces. No estoy dispuesto a hacer repetir esta tarea más veces, y la <a href="https://stackoverflow.com/questions/11950038/how-to-open-text-with-vim-from-thunar#11953964">solución</a> es crear un fichero <code>.desktop</code> (lo llamamos como nos de la gana) en <code>~/.local/share/applications/</code> con el siguiente contenido:</p>
+
+<pre><code class="language-bash">[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+Exec=&quot;xfce4-terminal -e 'vim %F'&quot;
+Name=&quot;VIMMMM&quot;
+Comment=Custom definition for &quot;xfce4-terminal -e 'vim %F'&quot;
+</code></pre>
+
+<p>Y con esto abrimos los ficheros en <em>Vim</em> desde <em>Thunar</em> pinchando dos veces sin tener que abrir la terminal ;)</p>
+
+
+
+                    </div>
+
+                    
+
+                    
                 </div>
             </div>
         </div>

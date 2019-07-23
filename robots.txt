@@ -1,11 +1,19 @@
 User-agent: *
 
 
+Disallow: /blog/2019-0723_vim-xfce/
+
 Disallow: /blog/
 
 Disallow: /
 
 Disallow: /tags/
+
+Disallow: /tags/linux/
+
+Disallow: /tags/vim/
+
+Disallow: /tags/xfce/
 
 Disallow: /blog/2019-0503_pandas-truquitos/
 
@@ -22,8 +30,6 @@ Disallow: /tags/data-science/
 Disallow: /tags/deporte/
 
 Disallow: /blog/2019-0201_vim-spell-checking/
-
-Disallow: /tags/vim/
 
 Disallow: /blog/2018-0513_eurol_17-18/
 
