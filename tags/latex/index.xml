@@ -13,10 +13,10 @@
     
     <item>
       <title>[LaTeX] Capítulo 1: Compiladores</title>
-      <link>/blog/2018-0401_tex-cap01/</link>
+      <link>/post/2018-0401_tex-cap01/</link>
       <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2018-0401_tex-cap01/</guid>
+      <guid>/post/2018-0401_tex-cap01/</guid>
       <description>Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
 TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo</description>
     </item>

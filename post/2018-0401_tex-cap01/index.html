@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Pablo M.">
+
+<meta name="generator" content="Hugo 0.56.3" />
+<title>[LaTeX] Capítulo 1: Compiladores</title>
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="/css/monosocialiconsfont.css">
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Pablo M. | Engineering &amp; Data Science" />
+
+
+<meta property="og:title" content="[LaTeX] Capítulo 1: Compiladores" />
+<meta property="og:description" content="Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
+TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/2018-0401_tex-cap01/" />
+<meta property="article:published_time" content="2018-04-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-04-01T00:00:00+00:00" />
+
+
+<meta itemprop="name" content="[LaTeX] Capítulo 1: Compiladores">
+<meta itemprop="description" content="Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
+TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo">
+
+
+<meta itemprop="datePublished" content="2018-04-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-04-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="438">
+
+
+
+<meta itemprop="keywords" content="latex," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[LaTeX] Capítulo 1: Compiladores"/>
+<meta name="twitter:description" content="Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
+TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>[LaTeX] Capítulo 1: Compiladores</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        April 1, 2018
+        <br>
+        
+        
+            
+                <a href="/tags/latex">latex</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.</p>
+
+<h2 id="tex">TeX</h2>
+
+<blockquote>
+<p>TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo</p>
+</blockquote>
+
+<p>Esto es como definió Donald Knuth (su creador) que era TeX en el libro <em>The TeXbook</em>. Es la base de todo el sistema y lo primero que se creó allá por 1978.</p>
+
+<p>TeX es un lenguaje basado en <a href="https://en.wikipedia.org/wiki/Macro_(computer_science)">macros</a> y <a href="https://en.wikipedia.org/wiki/Token_(parser)">tokens</a>. Tiene un conocimiento preciso de los tamaños de todos los caracteres y símbolos, y usando esta información calcula la disposición óptima de letras por línea y líneas por página.</p>
+
+<p>Cuando compilamos (por ejemplo por una CLI con <code>tex example.tex</code>) el resultado es un fichero <a href="https://en.wikipedia.org/wiki/DVI_file_format">DVI</a> que contiene la localización final de todos los caracteres. Este fichero se puede convertir a otros formatos o directamente imprimir.</p>
+
+<p>El sistema base contiene unos 300 comandos llamados <em>primitivos</em>. Son comandos de bajo nivel, pero la mayor parte de la funcionalidad es proporcionada por archivos de formato. El formato por defecto original de Knuth, que añade unos 600 comandos, es Plain TeX.</p>
+
+<h2 id="latex">LaTeX</h2>
+
+<p>Con TeX se podían hacer cosas básicas, por lo que pronto surge la necesidad de realizar cosas más complejas y completas. Entra en escena Leslie Lamport, que crea LaTeX a principios de la década de 1980.</p>
+
+<p>LaTeX es un conjunto de comandos definidos en términos de los subyacentes a TeX. De hecho todos los comandos usados en un documento LaTeX son en realidad conjuntos de comandos de TeX. Lo que hace es proporcionarnos un lenguaje de alto nivel que acceda al poder de TeX de una manera más fácil.</p>
+
+<p>Podríamos establecer la siguiente diferencia entre ellos: TeX se ocupa de la maquetación, mientras que LaTeX maneja el lado del contenido para el procesamiento de documentos.</p>
+
+<p>Gracias a que Leslie Lamport creó un sistema estandarizado de gestión de paquetes, la comunidad creció enormemente. Precisamente por esto tenemos paquetes para cualquier cosa y clases de documentos para todo lo que necesitemos.</p>
+
+<p>OJO: para mantener tu reputación en el mundo LaTeX tienes que escribirlo con una T y X mayuscula, y pronunciarlo como <em>Lay-Tech</em>. Esto se debe a que la X en TeX es en realidad la letra <em>Chi</em> mayúscula del griego.</p>
+
+<p>(Post en construcción)</p>
+
+<h2 id="referencias">Referencias</h2>
+
+<p><a href="https://www.latex-project.org/">https://www.latex-project.org/</a></p>
+
+<p><a href="https://www.sharelatex.com/blog/2012/12/01/the-tex-family-tree-latex-pdftex-xelatex-luatex-context.html">https://www.sharelatex.com/blog/2012/12/01/the-tex-family-tree-latex-pdftex-xelatex-luatex-context.html</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/TeX">https://en.wikipedia.org/wiki/TeX</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/LaTeX">https://en.wikipedia.org/wiki/LaTeX</a></p>
+
+<p>The LaTeX Companion, Frank Mittelbach.</p>
+
+<p>The TeXbook, Donald E. Knuth.</p>
+
+    </section>
+</article>
+
+
+
+
+
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="mailto:pmopa@pm.me">
+        circleemail
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/mopa">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="/index.xml">
+        circlerss
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        Creative Commons BY-NC 4.0  |  Proudly Made on Earth
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

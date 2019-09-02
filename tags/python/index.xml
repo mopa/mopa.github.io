@@ -13,10 +13,10 @@
     
     <item>
       <title>[Python/Pandas] Truquitos para ser más ágiles</title>
-      <link>/blog/2019-0503_pandas-truquitos/</link>
+      <link>/post/2019-0503_pandas-truquitos/</link>
       <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2019-0503_pandas-truquitos/</guid>
+      <guid>/post/2019-0503_pandas-truquitos/</guid>
       <description>Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien gordo, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.
 read_csv Comando archiconocido, y uno de sus argumentos es nrows. Si añadimos, por ejemplo, nrows=5 como argumento de ese gran fichero, estaremos importando una pequeña porción.
 Si usamos GNU/Linux tenemos el comando head para ver las primeras líneas del documento, e.</description>

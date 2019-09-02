@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Pablo M.">
+
+<meta name="generator" content="Hugo 0.56.3" />
+<title>[Python/Pandas] Truquitos para ser más ágiles</title>
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="/css/monosocialiconsfont.css">
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Pablo M. | Engineering &amp; Data Science" />
+
+
+<meta property="og:title" content="[Python/Pandas] Truquitos para ser más ágiles" />
+<meta property="og:description" content="Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien gordo, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.
+read_csv Comando archiconocido, y uno de sus argumentos es nrows. Si añadimos, por ejemplo, nrows=5 como argumento de ese gran fichero, estaremos importando una pequeña porción.
+Si usamos GNU/Linux tenemos el comando head para ver las primeras líneas del documento, e." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/2019-0503_pandas-truquitos/" />
+<meta property="article:published_time" content="2019-05-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-05-03T00:00:00+00:00" />
+
+
+<meta itemprop="name" content="[Python/Pandas] Truquitos para ser más ágiles">
+<meta itemprop="description" content="Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien gordo, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.
+read_csv Comando archiconocido, y uno de sus argumentos es nrows. Si añadimos, por ejemplo, nrows=5 como argumento de ese gran fichero, estaremos importando una pequeña porción.
+Si usamos GNU/Linux tenemos el comando head para ver las primeras líneas del documento, e.">
+
+
+<meta itemprop="datePublished" content="2019-05-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="831">
+
+
+
+<meta itemprop="keywords" content="python,pandas,data," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Python/Pandas] Truquitos para ser más ágiles"/>
+<meta name="twitter:description" content="Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien gordo, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.
+read_csv Comando archiconocido, y uno de sus argumentos es nrows. Si añadimos, por ejemplo, nrows=5 como argumento de ese gran fichero, estaremos importando una pequeña porción.
+Si usamos GNU/Linux tenemos el comando head para ver las primeras líneas del documento, e."/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>[Python/Pandas] Truquitos para ser más ágiles</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        May 3, 2019
+        <br>
+        
+        
+            
+                <a href="/tags/python">python</a>
+            
+                <a href="/tags/pandas">pandas</a>
+            
+                <a href="/tags/data">data</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien <em>gordo</em>, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.</p>
+
+<h3 id="read-csv">read_csv</h3>
+
+<p>Comando archiconocido, y uno de sus argumentos es <code>nrows</code>. Si añadimos, por ejemplo, <code>nrows=5</code> como argumento de ese gran fichero, estaremos importando una pequeña porción.</p>
+
+<p>Si usamos <em>GNU/Linux</em> tenemos el comando <code>head</code> para ver las primeras líneas del documento, e.g.:</p>
+
+<pre><code class="language-bash">head -n 5 data.csv
+</code></pre>
+
+<p>Otra operación para cargar más rápido el documento, sería &laquo;sacar&raquo; las columnas que nos interesan, y si además sabemos el tipo de datos aún más rápida será la carga. Veamos un pequeño ejemplo:</p>
+
+<pre><code class="language-python"># Cargamos algunas filas del fichero
+df = pd.read_csv('data.csv', nrows=5)
+
+# Extraemos la lista de columnas
+df.columns.tolist()
+</code></pre>
+
+<p>Esto nos devuelve la lista de columnas, por lo que ahora podemos cargas las columnas que nos interese, además de poder especifica el tipo de datos que es cada una para una carga más rápida:</p>
+
+<pre><code class="language-python">df = pd.read_csv('data.csv', usecols=['c1', 'c2'], dtype={'c1':str, 'c2':int})
+</code></pre>
+
+<p>Otra ventaja de este último argumento (<code>dtype</code>) es que si alguna columna contiene tanto cadenas como números, es la de declarar dicha columna como tipo <em>string</em> para no obtener errores cuando tratamos de unir tablas.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="select-dtypes">select_dtypes</h3>
+
+<p>Una vez hecho el preprocesamiento de datos, podemos tenemos por defecto distintos tipos de datos en cada columna (<code>bool</code>, <code>int64</code>, <code>float64</code>, etc.), la distribución de los mismos la comprobamos con</p>
+
+<pre><code class="language-python">df.dtypes.value_counts()
+</code></pre>
+
+<p>Con el anterior comando obtenemos todos los posibles tipos de datos del <em>dataframe</em>. Podemos hacer un <em>sub-dataframe</em> solo con los tipos de datos que desemos con el siguiente comando:</p>
+
+<pre><code class="language-python">df.select_dtypes(include=['float64', 'int64'])
+</code></pre>
+
+<p>&nbsp;</p>
+
+<h3 id="copy">copy</h3>
+
+<p>Es obvia su función, pero podríamos pensar para que queremos este comando. Si por ejemplo hacemos una copia de un <em>dataframe</em> y se nos ocurre hacerlo así:</p>
+
+<pre><code class="language-python">import pandas as pd
+df1 = pd.DataFrame({ 'a':[0,0,0], 'b': [1,1,1]})
+df2 = df1
+df2['a'] = df2['a'] + 1
+df1.head()
+</code></pre>
+
+<p>El resultdo es que <code>df1</code> ha cambiado dado que estamos apuntando al mismo sitio en memoria. Por esta razón necesitamos <code>.copy()</code>:</p>
+
+<pre><code class="language-python">df2 = df1.copy()
+</code></pre>
+
+<p>Otra opción sería</p>
+
+<pre><code class="language-python">from copy import deepcopy
+df2 = deepcopy(df1)
+</code></pre>
+
+<p>&nbsp;</p>
+
+<!--
+AÑADIR MÁS COSAS Y CLARIFICARLO
+-->
+
+<h3 id="map">map</h3>
+
+<p>Se usa para hacer transformaciones de datos. Primero definimos un diccionario con las llaves sean los valores antiguos y los valores sean los nuevos valores.</p>
+
+<pre><code class="language-python">level_map = {1: 'high', 2: 'medium', 3: 'low'}
+df['c_level'] = df['c'].map(level_map)
+</code></pre>
+
+<p>Algunos ejemplos: <code>True</code>, <code>False</code> a 1, 0; definir niveles; etc.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="value-counts">value counts</h3>
+
+<p>Es un comando para verificar las distribuciones de valores. Por ejemplo, si queremos comprobar los posibles valores y la frecuencia para cada valor individual en la columna <code>'c'</code> podemos hacer</p>
+
+<pre><code class="language-python">df['c'].value_counts()
+</code></pre>
+
+<p>Algunos trucos/argumentos útiles:</p>
+
+<ul>
+<li><code>normalize = True</code>: si queremos comprobar la frecuencia en lugar de hacer el recuento.</li>
+<li><code>dropna = False</code>: si queremos incluir los valores perdidos (<em>missing values</em>) en las estadísticas.</li>
+<li><code>df['c'].value_counts().reset_index()</code>: si queremos convertir la tabla de estadísticas a un <em>dataframe</em>.</li>
+<li><code>df['c'].value_counts().sort_index()</code>: para mostrar las estadísticas ordenadas según los valores de la columna <code>['c']</code>.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3 id="número-de-valores-perdidos-missing-values">Número de valores perdidos (<em>missing values</em>)</h3>
+
+<p>Al importar algunos <em>datasets</em> o por estar haciendo algún modelo, nos encontrar con los <em>missing values</em> en filas o columnas. Usamos <code>.isnull()</code> y <code>.sum()</code> para contar el número de valores perdidos que hay en las columnas que especifiquemos.</p>
+
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({ 'id': [1,2,3], 'c1':[0,0,np.nan], 'c2': [np.nan,1,1]})
+df = df[['id', 'c1', 'c2']]
+
+df['num_nulls'] = df[['c1', 'c2']].isnull().sum(axis=1)
+
+df.head()
+</code></pre>
+
+<p>&nbsp;</p>
+
+<h3 id="seleccionar-filas-especificando-los-ids">Seleccionar filas especificando los IDs</h3>
+
+<p>En SQL al hacer <code>SELECT * FROM ... WHERE ID in ('A001', 'C022', ...)</code> obtenemos los registros de los IDs especificados. Para hacer lo mismo en Pandas:</p>
+
+<pre><code class="language-python">df_filter = df['ID'].isin(['A001','C022',...])
+df[df_filter]
+</code></pre>
+
+<p>&nbsp;</p>
+
+<h3 id="grupos-de-percentiles">Grupos de percentiles</h3>
+
+<p>Tenemos una columna numérica y queremos clasificar los valores en dicha columna en grupos, digamos que el 5% superior en el grupo 1, 5-20% en el grupo 2, 20-50% en el grupo 3 y el 50% inferior en el grupo 4.</p>
+
+<pre><code class="language-python">import numpy as np
+
+cut_points = [np.percentile(df['c'], i) for i in [50, 80, 95]]
+
+df['group'] = 1
+
+for i in range(3):
+    df['group'] = df['group'] + (df['c'] &lt; cut_points[i])
+# or &lt;= cut_points[i]
+</code></pre>
+
+<p>Otra opción sería con <code>pandas.cut()</code>.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="to-csv">to_csv</h3>
+
+<p>Comando utilizado por todos/as, pero veamos un par de trucos adicionales. El primero es,</p>
+
+<pre><code class="language-python">print(df[:5].to_csv())
+</code></pre>
+
+<p>Imprime las primeras cinco filas pero de la forma exacta en que se guardan.</p>
+
+<p>El segundo truco es al tratar con números enteros y valores perdidos mezclados. Si una columna tienen tanto valores enteros como perdidos, el tipo de dato sería flotante en lugar de entero. Cuando exportamos la tabla podemos añadir el argumento <code>float_format='%.0f'</code> para redondear todos los flotantes a enteros.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="muestras-aleatorias">Muestras aleatorias</h3>
+
+<p>En algunos casos queremos ver una muestra aleatoria de más de una fila. Si por ejemplo queremos una muestra de tamaño 200 hacemos</p>
+
+<pre><code class="language-python">df.sample(n=200).head(10)
+</code></pre>
+
+<p>Otra forma de hacerlo es con NumPy:</p>
+
+<pre><code class="language-python">import numpy as np
+
+rows = np.random.choice(df.index.values, 200)
+df200 = df.loc[rows]
+df200.head()
+</code></pre>
+
+<p>&nbsp;</p>
+
+<p>Referencias:</p>
+
+<ul>
+<li><a href="https://towardsdatascience.com/10-python-pandas-tricks-that-make-your-work-more-efficient-2e8e483808ba">10 Python Pandas tricks that make your work more efficient</a></li>
+<li><a href="http://www.pybloggers.com/2018/11/how-to-use-pandas-sample-to-select-rows-and-columns/">How to use Pandas sample to select rows and columns</a></li>
+<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook, Jake VanderPlas</a></li>
+</ul>
+
+    </section>
+</article>
+
+
+
+
+
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="mailto:pmopa@pm.me">
+        circleemail
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/mopa">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="/index.xml">
+        circlerss
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        Creative Commons BY-NC 4.0  |  Proudly Made on Earth
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

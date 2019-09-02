@@ -3,18 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/2019-0723_vim-xfce/</loc>
+    <loc>/post/2019-0723_vim-xfce/</loc>
     <lastmod>2019-07-23T17:03:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/</loc>
+    <loc>/</loc>
     <lastmod>2019-07-23T17:03:39+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/post/</loc>
     <lastmod>2019-07-23T17:03:39+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -44,7 +44,7 @@
   </url>
   
   <url>
-    <loc>/blog/2019-0503_pandas-truquitos/</loc>
+    <loc>/post/2019-0503_pandas-truquitos/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -67,7 +67,7 @@
   </url>
   
   <url>
-    <loc>/blog/2019-0215_copa_acb_18-19/</loc>
+    <loc>/post/2019-0215_copa_acb_18-19/</loc>
     <lastmod>2019-02-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -84,17 +84,17 @@
   </url>
   
   <url>
-    <loc>/blog/2019-0201_vim-spell-checking/</loc>
+    <loc>/post/2019-0201_vim-spell-checking/</loc>
     <lastmod>2019-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/2018-0513_eurol_17-18/</loc>
+    <loc>/post/2018-0513_eurol_17-18/</loc>
     <lastmod>2018-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/2018-0401_tex-cap01/</loc>
+    <loc>/post/2018-0401_tex-cap01/</loc>
     <lastmod>2018-04-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>/blog/2018-0331_hello-world/</loc>
+    <loc>/post/2018-0331_hello-world/</loc>
     <lastmod>2018-03-31T11:59:16+02:00</lastmod>
   </url>
   

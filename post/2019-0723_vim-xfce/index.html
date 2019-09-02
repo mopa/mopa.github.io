@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Pablo M.">
+
+<meta name="generator" content="Hugo 0.56.3" />
+<title>Abrir con VIM en Xfce</title>
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="/css/monosocialiconsfont.css">
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Pablo M. | Engineering &amp; Data Science" />
+
+
+<meta property="og:title" content="Abrir con VIM en Xfce" />
+<meta property="og:description" content="Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
+Exec=xfce4-terminal -e &quot;vim %F&quot; Terminal=false  Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/2019-0723_vim-xfce/" />
+<meta property="article:published_time" content="2019-07-23T17:03:39+02:00" />
+<meta property="article:modified_time" content="2019-07-23T17:03:39+02:00" />
+
+
+<meta itemprop="name" content="Abrir con VIM en Xfce">
+<meta itemprop="description" content="Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
+Exec=xfce4-terminal -e &quot;vim %F&quot; Terminal=false  Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces.">
+
+
+<meta itemprop="datePublished" content="2019-07-23T17:03:39&#43;02:00" />
+<meta itemprop="dateModified" content="2019-07-23T17:03:39&#43;02:00" />
+<meta itemprop="wordCount" content="175">
+
+
+
+<meta itemprop="keywords" content="linux,xfce,vim," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Abrir con VIM en Xfce"/>
+<meta name="twitter:description" content="Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
+Exec=xfce4-terminal -e &quot;vim %F&quot; Terminal=false  Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces."/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Abrir con VIM en Xfce</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        July 23, 2019
+        <br>
+        
+        
+            
+                <a href="/tags/linux">linux</a>
+            
+                <a href="/tags/xfce">xfce</a>
+            
+                <a href="/tags/vim">vim</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>Suelo usar <strong>Vim</strong> con regularidad junto con <strong>Xfce</strong> como entorno de escritorio. Al hacer la típica operación de <em>Abrir con&hellip;</em> un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve <a href="https://askubuntu.com/questions/788737/open-vim-in-xfce4-terminal-from-thunar">buscando</a> información y lo que encontré es que debemos editar el fichero <code>/usr/share/applications/vim.desktop</code> y cambiar los siguientes valores:</p>
+
+<pre><code class="language-bash">Exec=xfce4-terminal -e &quot;vim %F&quot;
+
+Terminal=false
+</code></pre>
+
+<p>Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces. No estoy dispuesto a hacer repetir esta tarea más veces, y la <a href="https://stackoverflow.com/questions/11950038/how-to-open-text-with-vim-from-thunar#11953964">solución</a> es crear un fichero <code>.desktop</code> (lo llamamos como nos de la gana) en <code>~/.local/share/applications/</code> con el siguiente contenido:</p>
+
+<pre><code class="language-bash">[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+Exec=&quot;xfce4-terminal -e 'vim %F'&quot;
+Name=&quot;VIMMMM&quot;
+Comment=Custom definition for &quot;xfce4-terminal -e 'vim %F'&quot;
+</code></pre>
+
+<p><em>NOTA</em>: otra opción sería copiar el archivo <code>/usr/share/applications/vim.desktop</code> y pegarlo en <code>~/.local/share/applications/</code> para posteriormente modificar las líneas <code>Exec=</code> y <code>Terminal=</code>.</p>
+
+<p>Ahora ya podemos abrir los ficheros en <em>Vim</em> desde <em>Thunar</em> pinchando dos veces sin tener que abrir la terminal ;)</p>
+
+    </section>
+</article>
+
+
+
+
+
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="mailto:pmopa@pm.me">
+        circleemail
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/mopa">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="/index.xml">
+        circlerss
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        Creative Commons BY-NC 4.0  |  Proudly Made on Earth
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>
