@@ -1,94 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Pablo M. | Engineering &amp; Data Science</title>
-    <link>/</link>
-    <description>Recent content on Pablo M. | Engineering &amp; Data Science</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <copyright>Creative Commons BY-NC 4.0</copyright>
-    <lastBuildDate>Tue, 23 Jul 2019 17:03:39 +0200</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Abrir con VIM en Xfce</title>
-      <link>/post/2019-0723_vim-xfce/</link>
-      <pubDate>Tue, 23 Jul 2019 17:03:39 +0200</pubDate>
-      
-      <guid>/post/2019-0723_vim-xfce/</guid>
-      <description>Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&amp;hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
-Exec=xfce4-terminal -e &amp;quot;vim %F&amp;quot; Terminal=false  Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces.</description>
-    </item>
-    
-    <item>
-      <title>[Python/Pandas] Truquitos para ser más ágiles</title>
-      <link>/post/2019-0503_pandas-truquitos/</link>
-      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-0503_pandas-truquitos/</guid>
-      <description>Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien gordo, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.
-read_csv Comando archiconocido, y uno de sus argumentos es nrows. Si añadimos, por ejemplo, nrows=5 como argumento de ese gran fichero, estaremos importando una pequeña porción.
-Si usamos GNU/Linux tenemos el comando head para ver las primeras líneas del documento, e.</description>
-    </item>
-    
-    <item>
-      <title>Estadística y la Copa del Rey ACB 18-19</title>
-      <link>/post/2019-0215_copa_acb_18-19/</link>
-      <pubDate>Fri, 15 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-0215_copa_acb_18-19/</guid>
-      <description>canvas { padding: 0; margin: auto; display: block; width: 600px; height: 500px; }  El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la final four de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo PES, FIFA, etc. Para ello tomamos las siguientes variables:</description>
-    </item>
-    
-    <item>
-      <title>[Vim] Corrección Ortográfica</title>
-      <link>/post/2019-0201_vim-spell-checking/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-0201_vim-spell-checking/</guid>
-      <description>Poco a poco voy conociendo más cosas sobre Vim, y lo que antes me parecía un tarea ardua ahora lo hago con más rapidez. Cierto es que al principio cuesta y una cosa que echaba de menos era tener un corrector ortográfico (por lo que pudiera pasar). Voy a mostrar varias cositas y trucos para tener lo necesario ante este tema.
-Para activarlo lo hacemos con el comando:
-:setlocal spell  Esto puede (probablemente) no escoja por defecto nuestro idioma, pero tranquilos no pasa nada, lo especificamos tal que</description>
-    </item>
-    
-    <item>
-      <title>Estadística y la Final Four de Belgrado</title>
-      <link>/post/2018-0513_eurol_17-18/</link>
-      <pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018-0513_eurol_17-18/</guid>
-      <description>canvas { padding: 0; margin: auto; display: block; width: 500px; height: 400px; }  Ahora que ya tenemos al caer la Final Four de Belgrado, vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los Playoff. He tomado las siguientes variables:
-3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef.</description>
-    </item>
-    
-    <item>
-      <title>[LaTeX] Capítulo 1: Compiladores</title>
-      <link>/post/2018-0401_tex-cap01/</link>
-      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018-0401_tex-cap01/</guid>
-      <description>Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
-TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Sat, 31 Mar 2018 12:09:51 +0200</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Under construction ¯\(ツ)/¯</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>/post/2018-0331_hello-world/</link>
-      <pubDate>Sat, 31 Mar 2018 11:59:16 +0200</pubDate>
-      
-      <guid>/post/2018-0331_hello-world/</guid>
-      <description>Hello Everyone!</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Pablo M. | Pablo M.</title>
+        <link>/</link>
+        <description>Pablo M. | Pablo M.</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 08 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml" /><item>
+                <title>Recursos</title>
+                <link>/recursos/</link>
+                <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate><guid>/recursos/</guid>
+                <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;/latex-notas-trucos&#34;&gt;[LaTeX] Notas y Trucos&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+            </item><item>
+                <title>[LaTeX] Notas y Trucos</title>
+                <link>/latex-notas-trucos/</link>
+                <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate><guid>/latex-notas-trucos/</guid>
+                <description>&lt;p&gt;En esta página voy a ir almacenando pequeños trucos para la realización de documentos (no es la típica &lt;em&gt;cheatsheet&lt;/em&gt;). Se trata más bien de las cosas usuales que nos surgen, como hacer anotaciones al margen, texto que envuelve una imagen, etc.&lt;/p&gt;
+&lt;h3 id=&#34;listas-ordenadas-por-letras&#34;&gt;Listas ordenadas por letras&lt;/h3&gt;
+&lt;p&gt;Para tener listas ordenadas con letras minúsculas, usamos el paquete &lt;code&gt;enumitem&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[label=&lt;span class=&#34;k&#34;&gt;\alph&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt;]
+
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Esto no daría una salida como la siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;a) Item
+b) Item
+c) Item
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;anotaciones-al-margen&#34;&gt;Anotaciones al margen&lt;/h3&gt;
+&lt;p&gt;Con el paquete &lt;code&gt;marginnote&lt;/code&gt; tenemos más flexibilidad para usar notas al margen, como por ejemplo especificar la geometría de las notas. &lt;a href=&#34;https://www.ctan.org/pkg/marginnote&#34; target=&#34;_blank&#34;&gt;Documentación oficial&lt;/a&gt;
+&lt;/p&gt;
+</description>
+            </item><item>
+                <title>Posts</title>
+                <link>/posts/</link>
+                <pubDate>Tue, 23 Jul 2019 17:03:39 +0200</pubDate><guid>/posts/</guid>
+                <description></description>
+            </item><item>
+                <title>About</title>
+                <link>/about/</link>
+                <pubDate>Sat, 31 Mar 2018 12:09:51 +0200</pubDate><guid>/about/</guid>
+                <description>&lt;p&gt;Under construction  ¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯&lt;/p&gt;
+</description>
+            </item></channel>
 </rss>

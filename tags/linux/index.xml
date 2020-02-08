@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Pablo M. | Engineering &amp; Data Science</title>
+    <title>linux on Pablo M.</title>
     <link>/tags/linux/</link>
-    <description>Recent content in linux on Pablo M. | Engineering &amp; Data Science</description>
+    <description>Recent content in linux on Pablo M.</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Creative Commons BY-NC 4.0</copyright>
+    <language>es</language>
+    <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Tue, 23 Jul 2019 17:03:39 +0200</lastBuildDate>
     
 	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -13,12 +14,12 @@
     
     <item>
       <title>Abrir con VIM en Xfce</title>
-      <link>/post/2019-0723_vim-xfce/</link>
+      <link>/2019/07/2019-0723_vim-xfce/</link>
       <pubDate>Tue, 23 Jul 2019 17:03:39 +0200</pubDate>
       
-      <guid>/post/2019-0723_vim-xfce/</guid>
+      <guid>/2019/07/2019-0723_vim-xfce/</guid>
       <description>Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&amp;hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
-Exec=xfce4-terminal -e &amp;quot;vim %F&amp;quot; Terminal=false  Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces.</description>
+1 2 3  Exec=xfce4-terminal -e &amp;#34;vim %F&amp;#34; Terminal=false   Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces.</description>
     </item>
     
   </channel>

@@ -1,122 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>/post/2019-0723_vim-xfce/</loc>
-    <lastmod>2019-07-23T17:03:39+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-07-23T17:03:39+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-07-23T17:03:39+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-07-23T17:03:39+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2019-07-23T17:03:39+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/vim/</loc>
-    <lastmod>2019-07-23T17:03:39+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/xfce/</loc>
-    <lastmod>2019-07-23T17:03:39+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/2019-0503_pandas-truquitos/</loc>
-    <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/data/</loc>
-    <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/pandas/</loc>
-    <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/python/</loc>
-    <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/2019-0215_copa_acb_18-19/</loc>
-    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/data-science/</loc>
-    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/deporte/</loc>
-    <lastmod>2019-02-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/2019-0201_vim-spell-checking/</loc>
-    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2018-0513_eurol_17-18/</loc>
-    <lastmod>2018-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2018-0401_tex-cap01/</loc>
-    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/latex/</loc>
-    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2018-03-31T12:09:51+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2018-0331_hello-world/</loc>
-    <lastmod>2018-03-31T11:59:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-</urlset>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    ><url>
+            <loc>/</loc><lastmod>2020-02-08T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/recursos/</loc><lastmod>2020-02-08T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/</loc><lastmod>2020-02-08T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/latex-notas-trucos/</loc><lastmod>2020-01-26T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/latex/</loc><lastmod>2020-01-26T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/2019/07/2019-0723_vim-xfce/</loc><lastmod>2019-07-23T17:03:39+02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/linux/</loc><lastmod>2019-07-23T17:03:39+02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/posts/</loc><lastmod>2019-07-23T17:03:39+02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/vim/</loc><lastmod>2019-07-23T17:03:39+02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/xfce/</loc><lastmod>2019-07-23T17:03:39+02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/2019/05/2019-0503_pandas-truquitos/</loc><lastmod>2019-05-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/data/</loc><lastmod>2019-05-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/pandas/</loc><lastmod>2019-05-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/python/</loc><lastmod>2019-05-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/data-science/</loc><lastmod>2019-02-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/deporte/</loc><lastmod>2019-02-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/2019/02/2019-0215_copa_acb_18-19/</loc><lastmod>2019-02-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/2019/02/2019-0201_vim-spell-checking/</loc><lastmod>2019-02-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/2018/05/2018-0513_eurol_17-18/</loc><lastmod>2018-05-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/2018/04/2018-0401_tex-cap01/</loc><lastmod>2018-04-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/about/</loc><lastmod>2018-03-31T12:09:51+02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/2018/03/2018-0331_hello-world/</loc><lastmod>2018-03-31T11:59:16+02:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

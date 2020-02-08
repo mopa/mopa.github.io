@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pandas on Pablo M. | Engineering &amp; Data Science</title>
+    <title>pandas on Pablo M.</title>
     <link>/tags/pandas/</link>
-    <description>Recent content in pandas on Pablo M. | Engineering &amp; Data Science</description>
+    <description>Recent content in pandas on Pablo M.</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Creative Commons BY-NC 4.0</copyright>
+    <language>es</language>
+    <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/pandas/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +14,10 @@
     
     <item>
       <title>[Python/Pandas] Truquitos para ser más ágiles</title>
-      <link>/post/2019-0503_pandas-truquitos/</link>
+      <link>/2019/05/2019-0503_pandas-truquitos/</link>
       <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019-0503_pandas-truquitos/</guid>
+      <guid>/2019/05/2019-0503_pandas-truquitos/</guid>
       <description>Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien gordo, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.
 read_csv Comando archiconocido, y uno de sus argumentos es nrows. Si añadimos, por ejemplo, nrows=5 como argumento de ese gran fichero, estaremos importando una pequeña porción.
 Si usamos GNU/Linux tenemos el comando head para ver las primeras líneas del documento, e.</description>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Estadística y la Final Four de Belgrado | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/2018/04/2018-0401_tex-cap01/" /><link rel="next" href="/2019/02/2019-0201_vim-spell-checking/" /><link rel="canonical" href="/2018/05/2018-0513_eurol_17-18/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="Estadística y la Final Four de Belgrado" />
+<meta property="og:description" content="canvas { padding: 0; margin: auto; display: block; width: 500px; height: 400px; }  Ahora que ya tenemos al caer la Final Four de Belgrado , vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los Playoff. He tomado las siguientes variables:
+3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2018/05/2018-0513_eurol_17-18/" />
+<meta property="article:published_time" content="2018-05-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-05-13T00:00:00+00:00" />
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Estadística y la Final Four de Belgrado",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/2018\/05\/2018-0513_eurol_17-18\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "data, data science, deporte","wordcount":  543 ,
+        "url": "\/2018\/05\/2018-0513_eurol_17-18\/","datePublished": "2018-05-13T00:00:00\x2b00:00","dateModified": "2018-05-13T00:00:00\x2b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "Pablo M.",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"description": ""
+    }
+    </script><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/css/lib/forkawesome/forkawesome.min.css"><link rel="stylesheet" href="/css/lib/animate/animate.min.css"></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {
+                window.isDark = 'light' === 'dark';
+            } else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header bounceIn">
+            <a href="/">Pablo M.</a>
+        </div>
+        <div class="navbar-menu"><a class="menu-item" href="/posts" title="">Posts</a><a class="menu-item" href="/tags" title="">Tags</a><a class="menu-item" href="/recursos" title="">Recursos</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title=""></i></a>
+        </div>
+    </div>
+</nav><nav class="navbar-mobile">
+    <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="/">Pablo M.</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="/posts" title="">Posts</a><a class="menu-item" href="/tags" title="">Tags</a><a class="menu-item" href="/recursos" title="">Recursos</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title=""></i></a>
+        </div>
+    </div>
+</nav>
+<main class="main">
+                <div class="container"><article class="page"><h1 class="post-title flipInX">Estadística y la Final Four de Belgrado</h1><div class="post-meta">
+            <div class="post-meta-main"></div>
+            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2018-05-13>2018-05-13</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;</div>
+        </div><div class="post-content">
+<!-- Llamamos a ChartJS y centramos los canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<style media="screen">
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 500px;
+    height: 400px;
+}
+</style>
+
+<p>Ahora que ya tenemos al caer la <a href="http://www.euroleague.net/final-four/belgrade-2018" target="_blank">Final Four de Belgrado</a>
+, vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los <em>Playoff</em>. He tomado las siguientes variables:</p>
+<div class="tg-wrap"><table><tr><td>3PA</td><td>3-Point Attempted</td><td>3-Puntos Intentados</td></tr><tr><td>3PM</td><td>3-Point Made</td><td>3-Puntos Anotados</td></tr><tr><td>FGA</td><td>Field Goals Attempted</td><td>Tiros de Campo Intentados</td></tr><tr><td>FGM</td><td>Field Goals Made</td><td>Tiros de Campo Anotados</td></tr><tr><td>PTS</td><td>Points</td><td>Puntos</td></tr><tr><td>BLK</td><td>Blocks</td><td>Tapones</td></tr><tr><td>TO</td><td>Turnovers</td><td>Pérdidas</td></tr><tr><td>STL</td><td>Steals</td><td>Robos</td></tr><tr><td>AST</td><td>Assists</td><td>Asistencias</td></tr><tr><td>Def. REB</td><td>Defensive Rebounds</td><td>Rebotes Defensivos</td></tr><tr><td>Off. REB</td><td>Offensive Rebounds</td><td>Rebotes Ofensivos</td></tr></table></div>
+<!-- REESCRIBIR COMO UNA PERSONA NORMAL OSTIA!! -->
+<p>He elegido estas porque creo que son bastante representativas a la hora de comparar dos equipos. Tras recoger los datos ofrecidos por la web de la <em>Euroliga</em>, hago una gráfica tipo <em>FIFA</em>, <em>PES</em>, etc. Es lo que se suele llamar una <em>Radar Chart</em>.</p>
+<p>Antes de sacar conclusiones voy a explicar que está representado. En ambas gráficas he tomado la media de la temporada regular 2017/2018. Para la primera se han calculado los valores tomando el 100% como el máximo, y sobre este cuanto corresponde los siguientes valores. En la segunda se normalizan los datos, por lo que el máximo es 1 y el mínimo es 0. De esta forma se aprecian mejor las diferencias, pero no queda tan llamativo como la primera gráfica.</p>
+<p>(<em>Nota</em>: si se pincha en el color del equipo en la leyenda se oculta dicho equipo)</p>
+<!-- Canvas de la Temporada Regular -->
+<p><canvas id="canvas_reg_per" height="400" width="500"></canvas>
+ </p>
+<p><canvas id="canvas_reg_uno" height="400" width="500"></canvas></p>
+<p>Ahora ya si podemos empezar ha valorar la temporada regular, pero lo haré según los enfrentamiento de semifinales.</p>
+<!-- COMPLETAR -->
+<p><strong>CSKA-Real Madrid</strong>. Obviamente el CSKA es el equipo con mayor anotación, tiros de campo anotados y robos por partido. El Real Madrid tiene mayor cantidad de triples anotados pero también intentados, cosa que si lo vemos en el CSKA tienen menos triples anotados pero son más efectivos. Otro aspecto fundamental a favor del Real Madrid son los rebotes defensivos.</p></p>
+<p><strong>Fenerbahce-Zalgiris</strong>. Al ver las gráficas tenderíamos a decir que el Fenerbahce lo tiene &ldquo;fácil&rdquo;. Pero si hacemos una lectura tranquilamente veremos que los tiros de campo ambos equipos están igualados, y al porcentaje de triples le pasa lo mismo, pero con una salvedad, el Fenerbahce anota algunos más. Con el tipo de baloncesto actual esto puede suponer la victoria.</p>
+ </p>
+<a class="post-dummy-target" id="playoff"></a><h2>Playoff</h2>
+<p>Durante los <em>Playoff</em> los equipos pueden haber perdido/recuperado jugadores importantes, cambiado los esquemas por las eliminatorias u otros factores, por lo que resulta interesante observar si ha habido grandes cambios.</p>
+<!-- Canvas de la Temporada Regular -->
+<p><canvas id="canvas_play_per" height="400" width="500"></canvas>
+ </p>
+<p><canvas id="canvas_play_uno" height="400" width="500"></canvas></p>
+<p><strong>CSKA-Real Madrid</strong>. CSKA mejora en puntos, rebotes ofensivos y tiros de campo, vamos que mejora su parte ofensiva aún dejando un poco atrás el triple. El Real Madrid baja en casi todos los aspectos excepto en el rebote defensivo.</p>
+<p><strong>Fenerbahce-Zalgiris</strong>. Fenerbahce ha seguido en su línea pero mejorando en los tiros y anotación, por contra de no coger tantos rebotes como durante la temporada regular. Zalgiris se ha hecho fuerte en defensa, cogienddo más rebotes, perdiendo menos balones además de anotar más aún no siendo el triple su principal baza.</p>
+<p> </p>
+<a class="post-dummy-target" id="jugadores"></a><h2>Jugadores</h2>
+<p>Para terminar voy a hacer un gráfico de burbujas (o <em>bubble plot</em>) con algunas de las categorías más relevantes en la estadística. Lo haré para la temporada regular y tomando la media por partido.</p>
+<a class="post-dummy-target" id="media-en-tiros-de-2-en-"></a><h3>Media en tiros de 2 (en %)</h3>
+<img src="/img/euro_17-18/Season_2FG.svg" height="400"/>
+<a class="post-dummy-target" id="media-en-tiros-de-3-en-"></a><h3>Media en tiros de 3 (en %)</h3>
+<img src="/img/euro_17-18/Season_3FG.svg" height="400"/>
+<a class="post-dummy-target" id="media-de-puntos-por-partido"></a><h3>Media de puntos por partido</h3>
+<img src="/img/euro_17-18/Season_Puntos.svg" height="400"/>
+<a class="post-dummy-target" id="media-de-rebotes-por-partido"></a><h3>Media de rebotes por partido</h3>
+<img src="/img/euro_17-18/Season_Rebotes.svg" height="400"/>
+<a class="post-dummy-target" id="media-de-asistencias-por-partido"></a><h3>Media de asistencias por partido</h3>
+<img src="/img/euro_17-18/Season_Asistencias.svg" height="400"/>
+<a class="post-dummy-target" id="media-de-robos-por-partido"></a><h3>Media de robos por partido</h3>
+<img src="/img/euro_17-18/Season_Robos.svg" height="400"/>
+<!-- Scripts de los Radar Charts Temporada Regular -->
+<script src="/js/euro17-18/radar_chart_regular_per.js"></script>
+<script src="/js/euro17-18/radar_chart_regular_uno.js"></script>
+<!-- Scripts de los Radar Charts Playoff -->
+<script src="/js/euro17-18/radar_chart_playoff_per.js"></script>
+<script src="/js/euro17-18/radar_chart_playoff_uno.js"></script>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><span></span></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><span class="tag">
+                        <a href="/tags/data/"><i class="fas fa-tag fa-fw"></i>&nbsp;data</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="/tags/data-science/"><i class="fas fa-tag fa-fw"></i>&nbsp;data science</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="/tags/deporte/"><i class="fas fa-tag fa-fw"></i>&nbsp;deporte</a>&nbsp;
+                    </span></section>
+        <section>
+            <span><a href="javascript:window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2018/04/2018-0401_tex-cap01/" class="prev" rel="prev" title="[LaTeX] Capítulo 1: Compiladores"><i class="fas fa-angle-left fa-fw"></i>[LaTeX] Capítulo 1: Compiladores</a>
+            <a href="/2019/02/2019-0201_vim-spell-checking/" class="next" rel="next" title="[Vim] Corrección Ortográfica">[Vim] Corrección Ortográfica<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="post-comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |  Proudly Made on Earth <i class="far fa-heart fa-fw"></i></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll>
+            <span>&nbsp;</span>
+        </a><script src="/js/lib/jquery/jquery.slim.min.js"></script><script src="/js/lib/lazysizes/lazysizes.min.js"></script><script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script><link rel="stylesheet" href="/css/lib/katex/katex.min.css"><script src="/js/lib/katex/katex.min.js"></script><script defer src="/js/lib/katex/auto-render.min.js"></script><link rel="stylesheet" href="/css/lib/katex/copy-tex.min.css"><script defer src="/js/lib/katex/copy-tex.min.js"></script><script defer src="/js/lib/katex/mhchem.min.js"></script><script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true },{ left: "$", right: "$", display: false },]
+            });
+        });
+    </script><script src="/js/blog.min.js"></script>
+</body>
+</html>
