@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Pablo M.</title>
+    <link>/pages/</link>
+    <description>Recent content in Pages on Pablo M.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 08 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recursos</title>
+      <link>/recursos/</link>
+      <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/recursos/</guid>
+      <description> [LaTeX] Notas y Trucos   </description>
+    </item>
+    
+    <item>
+      <title>[LaTeX] Notas y Trucos</title>
+      <link>/pages/latex-notas-trucos/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/latex-notas-trucos/</guid>
+      <description>En esta página voy a ir almacenando pequeños trucos para la realización de documentos (no es la típica cheatsheet). Se trata más bien de las cosas usuales que nos surgen, como hacer anotaciones al margen, texto que envuelve una imagen, etc.
+Listas ordenadas por letras Para tener listas ordenadas con letras minúsculas, usamos el paquete enumitem:
+1 2 3  \begin{enumerate}[label=\alph*] \end{enumerate}   Esto no daría una salida como la siguiente:</description>
+    </item>
+    
+  </channel>
+</rss>

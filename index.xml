@@ -9,50 +9,10 @@
                 <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate><guid>/posts/</guid>
                 <description></description>
             </item><item>
-                <title>Recursos</title>
-                <link>/recursos/</link>
-                <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate><guid>/recursos/</guid>
-                <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/latex-notas-trucos&#34;&gt;[LaTeX] Notas y Trucos&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-            </item><item>
-                <title>[LaTeX] Notas y Trucos</title>
-                <link>/latex-notas-trucos/</link>
-                <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate><guid>/latex-notas-trucos/</guid>
-                <description>&lt;p&gt;En esta página voy a ir almacenando pequeños trucos para la realización de documentos (no es la típica &lt;em&gt;cheatsheet&lt;/em&gt;). Se trata más bien de las cosas usuales que nos surgen, como hacer anotaciones al margen, texto que envuelve una imagen, etc.&lt;/p&gt;
-&lt;h3 id=&#34;listas-ordenadas-por-letras&#34;&gt;Listas ordenadas por letras&lt;/h3&gt;
-&lt;p&gt;Para tener listas ordenadas con letras minúsculas, usamos el paquete &lt;code&gt;enumitem&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[label=&lt;span class=&#34;k&#34;&gt;\alph&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;*&lt;/span&gt;]
-
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Esto no daría una salida como la siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;a) Item
-b) Item
-c) Item
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;anotaciones-al-margen&#34;&gt;Anotaciones al margen&lt;/h3&gt;
-&lt;p&gt;Con el paquete &lt;code&gt;marginnote&lt;/code&gt; tenemos más flexibilidad para usar notas al margen, como por ejemplo especificar la geometría de las notas. &lt;a href=&#34;https://www.ctan.org/pkg/marginnote&#34; target=&#34;_blank&#34;&gt;Documentación oficial&lt;/a&gt;
-&lt;/p&gt;
-</description>
+                <title>Pages</title>
+                <link>/pages/</link>
+                <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate><guid>/pages/</guid>
+                <description></description>
             </item><item>
                 <title>About</title>
                 <link>/about/</link>

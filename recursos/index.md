@@ -1,4 +1,5 @@
 # Recursos
 
 
-+ [[LaTeX] Notas y Trucos](/latex-notas-trucos)
++ [[LaTeX] Notas y Trucos](/pages/latex-notas-trucos)
+
