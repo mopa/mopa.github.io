@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>[Linux] Matar Procesos | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/2019/07/abrir-con-vim-en-xfce/" /><link rel="canonical" href="/2020/02/linux-matar-procesos/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="[Linux] Matar Procesos" />
+<meta property="og:description" content="No existen sistemas infalibles y de vez en cuando las aplicaciones se quedan congeladas, no responden y por más que pinchemos el botón de cerrar no quiere cerrarse. En estos casos recurrimos a la terminal y podríamos usar xkill, pero puede pasar que notemos el sistema lento y no sepamos de donde viene. Para estas situaciones y conocer mejor lo que se está ejecutando, voy a mostrar de forma (intentaré que sea breve) ver los procesos que más usan la CPU y la memoria." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2020/02/linux-matar-procesos/" />
+<meta property="article:published_time" content="2020-02-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-10T00:00:00+00:00" />
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Linux] Matar Procesos",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/2020\/02\/linux-matar-procesos\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "linux, commands, tips","wordcount":  556 ,
+        "url": "\/2020\/02\/linux-matar-procesos\/","datePublished": "2020-02-10T00:00:00\x2b00:00","dateModified": "2020-02-10T00:00:00\x2b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "Pablo M.",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"description": ""
+    }
+    </script><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/css/lib/forkawesome/forkawesome.min.css"><link rel="stylesheet" href="/css/lib/animate/animate.min.css"></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {
+                window.isDark = 'light' === 'dark';
+            } else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header bounceIn">
+            <a href="/">Pablo M.</a>
+        </div>
+        <div class="navbar-menu"><a class="menu-item" href="/posts" title="">Posts</a><a class="menu-item" href="/tags" title="">Tags</a><a class="menu-item" href="/recursos" title="">Recursos</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title=""></i></a>
+        </div>
+    </div>
+</nav><nav class="navbar-mobile">
+    <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="/">Pablo M.</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="/posts" title="">Posts</a><a class="menu-item" href="/tags" title="">Tags</a><a class="menu-item" href="/recursos" title="">Recursos</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title=""></i></a>
+        </div>
+    </div>
+</nav>
+<main class="main">
+                <div class="container"><article class="page"><h1 class="post-title flipInX">[Linux] Matar Procesos</h1><div class="post-meta">
+            <div class="post-meta-main"></div>
+            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-10>2020-02-10</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;</div>
+        </div><div class="post-toc" id="post-toc">
+                <h2 class="post-toc-title"></h2>
+                <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#ver-los-procesos-en-ejecución">Ver los procesos en ejecución</a>
+      <ul>
+        <li><a href="#ps">PS</a></li>
+        <li><a href="#htop">HTOP</a></li>
+      </ul>
+    </li>
+    <li><a href="#matar-procesos">Matar procesos</a>
+      <ul>
+        <li><a href="#usando-el-pid-del-proceso">Usando el PID del proceso</a></li>
+        <li><a href="#usando-el-nombre-del-proceso">Usando el nombre del proceso</a></li>
+        <li><a href="#usando-parte-del-nombre-del-proceso">Usando parte del nombre del proceso</a></li>
+      </ul>
+    </li>
+    <li><a href="#matar-un-proceso-zombi">Matar un proceso zombi</a></li>
+  </ul>
+</nav></div>
+            </div>
+            <div class="post-toc-mobile" id="post-toc-mobile">
+                <details>
+                    <summary>
+                        <div class="post-toc-title">
+                            <span></span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="post-toc-content"><nav id="TableOfContentsMobile">
+  <ul>
+    <li><a href="#ver-los-procesos-en-ejecución">Ver los procesos en ejecución</a>
+      <ul>
+        <li><a href="#ps">PS</a></li>
+        <li><a href="#htop">HTOP</a></li>
+      </ul>
+    </li>
+    <li><a href="#matar-procesos">Matar procesos</a>
+      <ul>
+        <li><a href="#usando-el-pid-del-proceso">Usando el PID del proceso</a></li>
+        <li><a href="#usando-el-nombre-del-proceso">Usando el nombre del proceso</a></li>
+        <li><a href="#usando-parte-del-nombre-del-proceso">Usando parte del nombre del proceso</a></li>
+      </ul>
+    </li>
+    <li><a href="#matar-un-proceso-zombi">Matar un proceso zombi</a></li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="post-content"><p>No existen sistemas infalibles y de vez en cuando las aplicaciones se quedan congeladas, no responden y por más que pinchemos el botón de cerrar no quiere cerrarse. En estos casos recurrimos a la terminal y podríamos usar <code>xkill</code>, pero puede pasar que notemos el sistema lento y no sepamos de donde viene. Para estas situaciones y conocer mejor lo que se está ejecutando, voy a mostrar de forma (intentaré que sea breve) ver los procesos que más usan la CPU y la memoria.</p>
+<a class="post-dummy-target" id="ver-los-procesos-en-ejecución"></a><h2>Ver los procesos en ejecución</h2>
+<p>Tenemos varias opciones: el administrador del sistema (depende la distribución que uses), <code>top</code>, <code>ps</code>, <code>htop</code>, &hellip; y un sin fin de utilidades gráficas y por <a href="https://es.wikipedia.org/wiki/Interfaz_de_l%C3%ADnea_de_comandos?oldformat=true" target="_blank">CLI</a>
+. Aquí trataré solo con <code>ps</code> y <code>htop</code>.</p>
+<a class="post-dummy-target" id="ps"></a><h3>PS</h3>
+<p>Con <code>ps</code> se pueden hacer auténticas maravillas, pero vamos a lo que nos interesa. Vamos a listar los procesos de todos los usuarios (<code>-a</code>), la información del proceso (<code>-u</code>) y listar los procesos de todas las terminales y usuarios (<code>-x</code>):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ps aux
+</code></pre></td></tr></table>
+</div>
+</div><p>Esto nos saca un <em>tochaco</em> que a primera vista no gusta nada, vamos a refinarlo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ps axc -o cmd:18,%cpu --sort<span class="o">=</span>-%cpu <span class="p">|</span> head
+</code></pre></td></tr></table>
+</div>
+</div><p>Ahora mucho mejor, el comando anterior nos muestra de forma ordenada los procesos que están consumuendo mayor cantidad de CPU. <em>Tip</em>: usa un <tt>alias</tt> en tu <code>.bashrc</code> para ejecutarlo rapidamente.</p>
+<a class="post-dummy-target" id="htop"></a><h3>HTOP</h3>
+<p>Otra forma de ver en vivo y en directo el consumo e información de los procesos, es con el comando <code>htop</code>, que por defecto no viene instalado en algunas distribuciones. Solo hemos de ejecutar:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">htop
+</code></pre></td></tr></table>
+</div>
+</div><p>Con <tt>F3</tt> buscamos la aplicación que nos interese, con <tt>F6</tt> tenemos más opciones de ordenar los procesos, etc.</p>
+<a class="post-dummy-target" id="matar-procesos"></a><h2>Matar procesos</h2>
+<a class="post-dummy-target" id="usando-el-pid-del-proceso"></a><h3>Usando el PID del proceso</h3>
+<p>Una forma de realizar esta acción es a través del <a href="https://es.wikipedia.org/wiki/Identificador_de_proceso?oldformat=true" target="_blank">PID</a>
+ del proceso, para conocer al susodicho tenemos varias opciones. Por ejemplo para conocer el PID de firefox:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ps -ef <span class="p">|</span> grep firefox
+
+pidof firefox
+</code></pre></td></tr></table>
+</div>
+</div><p>El segundo es mucho más fácil puesto que nos saca directamente lo que buscamos. Ahora para matarlo usamos <code>kill</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">kill</span> -9 PID
+</code></pre></td></tr></table>
+</div>
+</div><p>El parámetro <code>-9</code> quiere decir que <em>mata al proceso</em>, puede parecer redundante pero tiene que ver con las <a href="https://en.wikipedia.org/wiki/Signal_%28IPC%29?oldformat=true#Sending_signals" target="_blank">señales del sistema</a>
+.</p>
+<a class="post-dummy-target" id="usando-el-nombre-del-proceso"></a><h3>Usando el nombre del proceso</h3>
+<p>El comando <code>killall</code> termina con todos los programas que conincidan con el nombre que le pasemos. Por ejemplo para matar firefox:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">killall -9 firefox
+</code></pre></td></tr></table>
+</div>
+</div><p>Tenemos más opciones, una de ellas es poder terminar todos los procesos que está corriendo un usuario en particular:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo killall -u usuario
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="usando-parte-del-nombre-del-proceso"></a><h3>Usando parte del nombre del proceso</h3>
+<p>Con <code>pkill</code> matamos los proceso especificando el nombre o parte del nombre. Al igual que en los ejemplos anteriores:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pkill -9 firefox
+</code></pre></td></tr></table>
+</div>
+</div><p><code>pkill</code> puede enviar la señal al proceso de un usuario. Esto es, que queremos matar firefox para un usuario particular:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pkill -9 -u usuario firefox
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="matar-un-proceso-zombi"></a><h2>Matar un proceso zombi</h2>
+<p>Existen ocasiones que ejecutamos un programa y al cerrarlo dicho programa no se elimina de la tabla de procesos. No son dañinos pero ocupan espacio en la RAM. Es poco comun tener este tipo de procesos pero se puede dar el caso, de modo que vamos a buscarlos y eliminarlos.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ps aux <span class="p">|</span> grep Z
+</code></pre></td></tr></table>
+</div>
+</div><p>Este comando nos lista los procesos zombi junto con su PID, por lo que ya solo queda hacer un <code>kill -9 PID</code>.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><span></span></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><span class="tag">
+                        <a href="/tags/linux/"><i class="fas fa-tag fa-fw"></i>&nbsp;linux</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="/tags/commands/"><i class="fas fa-tag fa-fw"></i>&nbsp;commands</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="/tags/tips/"><i class="fas fa-tag fa-fw"></i>&nbsp;tips</a>&nbsp;
+                    </span></section>
+        <section>
+            <span><a href="javascript:window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2019/07/abrir-con-vim-en-xfce/" class="prev" rel="prev" title="Abrir con VIM en Xfce"><i class="fas fa-angle-left fa-fw"></i>Abrir con VIM en Xfce</a></div>
+</div>
+<div class="post-comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |  Proudly Made on Earth <i class="far fa-heart fa-fw"></i></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll>
+            <span>&nbsp;</span>
+        </a><script src="/js/lib/jquery/jquery.slim.min.js"></script><script src="/js/lib/lazysizes/lazysizes.min.js"></script><script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script><link rel="stylesheet" href="/css/lib/katex/katex.min.css"><script src="/js/lib/katex/katex.min.js"></script><script defer src="/js/lib/katex/auto-render.min.js"></script><link rel="stylesheet" href="/css/lib/katex/copy-tex.min.css"><script defer src="/js/lib/katex/copy-tex.min.js"></script><script defer src="/js/lib/katex/mhchem.min.js"></script><script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true },{ left: "$", right: "$", display: false },]
+            });
+        });
+    </script><script src="/js/blog.min.js"></script>
+</body>
+</html>

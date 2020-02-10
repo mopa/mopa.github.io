@@ -14,20 +14,20 @@
     
     <item>
       <title>Abrir con VIM en Xfce</title>
-      <link>/2019/07/2019-0723_vim-xfce/</link>
+      <link>/2019/07/abrir-con-vim-en-xfce/</link>
       <pubDate>Tue, 23 Jul 2019 17:03:39 +0200</pubDate>
       
-      <guid>/2019/07/2019-0723_vim-xfce/</guid>
+      <guid>/2019/07/abrir-con-vim-en-xfce/</guid>
       <description>Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&amp;hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
 1 2 3  Exec=xfce4-terminal -e &amp;#34;vim %F&amp;#34; Terminal=false   Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces.</description>
     </item>
     
     <item>
       <title>[Vim] Corrección Ortográfica</title>
-      <link>/2019/02/2019-0201_vim-spell-checking/</link>
+      <link>/2019/02/vim-correccion-ortografica/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/02/2019-0201_vim-spell-checking/</guid>
+      <guid>/2019/02/vim-correccion-ortografica/</guid>
       <description>Poco a poco voy conociendo más cosas sobre Vim, y lo que antes me parecía un tarea ardua ahora lo hago con más rapidez. Cierto es que al principio cuesta y una cosa que echaba de menos era tener un corrector ortográfico (por lo que pudiera pasar). Voy a mostrar varias cositas y trucos para tener lo necesario ante este tema.
 Para activarlo lo hacemos con el comando:
 1  :setlocal spell   Esto puede (probablemente) no escoja por defecto nuestro idioma, pero tranquilos no pasa nada, lo especificamos tal que</description>

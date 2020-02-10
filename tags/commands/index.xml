@@ -14,10 +14,10 @@
     
     <item>
       <title>[Linux] Matar Procesos</title>
-      <link>/2020/02/2020-0210_linux-matar-procesos/</link>
+      <link>/2020/02/linux-matar-procesos/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/02/2020-0210_linux-matar-procesos/</guid>
+      <guid>/2020/02/linux-matar-procesos/</guid>
       <description>No existen sistemas infalibles y de vez en cuando las aplicaciones se quedan congeladas, no responden y por más que pinchemos el botón de cerrar no quiere cerrarse. En estos casos recurrimos a la terminal y podríamos usar xkill, pero puede pasar que notemos el sistema lento y no sepamos de donde viene. Para estas situaciones y conocer mejor lo que se está ejecutando, voy a mostrar de forma (intentaré que sea breve) ver los procesos que más usan la CPU y la memoria.</description>
     </item>
     
