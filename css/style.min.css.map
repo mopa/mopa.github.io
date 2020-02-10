@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/home/prismo/Sync/1-Projects/Blog_Hugo/hugo-source",
+	"sourceRoot": "/home/kiyoshi/Sync/1-Projects/Blog_Hugo/hugo-source",
 	"sources": [
 		"themes/LoveIt/assets/css/style.scss",
 		"themes/LoveIt/assets/css/_variables.scss",

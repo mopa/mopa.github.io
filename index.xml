@@ -3,7 +3,12 @@
         <title>Pablo M. | Pablo M.</title>
         <link>/</link>
         <description>Pablo M. | Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 08 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml" /><item>
+                <title>Posts</title>
+                <link>/posts/</link>
+                <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate><guid>/posts/</guid>
+                <description></description>
+            </item><item>
                 <title>Recursos</title>
                 <link>/recursos/</link>
                 <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate><guid>/recursos/</guid>
@@ -48,11 +53,6 @@ c) Item
 &lt;p&gt;Con el paquete &lt;code&gt;marginnote&lt;/code&gt; tenemos más flexibilidad para usar notas al margen, como por ejemplo especificar la geometría de las notas. &lt;a href=&#34;https://www.ctan.org/pkg/marginnote&#34; target=&#34;_blank&#34;&gt;Documentación oficial&lt;/a&gt;
 &lt;/p&gt;
 </description>
-            </item><item>
-                <title>Posts</title>
-                <link>/posts/</link>
-                <pubDate>Tue, 23 Jul 2019 17:03:39 +0200</pubDate><guid>/posts/</guid>
-                <description></description>
             </item><item>
                 <title>About</title>
                 <link>/about/</link>
