@@ -1,4 +1,4 @@
-# [LaTeX/Pandoc] Tutorial Basico
+# [LaTeX/Pandoc] Tutorial Básico
 
 
 
@@ -134,6 +134,10 @@ make clean
 
 Este archivo <tt>make</tt> es muy básico, se pueden hacer un montón de cosas a partir de aquí. Esta forma de automatizar el proceso es realmente simple y rápida, aunque dependiendo del editor que se use también es posible sin tener que usar un <tt>makefile</tt>.
 
+*Workflow*:
+<video controls width='600'>
+	<source src='/img/latex-pandoc-workflow.webm' type="video/webm">
+</video>
 
 ### Referencias
 
