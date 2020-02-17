@@ -136,7 +136,7 @@ Este archivo <tt>make</tt> es muy básico, se pueden hacer un montón de cosas a
 
 *Workflow*:
 
-<video controls width='600'>
+<video controls style="width:100%; height:auto;">
 	<source src='/img/latex-pandoc-workflow.webm' type="video/webm">
 </video>
 
