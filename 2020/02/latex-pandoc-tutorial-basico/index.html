@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>[LaTeX/Pandoc] Tutorial Basico | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/2020/02/linux-matar-procesos/" /><link rel="canonical" href="/2020/02/latex-pandoc-tutorial-basico/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="[LaTeX/Pandoc] Tutorial Basico" />
+<meta property="og:description" content="Desde que uso Markdown realizar documentos se ha convertido en una tarea realmente fácil y rápida. Es cierto que en formato RAW no lo podemos enviar de forma general, se vuelve necesario convertirlo a PDF. Y en esta tarea es donde entra en juego Pandoc , el cual es un conversor de documentos libre y de código abierto.
+Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en una combinación perfecta y personalizable." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2020/02/latex-pandoc-tutorial-basico/" />
+<meta property="article:published_time" content="2020-02-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-17T00:00:00+00:00" />
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[LaTeX\/Pandoc] Tutorial Basico",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/2020\/02\/latex-pandoc-tutorial-basico\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "latex, pandoc, tutorial","wordcount":  750 ,
+        "url": "\/2020\/02\/latex-pandoc-tutorial-basico\/","datePublished": "2020-02-17T00:00:00\x2b00:00","dateModified": "2020-02-17T00:00:00\x2b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "Pablo M.",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"description": ""
+    }
+    </script><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/css/lib/forkawesome/forkawesome.min.css"><link rel="stylesheet" href="/css/lib/animate/animate.min.css"></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {
+                window.isDark = 'light' === 'dark';
+            } else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header bounceIn">
+            <a href="/">Pablo M.</a>
+        </div>
+        <div class="navbar-menu"><a class="menu-item" href="/posts" title="">Posts</a><a class="menu-item" href="/tags" title="">Tags</a><a class="menu-item" href="/recursos" title="">Recursos</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title=""></i></a>
+        </div>
+    </div>
+</nav><nav class="navbar-mobile">
+    <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="/">Pablo M.</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="/posts" title="">Posts</a><a class="menu-item" href="/tags" title="">Tags</a><a class="menu-item" href="/recursos" title="">Recursos</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title=""></i></a>
+        </div>
+    </div>
+</nav>
+<main class="main">
+                <div class="container"><article class="page"><h1 class="post-title flipInX">[LaTeX/Pandoc] Tutorial Basico</h1><div class="post-meta">
+            <div class="post-meta-main"></div>
+            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-17>2020-02-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;</div>
+        </div><div class="post-toc" id="post-toc">
+                <h2 class="post-toc-title"></h2>
+                <div class="post-toc-content"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#instalación">Instalación</a></li>
+        <li><a href="#uso-básico">Uso básico</a></li>
+        <li><a href="#plantillas">Plantillas</a></li>
+        <li><a href="#automatizar-todo-el-proceso">Automatizar todo el proceso</a>
+          <ul>
+            <li><a href="#metadatos-yaml-y-makefile">Metadatos YAML y Makefile</a></li>
+          </ul>
+        </li>
+        <li><a href="#referencias">Referencias</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div>
+            <div class="post-toc-mobile" id="post-toc-mobile">
+                <details>
+                    <summary>
+                        <div class="post-toc-title">
+                            <span></span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="post-toc-content"><nav id="TableOfContentsMobile">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#instalación">Instalación</a></li>
+        <li><a href="#uso-básico">Uso básico</a></li>
+        <li><a href="#plantillas">Plantillas</a></li>
+        <li><a href="#automatizar-todo-el-proceso">Automatizar todo el proceso</a>
+          <ul>
+            <li><a href="#metadatos-yaml-y-makefile">Metadatos YAML y Makefile</a></li>
+          </ul>
+        </li>
+        <li><a href="#referencias">Referencias</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="post-content"><p>Desde que uso <tt>Markdown</tt> realizar documentos se ha convertido en una tarea realmente fácil y rápida. Es cierto que en formato <a href="https://www.wikiwand.com/es/Raw_%28formato%29" target="_blank">RAW</a>
+ no lo podemos enviar de forma general, se vuelve necesario convertirlo a PDF. Y en esta tarea es donde entra en juego <a href="https://pandoc.org/" target="_blank">Pandoc</a>
+, el cual es un conversor de documentos libre y de código abierto.</p>
+<p>Pandoc usa nuestro amado <tt>LaTeX</tt> para convertir a PDF, con lo que se convierte en una combinación perfecta y personalizable.</p>
+<a class="post-dummy-target" id="instalación"></a><h3>Instalación</h3>
+<p>Dado que uso Manjaro pongo el comando para este, pero para las demás distribuciones habidas y por haber el comando es similar (según se use <em>apt</em>, <em>yum</em>, etc.):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S pandoc
+</code></pre></td></tr></table>
+</div>
+</div><p>Para tener una completa integración instalamos los dos siguientes paquetes:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S pandoc-citeproc pandoc-crossref
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="uso-básico"></a><h3>Uso básico</h3>
+<p>El comando más básico de Pandoc es,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pandoc fileINPUT.txt -o fileOUTPUT.pdf
+</code></pre></td></tr></table>
+</div>
+</div><p>Las extensiones que he puesto son de ejemplo, puedes ver algunas <a href="https://pandoc.org/demos.html" target="_blank">demos  aquí</a>
+.</p>
+<p>Tenemos varias opciones para pasarle a Pandoc, pero como vamos a usar LaTeX, dos que nos interesan son</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">--latex-engine<span class="o">=</span>COMPILADOR
+--template<span class="o">=</span>RUTA
+</code></pre></td></tr></table>
+</div>
+</div><p>La primera opción es la elección del compilador, ya sea <tt>pdflatex</tt>, <tt>xelatex</tt>, etc. Y la segunda opción es la ubicacion de la plantilla que vamos a usar. Esta es una de las cosas que más me gustan, eliges el estilo del documento al instante.</p>
+<p>Pandoc nos provee de una plantilla por defecto, que podemos extraer con</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pandoc -D latex &gt; plantilla.latex
+</code></pre></td></tr></table>
+</div>
+</div><p>A partir de esta personalizamos nuestra plantilla y la podemos colocar (por ejemplo) en <code>\home\user\.config\pandoc</code>.</p>
+<a class="post-dummy-target" id="plantillas"></a><h3>Plantillas</h3>
+<p>Un buen punto de inicio es usar <a href="https://github.com/jgm/pandoc-templates/blob/master/default.latex" target="_blank">esta plantilla</a>
+ que es la del <a href="https://github.com/jgm" target="_blank">autor</a>
+ de Pandoc, y a partir de esta modificar a nuestro gusto.</p>
+<p>En la documentación de Pandoc podemos ver la <a href="https://pandoc.org/MANUAL.html#template-syntax" target="_blank">sintaxis</a>
+ de las plantillas además de las <a href="https://pandoc.org/MANUAL.html#variables-for-latex" target="_blank">variables</a>
+ que usa para LaTeX.</p>
+<p>Las plantillas al principio son un poco caos, sobre todo por la cantidad de opciones y parámetros a usar. Por eso mismo y para no hacer muy largo el artículo, lo dejaré para más adelante y así dedicarle una entrada específica.</p>
+<a class="post-dummy-target" id="automatizar-todo-el-proceso"></a><h3>Automatizar todo el proceso</h3>
+<p>Al comando básico de Pandoc visto anteriormente se le pueden añadir más opciones como:</p>
+<ul>
+<li><code>-V</code>: asignamos valores a las variables de la plantilla, e.g., <code>-V documentclass=book</code>.</li>
+<li><code>--toc</code>: añadir un indice al documento.</li>
+<li><code>-N</code>: numera las secciones.</li>
+<li><code>--filter FILTRO</code>: añade funcionalidades adicionales incluidas en un filtro.</li>
+</ul>
+<p>Pasar todo esto en un solo comando se vuelve totalmente impracticable. Por ello vamos a usar <tt>YAML</tt> y <tt>MAKE</tt>.</p>
+<a class="post-dummy-target" id="metadatos-yaml-y-makefile"></a><h4>Metadatos YAML y Makefile</h4>
+<p>En la plantilla nos aparacen un montón de variables, para poder asiganarle valores de una forma cómoda vamos a usar un archivo <tt>YAML</tt>. Un modelo puede ser el siguiente:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="c"># Datos</span><span class="w">
+</span><span class="w"></span><span class="k">title</span><span class="p">:</span><span class="w"> </span>Título<span class="w">
+</span><span class="w"></span><span class="k">author</span><span class="p">:</span><span class="w"> </span>Nombre<span class="w">
+</span><span class="w"></span><span class="k">lang</span><span class="p">:</span><span class="w"> </span>es<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># Control</span><span class="w">
+</span><span class="w"></span><span class="k">toc</span><span class="p">:</span><span class="w"> </span>True<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># Formato</span><span class="w">
+</span><span class="w"></span><span class="k">documentclass</span><span class="p">:</span><span class="w"> </span>article<span class="w">
+</span><span class="w"></span><span class="k">geometry</span><span class="p">:</span><span class="w">
+</span><span class="w"></span>- top=1in<span class="w">
+</span><span class="w"></span>- bottom=1in<span class="w">
+</span><span class="w"></span>- right=<span class="m">0.</span>5in<span class="w">
+</span><span class="w"></span>- left=<span class="m">1.</span>5in<span class="w">
+</span><span class="w"></span><span class="k">mainfont</span><span class="p">:</span><span class="w"> </span>LiberationSans<span class="w">
+</span><span class="w"></span><span class="k">fontsize</span><span class="p">:</span><span class="w"> </span>12pt<span class="w">
+</span><span class="w"></span>---<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Este bloque <tt>YAML</tt> se puede añadir al inicio de nuestro Markdown o guardarlo en un archivo aparte e incluirlo en el comando de Pandoc:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pandoc datos.yaml input.md -o output.pdf
+</code></pre></td></tr></table>
+</div>
+</div><p>El comando se ha vuelto «manejable» pero aún así es largo por lo que vamos a crear un <strong><tt>Makefile</tt></strong>. Este archivo va a contener todas las órdenes y opciones para compilar nuestro Markdown.</p>
+<p>Primero creamos un archivo de nombre <code>makefile</code> (así tal cual, sin extensión ni nada), lo editamos y vamos a incluir el siguiente bloque de código:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">FILES = doc_markdown.md
+
+all:
+	pandoc \
+	--filter pandoc-crossref \
+	--filter pandoc-citeproc \
+	--template=/home/USER/.config/pandoc/plantilla.latex \
+	-N \
+	$(FILES) metadata.yaml \
+	-f markdown -o OUTPUT.pdf
+
+clean:
+	rm OUTPUT.pdf
+
+.PHONY: clean
+</code></pre></td></tr></table>
+</div>
+</div><p>Explico un poco que tenemos:</p>
+<ul>
+<li><code>FILES</code>: obviamente ahí indicamos el nombre del fichero Markdown.</li>
+<li><code>all</code>: el comando Pandoc junto con todas las opciones. La barra invertida <code>\</code> es para partir el comando y que sea más legible.</li>
+<li><code>clean</code>: para elminar el PDF.</li>
+<li><code>.PHONY</code>: por si hay algún archivo que se llame <em>clean</em>.</li>
+</ul>
+<p>Ahora solo nos queda llamar a <code>make</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">make
+</code></pre></td></tr></table>
+</div>
+</div><p>Si queremos borrar el PDF:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">make clean
+</code></pre></td></tr></table>
+</div>
+</div><p>Este archivo <tt>make</tt> es muy básico, se pueden hacer un montón de cosas a partir de aquí. Esta forma de automatizar el proceso es realmente simple y rápida, aunque dependiendo del editor que se use también es posible sin tener que usar un <tt>makefile</tt>.</p>
+<a class="post-dummy-target" id="referencias"></a><h3>Referencias</h3>
+<ul>
+<li><a href="https://ondiz.github.io/cursoLatex/Contenido/15.Pandoc.html" target="_blank">La opción Pandoc</a>
+</li>
+<li><a href="https://github.com/cben/mathdown/wiki/math-in-markdown" target="_blank">Math in MarkDown</a>
+</li>
+<li><a href="https://tex.stackexchange.com/questions/296990/latex-and-pandoc-templates" target="_blank">LaTeX and pandoc templates</a>
+</li>
+<li><a href="https://kesdev.com/you-got-latex-in-my-markdown/" target="_blank">You got LaTeX in my Markdown!</a>
+</li>
+<li><a href="https://jdhao.github.io/2019/05/30/markdown2pdf_pandoc/" target="_blank">Converting Markdown to Beautiful PDF with Pandoc</a>
+</li>
+<li><a href="https://pfctelepathy.wordpress.com/2015/05/11/intro-compilacion-linkado-y-makefiles-en-c/" target="_blank">[Intro] Compilación, Linkado y Makefiles en C</a>
+</li>
+<li><a href="https://gist.github.com/ekaitz-zarraga/f90f4c9c46a394e2048a#file-makefile" target="_blank">Generic Makefile for Markdown documentation </a>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><span></span></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><span class="tag">
+                        <a href="/tags/latex/"><i class="fas fa-tag fa-fw"></i>&nbsp;latex</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="/tags/pandoc/"><i class="fas fa-tag fa-fw"></i>&nbsp;pandoc</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="/tags/tutorial/"><i class="fas fa-tag fa-fw"></i>&nbsp;tutorial</a>&nbsp;
+                    </span></section>
+        <section>
+            <span><a href="javascript:window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2020/02/linux-matar-procesos/" class="prev" rel="prev" title="[Linux] Matar Procesos"><i class="fas fa-angle-left fa-fw"></i>[Linux] Matar Procesos</a></div>
+</div>
+<div class="post-comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |  Proudly Made on Earth <i class="far fa-heart fa-fw"></i></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll>
+            <span>&nbsp;</span>
+        </a><script src="/js/lib/jquery/jquery.slim.min.js"></script><script src="/js/lib/lazysizes/lazysizes.min.js"></script><script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script><link rel="stylesheet" href="/css/lib/katex/katex.min.css"><script src="/js/lib/katex/katex.min.js"></script><script defer src="/js/lib/katex/auto-render.min.js"></script><link rel="stylesheet" href="/css/lib/katex/copy-tex.min.css"><script defer src="/js/lib/katex/copy-tex.min.js"></script><script defer src="/js/lib/katex/mhchem.min.js"></script><script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true },{ left: "$", right: "$", display: false },]
+            });
+        });
+    </script><script src="/js/blog.min.js"></script>
+</body>
+</html>
