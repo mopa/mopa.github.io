@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Linux] Editar y Modificar PDFs</title>
+      <link>/2020/04/linux-editar-modificar-pdfs/</link>
+      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/04/linux-editar-modificar-pdfs/</guid>
+      <description>Cuando nos iniciamos en el mundo GNU/Linux hay una de las tareas más comunes que puede llegar a ser un suplicio: editar archivos PDF. Para operaciones tan básicas como unir o cortar páginas, encriptar, etc. tenía que recurrir a alguna web que realizaban estos propósitos o resignarme a hacer alguna treta.
+Dado que me estoy empezando a manejar mejor con aplicaciones en CLI (por aquello de automatizar procesos), busqué soluciones de este tipo y me encontré con dos: PDFtk y Xpdf.</description>
+    </item>
     
     <item>
       <title>[Linux] Matar Procesos</title>
