@@ -9,7 +9,7 @@ Dado que me estoy empezando a manejar mejor con aplicaciones en [CLI](https://es
 
 ### PDFtk
 
-En más de una ocasión he tenido que unir varios PDF, unir páginas de distintos PDF, eliminar páginas... todo de forma recursiva. Así que eso de ir uno a uno sería una locura, mejor que PDFtk lo haga. Primero instalamos el paquete, que obviamente dependerá de la distribución que useis:
+En más de una ocasión he tenido que unir varios PDF, unir páginas de distintos PDF, eliminar páginas... todo de forma recursiva. Así que eso de ir uno a uno sería una locura, mejor que PDFtk lo haga. Primero instalamos el paquete, que obviamente dependerá de la distribución que uséis:
 ```bash
 sudo apt install pdftk # Debian
 sudo pacman -S pdftk # Manjaro
@@ -45,9 +45,9 @@ pdftk in1.pdf dump_data output informe.txt
 Podemos encontrar más ejemplos en [PDFtk Server Examples](https://www.pdflabs.com/docs/pdftk-cli-examples/), como [añadir marcas de agua](https://www.pdflabs.com/docs/how-to-add-headers-footers-watermarks-and-stamps-to-pdf/), y nunca viene mal echar un vistazo al [manual](https://www.pdflabs.com/docs/pdftk-man-page/).
 
 
-### Xpdf
+## Xpdf
 
-Esta herramienta aunque es un visor (el cual ofrece algunas cosas interesantes), también puede realizar conversiones, extraer texto, extraer imagenes, analizar fuentes, extraer información, etc. Lo primero como siempre es instalar el paquete:
+Esta herramienta aunque es un visor (el cual ofrece algunas cosas interesantes), también puede realizar conversiones, extraer texto, extraer imágenes, analizar fuentes, extraer información, etc. Lo primero como siempre es instalar el paquete:
 ```bash
 sudo apt install xpdf # Debian
 sudo pacman -S xpdf # Manjaro
@@ -61,7 +61,7 @@ pdftotext in1.pdf out.odt
 pdftotext in1.pdf out.txt
 ```
 
-+ Extraer las imagenes y guardarlas en una carpeta:
++ Extraer las imágenes y guardarlas en una carpeta:
 ```bash
 pdfimages -all in1.pdf /ruta/carpeta
 ```

@@ -34,7 +34,7 @@ Listas ordenadas por letras Para tener listas ordenadas con letras minúsculas, 
                 "url": "\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "pages","keywords": "latex","wordcount":  104 ,
+            },"genre": "pages","keywords": "latex","wordcount":  218 ,
         "url": "\/pages\/latex-notas-trucos\/","datePublished": "2020-01-26T00:00:00\x2b00:00","dateModified": "2020-01-26T00:00:00\x2b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
                 "@type": "Organization",
                 "name": "Pablo M.",
@@ -108,7 +108,45 @@ c) Item
 </div><a class="post-dummy-target" id="anotaciones-al-margen"></a><h3>Anotaciones al margen</h3>
 <p>Con el paquete <code>marginnote</code> tenemos más flexibilidad para usar notas al margen, como por ejemplo especificar la geometría de las notas. <a href="https://www.ctan.org/pkg/marginnote" target="_blank">Documentación oficial</a>
 </p>
+<a class="post-dummy-target" id="eliminar-borde-de-los-enlaces"></a><h3>Eliminar borde de los enlaces</h3>
+<p>Es conocido que al usar el paquete <code>hyperref</code> nos hace las referencias cruzadas, pero al generar el documento PDF algunos lectores dibujan unos bordes rojos alrededor de estas referencias (o de enlaces). Para evitar esto usamos una de las opciones del propio paquete:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\usepackage</span><span class="na">[hidelinks]</span><span class="nb">{</span>hyperref<span class="nb">}</span>
+</code></pre></td></tr></table>
 </div>
+</div><p>o también</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\hypersetup</span><span class="nb">{</span>hidelinks<span class="nb">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Sin embargo, si lo que queremos es cambiar el color de los bordes o ponerlos más acordes a nuesro estilo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\hypersetup</span><span class="nb">{</span>
+  colorlinks   = true,  <span class="c">% Colorea los enlaces
+</span><span class="c"></span>  urlcolor     = blue,  <span class="c">% Color para los hyperlinks
+</span><span class="c"></span>  linkcolor    = blue,  <span class="c">% Color para los enlaces internos
+</span><span class="c"></span>  citecolor   = red     <span class="c">% Color para las citas
+</span><span class="c"></span><span class="nb">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></div>
     </div></div>
             </main><footer class="footer">
     <div class="copyright">

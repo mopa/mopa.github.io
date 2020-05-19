@@ -25,3 +25,26 @@ c) Item
 
 Con el paquete `marginnote` tenemos más flexibilidad para usar notas al margen, como por ejemplo especificar la geometría de las notas. [Documentación oficial](https://www.ctan.org/pkg/marginnote)
 
+
+### Eliminar borde de los enlaces
+
+Es conocido que al usar el paquete `hyperref` nos hace las referencias cruzadas, pero al generar el documento PDF algunos lectores dibujan unos bordes rojos alrededor de estas referencias (o de enlaces). Para evitar esto usamos una de las opciones del propio paquete:
+```latex
+\usepackage[hidelinks]{hyperref}
+```
+
+o también
+```latex
+\hypersetup{hidelinks}
+```
+
+Sin embargo, si lo que queremos es cambiar el color de los bordes o ponerlos más acordes a nuesro estilo:
+```latex
+\hypersetup{
+  colorlinks   = true,  % Colorea los enlaces
+  urlcolor     = blue,  % Color para los hyperlinks
+  linkcolor    = blue,  % Color para los enlaces internos
+  citecolor   = red     % Color para las citas
+}
+```
+
