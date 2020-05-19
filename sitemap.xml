@@ -2,15 +2,17 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>/2020/05/docker-inicio-b%C3%A1sico/</loc><lastmod>2020-05-19T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/docker/</loc><lastmod>2020-05-19T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/posts/</loc><lastmod>2020-05-19T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/</loc><lastmod>2020-05-19T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/tutorial/</loc><lastmod>2020-05-19T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2020/04/linux-editar-modificar-pdfs/</loc><lastmod>2020-04-14T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/linux/</loc><lastmod>2020-04-14T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/pdf/</loc><lastmod>2020-04-14T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/posts/</loc><lastmod>2020-04-14T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/tags/</loc><lastmod>2020-04-14T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2020/02/latex-pandoc-tutorial-basico/</loc><lastmod>2020-02-17T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/latex/</loc><lastmod>2020-02-17T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/pandoc/</loc><lastmod>2020-02-17T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/tags/tutorial/</loc><lastmod>2020-02-17T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2020/02/linux-matar-procesos/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/commands/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/tips/</loc><lastmod>2020-02-10T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>[Linux] Editar y Modificar PDFs | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>[Docker] Inicio  Básico | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
-<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/2020/02/latex-pandoc-tutorial-basico/" /><link rel="next" href="/2020/05/docker-inicio-b%C3%A1sico/" /><link rel="canonical" href="/2020/04/linux-editar-modificar-pdfs/" />
+<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/2020/04/linux-editar-modificar-pdfs/" /><link rel="canonical" href="/2020/05/docker-inicio-b%C3%A1sico/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -13,28 +13,30 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff"><meta property="og:title" content="[Linux] Editar y Modificar PDFs" />
-<meta property="og:description" content="Cuando nos iniciamos en el mundo GNU/Linux hay una de las tareas más comunes que puede llegar a ser un suplicio: editar archivos PDF. Para operaciones tan básicas como unir o cortar páginas, encriptar, etc. tenía que recurrir a alguna web que realizaban estos propósitos o resignarme a hacer alguna treta.
-Dado que me estoy empezando a manejar mejor con aplicaciones en CLI (por aquello de automatizar procesos), busqué soluciones de este tipo y me encontré con dos: PDFtk y Xpdf." />
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="[Docker] Inicio  Básico" />
+<meta property="og:description" content="En el mundo de los que nos gusta el cacharreo Docker se ha convertido en una herramienta casi obligada, nos evitamos reinstalaciones, «formateos» y demás engorrros con sus correspondientes pérdidas de tiempo.
+Se ha escrito mucho sobre Docker, lo que pretendo con esta pequeña introducción es dejar claras algunas deficiones, y ofrecer una serie de comandos básicos.
+Deficiones Docker Es como un gestor de paquetes tipo Snap o AppImage.
+Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servicio." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2020/04/linux-editar-modificar-pdfs/" />
-<meta property="article:published_time" content="2020-04-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-14T00:00:00+00:00" />
+<meta property="og:url" content="/2020/05/docker-inicio-b%C3%A1sico/" />
+<meta property="article:published_time" content="2020-05-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-19T00:00:00+00:00" />
 <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "[Linux] Editar y Modificar PDFs",
+        "headline": "[Docker] Inicio  Básico",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "\/2020\/04\/linux-editar-modificar-pdfs\/"
+            "@id": "\/2020\/05\/docker-inicio-b%C3%A1sico\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "linux, pdf","wordcount":  445 ,
-        "url": "\/2020\/04\/linux-editar-modificar-pdfs\/","datePublished": "2020-04-14T00:00:00\x2b00:00","dateModified": "2020-04-14T00:00:00\x2b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            },"genre": "posts","keywords": "docker, tutorial","wordcount":  329 ,
+        "url": "\/2020\/05\/docker-inicio-b%C3%A1sico\/","datePublished": "2020-05-19T00:00:00\x2b00:00","dateModified": "2020-05-19T00:00:00\x2b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
                 "@type": "Organization",
                 "name": "Pablo M.",
                 "logo": {
@@ -76,26 +78,29 @@ Dado que me estoy empezando a manejar mejor con aplicaciones en CLI (por aquello
     </div>
 </nav>
 <main class="main">
-                <div class="container"><article class="page"><h1 class="post-title flipInX">[Linux] Editar y Modificar PDFs</h1><div class="post-meta">
+                <div class="container"><article class="page"><h1 class="post-title flipInX">[Docker] Inicio  Básico</h1><div class="post-meta">
             <div class="post-meta-main"></div>
-            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-14>2020-04-14</time>&nbsp;
+            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-19>2020-05-19</time>&nbsp;
                 <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;</div>
         </div><div class="post-toc" id="post-toc">
                 <h2 class="post-toc-title"></h2>
                 <div class="post-toc-content"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#deficiones">Deficiones</a>
       <ul>
-        <li><a href="#pdftk">PDFtk</a></li>
+        <li><a href="#docker">Docker</a></li>
+        <li><a href="#imagen">Imagen</a></li>
+        <li><a href="#contenedor">Contenedor</a></li>
       </ul>
     </li>
-    <li><a href="#xpdf">Xpdf</a>
+    <li><a href="#comandos">Comandos</a>
       <ul>
-        <li><a href="#master-pdf-editor">Master PDF Editor</a></li>
-        <li><a href="#conclusiones">Conclusiones</a></li>
+        <li><a href="#imágenes">Imágenes</a></li>
+        <li><a href="#contenedores">Contenedores</a></li>
       </ul>
     </li>
+    <li><a href="#referencias">Referencias</a></li>
   </ul>
 </nav></div>
             </div>
@@ -109,151 +114,199 @@ Dado que me estoy empezando a manejar mejor con aplicaciones en CLI (por aquello
                     </summary>
                     <div class="post-toc-content"><nav id="TableOfContentsMobile">
   <ul>
-    <li>
+    <li><a href="#deficiones">Deficiones</a>
       <ul>
-        <li><a href="#pdftk">PDFtk</a></li>
+        <li><a href="#docker">Docker</a></li>
+        <li><a href="#imagen">Imagen</a></li>
+        <li><a href="#contenedor">Contenedor</a></li>
       </ul>
     </li>
-    <li><a href="#xpdf">Xpdf</a>
+    <li><a href="#comandos">Comandos</a>
       <ul>
-        <li><a href="#master-pdf-editor">Master PDF Editor</a></li>
-        <li><a href="#conclusiones">Conclusiones</a></li>
+        <li><a href="#imágenes">Imágenes</a></li>
+        <li><a href="#contenedores">Contenedores</a></li>
       </ul>
     </li>
+    <li><a href="#referencias">Referencias</a></li>
   </ul>
 </nav></div>
                 </details>
-            </div><div class="post-content"><p>Cuando nos iniciamos en el mundo GNU/Linux hay una de las tareas más comunes que puede llegar a ser un suplicio: editar archivos PDF. Para operaciones tan básicas como unir o cortar páginas, encriptar, etc. tenía que recurrir a alguna web que realizaban estos propósitos o resignarme a hacer alguna treta.</p>
-<p>Dado que me estoy empezando a manejar mejor con aplicaciones en <a href="https://es.wikipedia.org/wiki/Interfaz_de_l%C3%ADnea_de_comandos?oldformat=true" target="_blank">CLI</a>
- (por aquello de automatizar procesos), busqué soluciones de este tipo y me encontré con dos: <strong>PDFtk</strong> y <strong>Xpdf</strong>. Aparte de estas dos también buscaba una en la que pudiera hacer resaltado de texto, anotaciones, etc. y entonces me topé con <strong>Master PDF Editor</strong>, que incluso en su versión gratuita no le falta de nada.</p>
-<a class="post-dummy-target" id="pdftk"></a><h3>PDFtk</h3>
-<p>En más de una ocasión he tenido que unir varios PDF, unir páginas de distintos PDF, eliminar páginas&hellip; todo de forma recursiva. Así que eso de ir uno a uno sería una locura, mejor que PDFtk lo haga. Primero instalamos el paquete, que obviamente dependerá de la distribución que uséis:</p>
+            </div><div class="post-content"><p>En el mundo de los que nos gusta el <em>cacharreo</em> Docker se ha convertido en una herramienta casi obligada, nos evitamos reinstalaciones, «formateos» y demás engorrros con sus correspondientes pérdidas de tiempo.</p>
+<p>Se ha escrito mucho sobre Docker, lo que pretendo con esta pequeña introducción es dejar claras algunas deficiones, y ofrecer una serie de comandos básicos.</p>
+<a class="post-dummy-target" id="deficiones"></a><h2>Deficiones</h2>
+<a class="post-dummy-target" id="docker"></a><h3>Docker</h3>
+<p>Es como un gestor de paquetes tipo Snap o AppImage.</p>
+<a class="post-dummy-target" id="imagen"></a><h3>Imagen</h3>
+<p>Es un paquete con todo lo necesario para ejecutar una aplicación o servicio. Es como un ejecutable.</p>
+<a class="post-dummy-target" id="contenedor"></a><h3>Contenedor</h3>
+<p>Es la imagen en funcionamiento. Es cada una de las instancias o procesos que hay en funcionamiento.</p>
+<p>Instancia: es una copia de una versión ejecutable del programa que ha sido escrito en la memoria del computador.</p>
+<p>Utiliza y comparte el SO de la máquina con otras aplicaciones y con otros contenedores. Al detener el contenedor este se queda en el equipo.</p>
+<a class="post-dummy-target" id="comandos"></a><h2>Comandos</h2>
+<a class="post-dummy-target" id="imágenes"></a><h3>Imágenes</h3>
+<p>Ver imagenes descargadas:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install pdftk <span class="c1"># Debian</span>
-sudo pacman -S pdftk <span class="c1"># Manjaro</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker image ls
+
+<span class="c1"># Equivalente</span>
+docker images
 </code></pre></td></tr></table>
 </div>
-</div><p>Voy a poner algunos comandos útiles.</p>
+</div><p>Ver imagenes intermedias:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker image ls -a
+</code></pre></td></tr></table>
+</div>
+</div><p>Ver los numeros de identificacion, <code>ID</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker image ls -q
+</code></pre></td></tr></table>
+</div>
+</div><p>Borrar las imagenes que no estamos utilizando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker image prune
+</code></pre></td></tr></table>
+</div>
+</div><p>Borrar una o varias imagenes:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker image rm &lt;nombre imagen&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>O también con:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker rmi &lt;nombre imagen&gt;
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="contenedores"></a><h3>Contenedores</h3>
+<p>Iniciar un contenedor:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker run hello-world
+</code></pre></td></tr></table>
+</div>
+</div><p>Ver los contenedores que tenemos:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker ps -a
+</code></pre></td></tr></table>
+</div>
+</div><p>Para un contenedor:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker stop &lt;nombre o ID&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Iniciar de nuevo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker start &lt;nombre o ID&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Reiniciar:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker restart &lt;nombre o ID&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Matando contenedores:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">kill</span> &lt;nombre o ID&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Borrar contenedor:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker rm &lt;nombre contenedor&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Borrar todos los contenedores que estén parados:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker container prune
+</code></pre></td></tr></table>
+</div>
+</div><p>Ver el proceso del docker:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker top &lt;nombre contenedor&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Ver estadisticas:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats --no-stream &lt;nombre contenedor&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Lo paramos con [[Ctrl]] + [[c]]</p>
+<a class="post-dummy-target" id="referencias"></a><h2>Referencias</h2>
 <ul>
-<li>Unir varios PDF en un nuevo documento:</li>
+<li><a href="https://www.atareao.es/tutorial/docker/" target="_blank">Docker. Introducción y primeros pasos</a>
+</li>
+<li><a href="https://docs.docker.com/engine/install/linux-postinstall/" target="_blank">Post-installation steps for Linux | Docker Documentation</a>
+</li>
+<li><a href="https://docs.docker.com/engine/install/debian/" target="_blank">Install Docker Engine on Debian | Docker Documentation</a>
+</li>
+<li><a href="https://hub.docker.com/search?q=&amp;type=edition&amp;offering=community&amp;operating_system=linux" target="_blank">Docker Hub</a>
+</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf in2.pdf in3.pdf cat output out123.pdf
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>Lo anterior pero usando <em>wildcards</em>:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk *.pdf cat output out.pdf
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>Eliminar la página 13 de in1.pdf y crear un documento nuevo:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf cat 1-12 14-end output out.pdf
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>Seleccionar varias páginas de distintos PDF y crear uno nuevo:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk <span class="nv">A</span><span class="o">=</span>in1.pdf <span class="nv">B</span><span class="o">=</span>in2.pdf cat A1-7 B1-5 A8 output out.pdf
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>Sacar un informe con los metadatos marcadores y etiquetas;</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf dump_data output informe.txt
-</code></pre></td></tr></table>
-</div>
-</div><p>Podemos encontrar más ejemplos en <a href="https://www.pdflabs.com/docs/pdftk-cli-examples/" target="_blank">PDFtk Server Examples</a>
-, como <a href="https://www.pdflabs.com/docs/how-to-add-headers-footers-watermarks-and-stamps-to-pdf/" target="_blank">añadir marcas de agua</a>
-, y nunca viene mal echar un vistazo al <a href="https://www.pdflabs.com/docs/pdftk-man-page/" target="_blank">manual</a>
-.</p>
-<a class="post-dummy-target" id="xpdf"></a><h2>Xpdf</h2>
-<p>Esta herramienta aunque es un visor (el cual ofrece algunas cosas interesantes), también puede realizar conversiones, extraer texto, extraer imágenes, analizar fuentes, extraer información, etc. Lo primero como siempre es instalar el paquete:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install xpdf <span class="c1"># Debian</span>
-sudo pacman -S xpdf <span class="c1"># Manjaro</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Veamos algunos ejemplos:</p>
-<ul>
-<li>Extraer texto y guardarlo en un <code>.odt</code> o <code>.txt</code>:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftotext in1.pdf out.odt
-pdftotext in1.pdf out.txt
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>Extraer las imágenes y guardarlas en una carpeta:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdfimages -all in1.pdf /ruta/carpeta
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>Ver la información del PDF:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdfinfo in1.pdf
-</code></pre></td></tr></table>
-</div>
-</div><p>Esta herramienta trae algunas utilidades más que podemos ver en su <a href="https://www.xpdfreader.com/support.html" target="_blank">página de soporte</a>
-.</p>
-<a class="post-dummy-target" id="master-pdf-editor"></a><h3>Master PDF Editor</h3>
-<p>Sin duda una aplicación completa para todas esas operaciones de resaltado de texto, añadir flechas y otras figuras.</p>
-<p><figure><img src="/svg/loading.min.svg" data-sizes="auto" data-src="/img/masterpdfeditor.png" alt="" class="lazyload"></figure>
-</p>
-<a class="post-dummy-target" id="conclusiones"></a><h3>Conclusiones</h3>
-<p>Con estas tres herramientas cubrimos todas las necesidades que tengamos para manipular PDF, desde lo básico hasta manejar varios documentos a la vez o extraer información.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -267,17 +320,16 @@ pdftotext in1.pdf out.txt
 
     <div class="post-info-more">
         <section><span class="tag">
-                        <a href="/tags/linux/"><i class="fas fa-tag fa-fw"></i>&nbsp;linux</a>&nbsp;
+                        <a href="/tags/docker/"><i class="fas fa-tag fa-fw"></i>&nbsp;docker</a>&nbsp;
                     </span><span class="tag">
-                        <a href="/tags/pdf/"><i class="fas fa-tag fa-fw"></i>&nbsp;pdf</a>&nbsp;
+                        <a href="/tags/tutorial/"><i class="fas fa-tag fa-fw"></i>&nbsp;tutorial</a>&nbsp;
                     </span></section>
         <section>
             <span><a href="javascript:window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2020/02/latex-pandoc-tutorial-basico/" class="prev" rel="prev" title="[LaTeX/Pandoc] Tutorial Básico"><i class="fas fa-angle-left fa-fw"></i>[LaTeX/Pandoc] Tutorial Básico</a>
-            <a href="/2020/05/docker-inicio-b%C3%A1sico/" class="next" rel="next" title="[Docker] Inicio  Básico">[Docker] Inicio  Básico<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/2020/04/linux-editar-modificar-pdfs/" class="prev" rel="prev" title="[Linux] Editar y Modificar PDFs"><i class="fas fa-angle-left fa-fw"></i>[Linux] Editar y Modificar PDFs</a></div>
 </div>
 <div class="post-comment"></div>
     </article></div>

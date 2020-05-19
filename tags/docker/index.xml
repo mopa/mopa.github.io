@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tutorial on Pablo M.</title>
-    <link>/tags/tutorial/</link>
-    <description>Recent content in tutorial on Pablo M.</description>
+    <title>docker on Pablo M.</title>
+    <link>/tags/docker/</link>
+    <description>Recent content in docker on Pablo M.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Tue, 19 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,16 +22,6 @@
 Se ha escrito mucho sobre Docker, lo que pretendo con esta pequeña introducción es dejar claras algunas deficiones, y ofrecer una serie de comandos básicos.
 Deficiones Docker Es como un gestor de paquetes tipo Snap o AppImage.
 Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servicio.</description>
-    </item>
-    
-    <item>
-      <title>[LaTeX/Pandoc] Tutorial Básico</title>
-      <link>/2020/02/latex-pandoc-tutorial-basico/</link>
-      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/02/latex-pandoc-tutorial-basico/</guid>
-      <description>Desde que uso Markdown realizar documentos se ha convertido en una tarea realmente fácil y rápida. Es cierto que en formato RAW no lo podemos enviar de forma general, se vuelve necesario convertirlo a PDF. Y en esta tarea es donde entra en juego Pandoc , el cual es un conversor de documentos libre y de código abierto.
-Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en una combinación perfecta y personalizable.</description>
     </item>
     
   </channel>
