@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 08 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/pages/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Atajos</title>
+      <link>/pages/atajos/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/atajos/</guid>
+      <description> Vim   </description>
+    </item>
+    
+    <item>
+      <title>Chuletario de Vim</title>
+      <link>/pages/cheatsheet/vim-cs/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/cheatsheet/vim-cs/</guid>
+      <description>Global  :saveas file - guarda un fichero como&amp;hellip; &#39;0 - reabrir el último fichero abierto \ - Leader Key  Movimientos del cursor Todo en el modo normal
+  w - saltamos al inicio de la siguiente palabra
+  e - saltamos al final de una palabra
+  b - igual que w pero en sentido opuesto
+  % - saltamos a la pareja del paréntesis</description>
+    </item>
     
     <item>
       <title>Recursos</title>
@@ -23,10 +45,10 @@
     
     <item>
       <title>[LaTeX] Notas y Trucos</title>
-      <link>/pages/latex-notas-trucos/</link>
+      <link>/pages/resources/latex-notas-trucos/</link>
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/pages/latex-notas-trucos/</guid>
+      <guid>/pages/resources/latex-notas-trucos/</guid>
       <description>En esta página voy a ir almacenando pequeños trucos para la realización de documentos (no es la típica cheatsheet). Se trata más bien de las cosas usuales que nos surgen, como hacer anotaciones al margen, texto que envuelve una imagen, etc.
 Listas ordenadas por letras Para tener listas ordenadas con letras minúsculas, usamos el paquete enumitem:
 1 2 3  \begin{enumerate}[label=\alph*] \end{enumerate}   Esto no daría una salida como la siguiente:</description>

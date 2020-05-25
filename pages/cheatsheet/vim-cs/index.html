@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Chuletario de Vim | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/recursos/" /><link rel="next" href="/pages/atajos/" /><link rel="canonical" href="/pages/cheatsheet/vim-cs/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="Chuletario de Vim" />
+<meta property="og:description" content="Global  :saveas file - guarda un fichero como&hellip; &#39;0 - reabrir el último fichero abierto \ - Leader Key  Movimientos del cursor Todo en el modo normal
+  w - saltamos al inicio de la siguiente palabra
+  e - saltamos al final de una palabra
+  b - igual que w pero en sentido opuesto
+  % - saltamos a la pareja del paréntesis" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/pages/cheatsheet/vim-cs/" />
+<meta property="article:published_time" content="2020-05-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-25T00:00:00+00:00" />
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Chuletario de Vim",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/pages\/cheatsheet\/vim-cs\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "pages","keywords": "","wordcount":  683 ,
+        "url": "\/pages\/cheatsheet\/vim-cs\/","datePublished": "2020-05-25T00:00:00\x2b00:00","dateModified": "2020-05-25T00:00:00\x2b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "Pablo M.",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"description": ""
+    }
+    </script><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/css/lib/forkawesome/forkawesome.min.css"><link rel="stylesheet" href="/css/lib/animate/animate.min.css"></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {
+                window.isDark = 'light' === 'dark';
+            } else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header bounceIn">
+            <a href="/">Pablo M.</a>
+        </div>
+        <div class="navbar-menu"><a class="menu-item" href="/posts" title="">Posts</a><a class="menu-item" href="/tags" title="">Tags</a><a class="menu-item" href="/recursos" title="">Recursos</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title=""></i></a>
+        </div>
+    </div>
+</nav><nav class="navbar-mobile">
+    <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="/">Pablo M.</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="/posts" title="">Posts</a><a class="menu-item" href="/tags" title="">Tags</a><a class="menu-item" href="/recursos" title="">Recursos</a><a class="menu-item" href="/about" title="">About</a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title=""></i></a>
+        </div>
+    </div>
+</nav>
+<main class="main">
+                <div class="container"><div class="page single"><h1 class="post-title pulse faster">Chuletario de Vim</h1><div class="post-content"><a class="post-dummy-target" id="global"></a><h2>Global</h2>
+<ul>
+<li><code>:saveas file</code> - guarda un fichero como&hellip;</li>
+<li><code>'0</code> - reabrir el último fichero abierto</li>
+<li><code>\</code> - Leader Key</li>
+</ul>
+<a class="post-dummy-target" id="movimientos-del-cursor"></a><h2>Movimientos del cursor</h2>
+<p>Todo en el modo normal</p>
+<ul>
+<li>
+<p><code>w</code> - saltamos al inicio de la siguiente palabra</p>
+</li>
+<li>
+<p><code>e</code> - saltamos al final de una palabra</p>
+</li>
+<li>
+<p><code>b</code> - igual que <code>w</code> pero en sentido opuesto</p>
+</li>
+<li>
+<p><code>%</code> - saltamos a la pareja del paréntesis</p>
+</li>
+<li>
+<p><code>0</code> - saltamos al inicio de línea</p>
+</li>
+<li>
+<p><code>$</code> - saltamos al final de línea</p>
+</li>
+<li>
+<p><code>}</code> - saltamos al siguiente párrafo</p>
+</li>
+<li>
+<p><code>{</code> - saltamos al anterior párrafo</p>
+</li>
+<li>
+<p><code>C-D</code> - bajamos media página</p>
+</li>
+<li>
+<p><code>C-U</code> - subimos media página</p>
+</li>
+<li>
+<p><code>gg</code> - vamos al inicio del documento</p>
+</li>
+<li>
+<p><code>G</code> - vamos al final del documento</p>
+</li>
+<li>
+<p><code>5G</code> - vamos a la línea 5</p>
+</li>
+<li>
+<p><code>zz</code> - centramos el cursor en la pantalla</p>
+</li>
+</ul>
+<a class="post-dummy-target" id="insertar"></a><h2>Insertar</h2>
+<p>Entramos al modo insertar bajo las siguientes opciones:</p>
+<ul>
+<li><code>i</code> - entramos en el modo insertar <em>antes del cursor</em></li>
+<li><code>I</code> - entramos en el modo insertar al inicio de línea</li>
+<li><code>a</code> - entramos en el modo insertar <em>después del cursor</em></li>
+<li><code>A</code> - entramos en el modo insertar al final de la línea</li>
+<li><code>o</code> - entramos en el modo insertar en la siguiente línea</li>
+<li><code>O</code> - entramos en el modo insertar en la línea anterior</li>
+<li><code>ea</code> - entramos en el modo insertar al final de la palabra</li>
+</ul>
+<a class="post-dummy-target" id="insertar-en-varias-columnas-a-la-vez"></a><h3>Insertar en varias columnas a la vez</h3>
+<p>Estando en el modo normal seleccionamos las columnas (a la vez que estar en la posición donde queremos insertar el texto) con <code>Ctrl + v</code>, seguidamente <code>I</code>, escribimos lo que sea y terminamos con <code>Esc</code>.</p>
+<p>Más info en: <a href="https://victorhckinthefreeworld.com/2019/10/09/como-insertar-el-mismo-texto-en-una-columna-en-varias-lineas-con-el-editor-vim/" target="_blank">Cómo insertar el mismo texto en una columna en varias líneas con el editor #Vim</a>
+</p>
+<a class="post-dummy-target" id="buscar--reemplazar"></a><h2>Buscar / Reemplazar</h2>
+<ul>
+<li>Para buscar solo tenemos que poner <code>/palabra</code> en el modo normal.</li>
+<li>Buscar dentro de otra busqueda: <code>/string1;/string2</code>. Lo que hace es primero buscar el <em>string1</em> y luego dentro de esos resultados el <em>string2</em>.</li>
+</ul>
+<p><strong>Reemplazar</strong></p>
+<p><code>/palabra</code> -&gt; <code>cgn</code> -&gt; Entramos al modo <em>Insertar</em> y escribimos la palabra a sustituir -&gt; <code>Esc</code> -&gt; <code>n</code> para saltar a la siguiente coincidencia -&gt; <code>.</code> para sustituir o <code>n</code> y nos vamos a la siguiente coincidencia sin sustituir.</p>
+<p>Más info: <a href="https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db" target="_blank">You dont need more than one cursor in vim</a>
+</p>
+<a class="post-dummy-target" id="texto"></a><h2>Texto</h2>
+<ul>
+<li>Modo <em>normal</em>. Cambiar todos los caracteres de mayusculas a minusculas: <code>g~~</code></li>
+</ul>
+<a class="post-dummy-target" id="múltiples-ficheros-abiertos"></a><h2>Múltiples Ficheros Abiertos</h2>
+<ul>
+<li><code>:sp fichero</code> - Abre <code>fichero</code> en un nuevo <em>buffer</em> y parte la ventana <strong>horizontalmente</strong>.</li>
+<li><code>:vsp fichero</code> - Abre <code>fichero</code> en un nuevo <em>buffer</em> y parte la ventana <strong>verticalmente</strong>.</li>
+<li><code>Ctrl</code> + <code>ww</code> - Cambiamos de ventana.</li>
+</ul>
+<a class="post-dummy-target" id="deshacer--rehacer-cambios"></a><h2>Deshacer / Rehacer cambios</h2>
+<p>Para deshacer el cambio más reciente en <strong>modo normal</strong> usamos <code>:u</code> o <code>u</code>. Pero esto deshace el último cambio en el documento.</p>
+<p>Si queremos deshacer varios cambios en de una misma línea y queremos deshacerlos todos a la vez, usamos <code>U</code>.</p>
+<p>Para rehacer los cambios: <code>Ctrl + r</code>.</p>
+<p>Más info y algún truco más: <a href="https://victorhckinthefreeworld.com/2019/10/23/deshacer-y-rehacer-cambios-editando-con-vim/" target="_blank">Deshacer y rehacer cambios editando con #Vim</a>
+.</p>
+<a class="post-dummy-target" id="copiar-cortar-y-pegar"></a><h2>Copiar, Cortar y Pegar</h2>
+<a class="post-dummy-target" id="en-el-modo-normal"></a><h3>En el Modo Normal</h3>
+<p>Copiar:</p>
+<ul>
+<li><code>yy</code> - Copiar la linea</li>
+<li><code>3yy</code> - Copiar tres lineas, contando desde la actual a las siguientes</li>
+<li><code>yiw</code> - Copiar la palabra</li>
+</ul>
+<p>Cortar (eliminar):</p>
+<ul>
+<li><code>dd</code> - Eliminar (cortar) la linea</li>
+<li><code>3dd</code> - Eliminar (cortar) tres lineas, contando desde la actual las siguientes</li>
+<li><code>d$</code> - Eliminar (cortar) todo desde el cursor hasta el final de la línea</li>
+</ul>
+<p>Todos los comandos que se aplican para copiar son válidos para cortar (eliminar).</p>
+<p>Pegar:</p>
+<ul>
+<li><code>p</code> - Pegar el texto después del cursor</li>
+<li><code>P</code> - Pegar el texto antes del cursor</li>
+</ul>
+<p>De donde lo he sacado: <a href="https://linuxize.com/post/how-to-copy-cut-paste-in-vim/" target="_blank">How to Copy, Cut and Paste in Vim / Vi | Linuxize</a>
+</p>
+<a class="post-dummy-target" id="en-el-clipboard"></a><h3>En el <em>Clipboard</em></h3>
+<p>Estando en el <code>modo Normal</code> hacemos [[Ctrl]] + [[v]] o [[Shift]] + [[v]] para seleccionar el texto, pulsamos [[Esc]] y seguidamente <code>:w !xclip -i -sel c</code> para <strong>copiar</strong>. En caso de que queramos <strong>pegar</strong>: <code>:r !xlcip -o -sel c</code>.</p>
+<a class="post-dummy-target" id="indentación"></a><h2>Indentación</h2>
+<ul>
+<li>Indentar la línea actual de acuerdo a la <strong>configuración por defecto</strong>: <code>==</code></li>
+<li>Indentar el fichero entero: <code>gg=G</code></li>
+</ul>
+<p><strong>Configurar la Indentación</strong></p>
+<p>Espacios para toda la indentación:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">expandtab</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">softtabstop</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p><em>Hard tabs</em> para toda la indentación:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Mezcla de tabulación y espacios:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">softtabstop</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div></div>
+    </div></div>
+            </main><footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |  Proudly Made on Earth <i class="far fa-heart fa-fw"></i></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll>
+            <span>&nbsp;</span>
+        </a><script src="/js/lib/jquery/jquery.slim.min.js"></script><script src="/js/lib/lazysizes/lazysizes.min.js"></script><script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script><link rel="stylesheet" href="/css/lib/katex/katex.min.css"><script src="/js/lib/katex/katex.min.js"></script><script defer src="/js/lib/katex/auto-render.min.js"></script><link rel="stylesheet" href="/css/lib/katex/copy-tex.min.css"><script defer src="/js/lib/katex/copy-tex.min.js"></script><script defer src="/js/lib/katex/mhchem.min.js"></script><script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true },{ left: "$", right: "$", display: false },]
+            });
+        });
+    </script><script src="/js/blog.min.js"></script>
+</body>
+</html>
