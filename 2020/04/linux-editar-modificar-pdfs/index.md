@@ -93,5 +93,5 @@ De forma online existen multitud de herramientas para hacer las tareas descritas
 
 ### Conclusiones
 
-Con estas tres herramientas cubrimos todas las necesidades que tengamos para manipular PDF, desde lo básico hasta manejar varios documentos a la vez o extraer información.
+Con estas tres herramientas cubrimos todas las necesidades que tengamos para manipular PDF, desde lo básico hasta manejar varios documentos a la vez, extraer información o crear scritps. Si además incluimos las herramientas online que nos pueden salvar de más de un apuro, el manejo de PDFs se queda en un juego de niñxs.
 
