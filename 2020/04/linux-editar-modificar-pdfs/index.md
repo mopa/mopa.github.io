@@ -81,6 +81,16 @@ Sin duda una aplicación completa para todas esas operaciones de resaltado de te
 ![](/img/masterpdfeditor.png)
 
 
+
+### Herramientas Online
+
+De forma online existen multitud de herramientas para hacer las tareas descritas anteriormente. Las expongo ya que en alguna ocasión seguro que haremos uso de ellas, ya sea por necesidad o por simple curiosidad. Eso sí, no tendremos la misma libertad y versatilidad, estas webs nos hacen el &laquo;apaño&raquo; en ocasiones puntuales.
+
++ [Soda PDF](https://www.sodapdf.com/es/)
++ [iLove PDF](https://www.ilovepdf.com/es)
++ [Online OCR](https://www.hipdf.com/ocr)
+
+
 ### Conclusiones
 
 Con estas tres herramientas cubrimos todas las necesidades que tengamos para manipular PDF, desde lo básico hasta manejar varios documentos a la vez o extraer información.
