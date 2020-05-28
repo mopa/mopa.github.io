@@ -45,7 +45,7 @@ pdftk in1.pdf dump_data output informe.txt
 Podemos encontrar más ejemplos en [PDFtk Server Examples](https://www.pdflabs.com/docs/pdftk-cli-examples/), como [añadir marcas de agua](https://www.pdflabs.com/docs/how-to-add-headers-footers-watermarks-and-stamps-to-pdf/), y nunca viene mal echar un vistazo al [manual](https://www.pdflabs.com/docs/pdftk-man-page/).
 
 
-## Xpdf
+### Xpdf
 
 Esta herramienta aunque es un visor (el cual ofrece algunas cosas interesantes), también puede realizar conversiones, extraer texto, extraer imágenes, analizar fuentes, extraer información, etc. Lo primero como siempre es instalar el paquete:
 ```bash
