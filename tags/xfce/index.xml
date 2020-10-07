@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 23 Jul 2019 17:03:39 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/xfce/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 23 Jul 2019 17:03:39 +0200</lastBuildDate><atom:link href="/tags/xfce/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Abrir con VIM en Xfce</title>
       <link>/2019/07/abrir-con-vim-en-xfce/</link>

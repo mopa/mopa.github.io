@@ -7,17 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 19 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Docker] Comandos Útiles</title>
+      <link>/2020/06/docker-comandos-%C3%BAtiles/</link>
+      <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/06/docker-comandos-%C3%BAtiles/</guid>
+      <description>Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.
+Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción -i). Además sacamos por pantalla la salida del contenedor (-t):</description>
+    </item>
     
     <item>
-      <title>[Docker] Inicio  Básico</title>
-      <link>/2020/05/docker-inicio-b%C3%A1sico/</link>
+      <title>[Docker] Comandos  Básico</title>
+      <link>/2020/05/docker-comandos-b%C3%A1sico/</link>
       <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/05/docker-inicio-b%C3%A1sico/</guid>
+      <guid>/2020/05/docker-comandos-b%C3%A1sico/</guid>
       <description>En el mundo de los que nos gusta el cacharreo Docker se ha convertido en una herramienta casi obligada, nos evitamos reinstalaciones, «formateos» y demás engorrros con sus correspondientes pérdidas de tiempo.
 Se ha escrito mucho sobre Docker, lo que pretendo con esta pequeña introducción es dejar claras algunas deficiones, y ofrecer una serie de comandos básicos.
 Deficiones Docker Es como un gestor de paquetes tipo Snap o AppImage.

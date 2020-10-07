@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Abrir con VIM en Xfce | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>[Docker] Comandos Útiles | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
-<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/2019/05/python-pandas-truquitos-para-ser-mas-agiles/" /><link rel="next" href="/2020/02/linux-matar-procesos/" /><link rel="canonical" href="/2019/07/abrir-con-vim-en-xfce/" />
+<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/2020/05/docker-comandos-b%C3%A1sico/" /><link rel="canonical" href="/2020/06/docker-comandos-%C3%BAtiles/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -13,28 +13,28 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff"><meta property="og:title" content="Abrir con VIM en Xfce" />
-<meta property="og:description" content="Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
-1 2 3  Exec=xfce4-terminal -e &#34;vim %F&#34; Terminal=false   Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces." />
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="[Docker] Comandos Útiles" />
+<meta property="og:description" content="Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.
+Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción -i). Además sacamos por pantalla la salida del contenedor (-t):" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2019/07/abrir-con-vim-en-xfce/" />
-<meta property="article:published_time" content="2019-07-23T17:03:39+02:00" />
-<meta property="article:modified_time" content="2019-07-23T17:03:39+02:00" />
+<meta property="og:url" content="/2020/06/docker-comandos-%C3%BAtiles/" />
+<meta property="article:published_time" content="2020-06-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-15T00:00:00+00:00" />
 <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Abrir con VIM en Xfce",
+        "headline": "[Docker] Comandos Útiles",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "\/2019\/07\/abrir-con-vim-en-xfce\/"
+            "@id": "\/2020\/06\/docker-comandos-%C3%BAtiles\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "linux, xfce, vim","wordcount":  186 ,
-        "url": "\/2019\/07\/abrir-con-vim-en-xfce\/","datePublished": "2019-07-23T17:03:39\u002b02:00","dateModified": "2019-07-23T17:03:39\u002b02:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            },"genre": "posts","keywords": "docker, tutorial","wordcount":  325 ,
+        "url": "\/2020\/06\/docker-comandos-%C3%BAtiles\/","datePublished": "2020-06-15T00:00:00\u002b00:00","dateModified": "2020-06-15T00:00:00\u002b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
                 "@type": "Organization",
                 "name": "Pablo M.",
                 "logo": {
@@ -76,51 +76,74 @@
     </div>
 </nav>
 <main class="main">
-                <div class="container"><article class="page"><h1 class="post-title flipInX">Abrir con VIM en Xfce</h1><div class="post-meta">
+                <div class="container"><article class="page"><h1 class="post-title flipInX">[Docker] Comandos Útiles</h1><div class="post-meta">
             <div class="post-meta-main"></div>
-            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-07-23>2019-07-23</time>&nbsp;
+            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-15>2020-06-15</time>&nbsp;
                 <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;</div>
-        </div><div class="post-content"><p>Suelo usar <strong>Vim</strong> con regularidad junto con <strong>Xfce</strong> como entorno de escritorio. Al hacer la típica operación de <em>Abrir con&hellip;</em> un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve <a href="https://askubuntu.com/questions/788737/open-vim-in-xfce4-terminal-from-thunar" target="_blank">buscando</a>
- información y lo que encontré es que debemos editar el fichero <code>/usr/share/applications/vim.desktop</code> y cambiar los siguientes valores:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">Exec</span><span class="o">=</span>xfce4-terminal -e <span class="s2">&#34;vim %F&#34;</span>
-
-<span class="nv">Terminal</span><span class="o">=</span><span class="nb">false</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces. No estoy dispuesto a hacer repetir esta tarea más veces, y la <a href="https://stackoverflow.com/questions/11950038/how-to-open-text-with-vim-from-thunar#11953964" target="_blank">solución</a>
- es crear un fichero <code>.desktop</code> (lo llamamos como nos de la gana) en <code>~/.local/share/applications/</code> con el siguiente contenido:</p>
+        </div><div class="post-content"><p>Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.</p>
+<a class="post-dummy-target" id="contenedor-interactivo"></a><h3>Contenedor Interactivo</h3>
+<p>La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción <code>-i</code>). Además sacamos por pantalla la salida del contenedor (<code>-t</code>):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>Desktop Entry<span class="o">]</span>
-<span class="nv">Encoding</span><span class="o">=</span>UTF-8
-<span class="nv">Version</span><span class="o">=</span>1.0
-<span class="nv">Type</span><span class="o">=</span>Application
-<span class="nv">NoDisplay</span><span class="o">=</span><span class="nb">true</span>
-<span class="nv">Exec</span><span class="o">=</span><span class="s2">&#34;xfce4-terminal -e &#39;vim %F&#39;&#34;</span>
-<span class="nv">Name</span><span class="o">=</span><span class="s2">&#34;VIMMMM&#34;</span>
-<span class="nv">Comment</span><span class="o">=</span>Custom definition <span class="k">for</span> <span class="s2">&#34;xfce4-terminal -e &#39;vim %F&#39;&#34;</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker run -it ubuntu
+
+<span class="c1"># Entramos al contenedor y lanzamos bash</span>
+docker run -it ubuntu bash
 </code></pre></td></tr></table>
 </div>
-</div><p><em>NOTA</em>: otra opción sería copiar el archivo <code>/usr/share/applications/vim.desktop</code> y pegarlo en <code>~/.local/share/applications/</code> para posteriormente modificar las líneas <code>Exec=</code> y <code>Terminal=</code>.</p>
-<p>Ahora ya podemos abrir los ficheros en <em>Vim</em> desde <em>Thunar</em> pinchando dos veces sin tener que abrir la terminal ;)</p>
+</div><p>Para salir del contenedor solo hay que ejecutar <code>exit</code>, lo cual también parará el propio contenedor.</p>
+<p>OjO! Cada vez que ejecutamos un <code>docker run</code> estamos creando un contenedor nuevo. Dado que al hacer <code>exit</code> lo hemos parado, podemos volver a usarlo con <code>docker start -i &lt;ID o nombre del contenedor&gt;</code>.</p>
+<a class="post-dummy-target" id="contenedor-en-backgroundsegundo-plano"></a><h3>Contenedor en Background/Segundo Plano</h3>
+<p>Arrancamos un contenedor (e.g. de php) y lo dejamos en segundo plano para no tener abierta la terminal:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker run -d php
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="darle-un-nombre-al-contenedor"></a><h3>Darle un Nombre al Contenedor</h3>
+<p>Para no tener que estar mirando el ID o el nombre <em>random</em> que le da Docker a los contenedores cada vez que creamos uno, vamos a pasarle la opción <code>--name</code> al crearlo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker run -it --name docker_ubuntu ubuntu
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="ejecutar-comandos"></a><h3>Ejecutar Comandos</h3>
+<p>Teniendo un contenedor en background, por ejemplo un Ubuntu, le podemos pasar comandos con:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">exec</span> docker_ubuntu <span class="nb">echo</span> Hola Mundo
+</code></pre></td></tr></table>
+</div>
+</div><p>La sintaxis sería: <code>docker exec &lt;ID o nombre contenedor&gt; &lt;Comando a ejecutar&gt;</code>.</p>
+<p>Hay contenedores que su modo interactivo es entrar a un intérprete de comandos (php, python, etc.), y en caso de que quisieramos hacer algún cambio en los mismo podemos usar <code>exec</code>. Suponiendo que tenemos un contenedor de php corriendo (<code>docker run -it --name docker_php php</code>):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">exec</span> -it docker_php bash
+</code></pre></td></tr></table>
+</div>
+</div><p> </p>
+<hr>
+<p> </p>
+<p>Con estos comandos ya podemos jugar mejor y comprender como funcionan los contenedores además de aprovecharlos no solo para correr un microservicio o un framework.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -134,19 +157,16 @@
 
     <div class="post-info-more">
         <section><span class="tag">
-                        <a href="/tags/linux/"><i class="fas fa-tag fa-fw"></i>&nbsp;linux</a>&nbsp;
+                        <a href="/tags/docker/"><i class="fas fa-tag fa-fw"></i>&nbsp;docker</a>&nbsp;
                     </span><span class="tag">
-                        <a href="/tags/xfce/"><i class="fas fa-tag fa-fw"></i>&nbsp;xfce</a>&nbsp;
-                    </span><span class="tag">
-                        <a href="/tags/vim/"><i class="fas fa-tag fa-fw"></i>&nbsp;vim</a>&nbsp;
+                        <a href="/tags/tutorial/"><i class="fas fa-tag fa-fw"></i>&nbsp;tutorial</a>&nbsp;
                     </span></section>
         <section>
             <span><a href="javascript:window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2019/05/python-pandas-truquitos-para-ser-mas-agiles/" class="prev" rel="prev" title="[Python/Pandas] Truquitos para ser más ágiles"><i class="fas fa-angle-left fa-fw"></i>[Python/Pandas] Truquitos para ser más ágiles</a>
-            <a href="/2020/02/linux-matar-procesos/" class="next" rel="next" title="[Linux] Matar Procesos">[Linux] Matar Procesos<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/2020/05/docker-comandos-b%C3%A1sico/" class="prev" rel="prev" title="[Docker] Comandos  Básico"><i class="fas fa-angle-left fa-fw"></i>[Docker] Comandos  Básico</a></div>
 </div>
 <div class="post-comment"></div>
     </article></div>
