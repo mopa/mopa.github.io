@@ -33,7 +33,7 @@ Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, p
                 "url": "\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "docker, tutorial","wordcount":  325 ,
+            },"genre": "posts","keywords": "docker, tutorial","wordcount":  374 ,
         "url": "\/2020\/06\/docker-comandos-%C3%BAtiles\/","datePublished": "2020-06-15T00:00:00\u002b00:00","dateModified": "2020-06-15T00:00:00\u002b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
                 "@type": "Organization",
                 "name": "Pablo M.",
@@ -100,6 +100,17 @@ docker run -it ubuntu bash
 </div>
 </div><p>Para salir del contenedor solo hay que ejecutar <code>exit</code>, lo cual también parará el propio contenedor.</p>
 <p>OjO! Cada vez que ejecutamos un <code>docker run</code> estamos creando un contenedor nuevo. Dado que al hacer <code>exit</code> lo hemos parado, podemos volver a usarlo con <code>docker start -i &lt;ID o nombre del contenedor&gt;</code>.</p>
+<a class="post-dummy-target" id="borrar-contenedor-al-paralo"></a><h3>Borrar contenedor al paralo</h3>
+<p>Si le pasamos el parámetro <code>--rm</code> borrará el contenedor una vez lo hayamos parado:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker run -it --rm --name docker_ubuntu ubuntu
+</code></pre></td></tr></table>
+</div>
+</div><p>Este comando arranca un contenedor interactivo de la imagen de <em>ubuntu</em> con el nombre <em>docker_ubuntu</em>, y además lo borrará una vez lo paremos.</p>
 <a class="post-dummy-target" id="contenedor-en-backgroundsegundo-plano"></a><h3>Contenedor en Background/Segundo Plano</h3>
 <p>Arrancamos un contenedor (e.g. de php) y lo dejamos en segundo plano para no tener abierta la terminal:</p>
 <div class="highlight"><div class="chroma">

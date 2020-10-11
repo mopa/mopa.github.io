@@ -21,6 +21,17 @@ Para salir del contenedor solo hay que ejecutar `exit`, lo cual también parará
 OjO! Cada vez que ejecutamos un `docker run` estamos creando un contenedor nuevo. Dado que al hacer `exit` lo hemos parado, podemos volver a usarlo con `docker start -i <ID o nombre del contenedor>`.
 
 
+### Borrar contenedor al paralo
+
+Si le pasamos el parámetro `--rm` borrará el contenedor una vez lo hayamos parado:
+```bash
+docker run -it --rm --name docker_ubuntu ubuntu
+```
+
+Este comando arranca un contenedor interactivo de la imagen de *ubuntu* con el nombre *docker_ubuntu*, y además lo borrará una vez lo paremos.
+
+
+
 ### Contenedor en Background/Segundo Plano
 
 Arrancamos un contenedor (e.g. de php) y lo dejamos en segundo plano para no tener abierta la terminal:
