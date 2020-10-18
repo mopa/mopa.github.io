@@ -19,7 +19,7 @@
 <meta property="og:description" content="Engineering and Data Science" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2020-06-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-07-05T00:00:00+00:00" />
 <script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -70,6 +70,15 @@
     </a></div>
 </div>
 <article class="post" itemscope itemtype="http://schema.org/Article"><h1 class="post-title post-list-title" itemprop="name headline">
+        <a href="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/">[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;</a>
+    </h1><div class="post-meta">  <time datetime=2020-07-05>2020-07-05</time>&nbsp;</div><div class="post-content">El error que me he encontrado en alguna ocasión esporádica en Proxmox es que no podía parar un contenedor (en concreto un lxc) ni tampoco apagarlo, por lo que no podía apagar el sistema.
+De hecho, al entrar por SSH al Proxmox también obtenía el mismo error, o sea era imposible apagarlo de la forma correcta.
+Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando lxc.</div><div class="post-footer">
+        <a href="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/"></a><div class="post-tags"><span class="tag">
+                        &nbsp;<a href="/tags/proxmox/"><i class="fas fa-tag fa-fw"></i>&nbsp;proxmox</a>
+                    </span></div></div>
+</article>
+<article class="post" itemscope itemtype="http://schema.org/Article"><h1 class="post-title post-list-title" itemprop="name headline">
         <a href="/2020/06/docker-comandos-%C3%BAtiles/">[Docker] Comandos Útiles</a>
     </h1><div class="post-meta">  <time datetime=2020-06-15>2020-06-15</time>&nbsp;</div><div class="post-content">Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.
 Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción -i). Además sacamos por pantalla la salida del contenedor (-t):</div><div class="post-footer">
@@ -111,17 +120,6 @@ Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en 
                         &nbsp;<a href="/tags/pandoc/"><i class="fas fa-tag fa-fw"></i>&nbsp;pandoc</a>
                     </span><span class="tag">
                         &nbsp;<a href="/tags/tutorial/"><i class="fas fa-tag fa-fw"></i>&nbsp;tutorial</a>
-                    </span></div></div>
-</article>
-<article class="post" itemscope itemtype="http://schema.org/Article"><h1 class="post-title post-list-title" itemprop="name headline">
-        <a href="/2020/02/linux-matar-procesos/">[Linux] Matar Procesos</a>
-    </h1><div class="post-meta">  <time datetime=2020-02-10>2020-02-10</time>&nbsp;</div><div class="post-content">No existen sistemas infalibles y de vez en cuando las aplicaciones se quedan congeladas, no responden y por más que pinchemos el botón de cerrar no quiere cerrarse. En estos casos recurrimos a la terminal y podríamos usar xkill, pero puede pasar que notemos el sistema lento y no sepamos de donde viene. Para estas situaciones y conocer mejor lo que se está ejecutando, voy a mostrar de forma (intentaré que sea breve) ver los procesos que más usan la CPU y la memoria.</div><div class="post-footer">
-        <a href="/2020/02/linux-matar-procesos/"></a><div class="post-tags"><span class="tag">
-                        &nbsp;<a href="/tags/linux/"><i class="fas fa-tag fa-fw"></i>&nbsp;linux</a>
-                    </span><span class="tag">
-                        &nbsp;<a href="/tags/commands/"><i class="fas fa-tag fa-fw"></i>&nbsp;commands</a>
-                    </span><span class="tag">
-                        &nbsp;<a href="/tags/tips/"><i class="fas fa-tag fa-fw"></i>&nbsp;tips</a>
                     </span></div></div>
 </article>
 <ul class="pagination"><li class="page-item active">

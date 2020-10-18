@@ -2,11 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</loc><lastmod>2020-07-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/</loc><lastmod>2020-07-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/posts/</loc><lastmod>2020-07-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/proxmox/</loc><lastmod>2020-07-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/</loc><lastmod>2020-07-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2020/06/docker-comandos-%C3%BAtiles/</loc><lastmod>2020-06-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/docker/</loc><lastmod>2020-06-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/</loc><lastmod>2020-06-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/posts/</loc><lastmod>2020-06-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/tags/</loc><lastmod>2020-06-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/tutorial/</loc><lastmod>2020-06-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/pages/atajos/</loc><lastmod>2020-05-25T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/pages/cheatsheet/vim-cs/</loc><lastmod>2020-05-25T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

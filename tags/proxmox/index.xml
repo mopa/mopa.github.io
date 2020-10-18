@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>proxmox on Pablo M.</title>
+    <link>/tags/proxmox/</link>
+    <description>Recent content in proxmox on Pablo M.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/proxmox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;</title>
+      <link>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</guid>
+      <description>El error que me he encontrado en alguna ocasión esporádica en Proxmox es que no podía parar un contenedor (en concreto un lxc) ni tampoco apagarlo, por lo que no podía apagar el sistema.
+De hecho, al entrar por SSH al Proxmox también obtenía el mismo error, o sea era imposible apagarlo de la forma correcta.
+Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando lxc.</description>
+    </item>
+    
+  </channel>
+</rss>
