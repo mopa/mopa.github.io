@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 23 Jul 2019 17:03:39 +0200</lastBuildDate><atom:link href="/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[LaTeX] Notas y Trucos</title>
+      <link>/pages/resources/vim-notas-trucos/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/resources/vim-notas-trucos/</guid>
+      <description>En esta página voy a ir almacenando pequeños trucos que me voy encontrando, atajos de teclado útiles en ciertas ocasiones o simplemente cosas que no quiero olvidar.
+Búsqueda insensible Por defecto viene desactivada, la podemos activar para que todas las búsquedas sean insensibles, pero la forma más rápida es agregar al final de nuestra búsqueda \c. Por ejemplo, si estamos buscando en nuestro documento la palabra linux:
+1  /linux\c  </description>
+    </item>
+    
     <item>
       <title>Abrir con VIM en Xfce</title>
       <link>/2019/07/abrir-con-vim-en-xfce/</link>

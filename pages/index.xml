@@ -7,27 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="/pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Atajos</title>
-      <link>/pages/atajos/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <title>[LaTeX] Notas y Trucos</title>
+      <link>/pages/resources/vim-notas-trucos/</link>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/pages/atajos/</guid>
-      <description> Vim   </description>
-    </item>
-    
-    <item>
-      <title>Chuletario de Vim</title>
-      <link>/pages/cheatsheet/vim-cs/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/pages/cheatsheet/vim-cs/</guid>
-      <description>Global  :saveas file - guarda un fichero como&amp;hellip; &#39;0 - reabrir el último fichero abierto \ - Leader Key  Movimientos del cursor Todo en el modo normal
-  w - saltamos al inicio de la siguiente palabra
-  e - saltamos al final de una palabra
-  b - igual que w pero en sentido opuesto
-  % - saltamos a la pareja del paréntesis</description>
+      <guid>/pages/resources/vim-notas-trucos/</guid>
+      <description>En esta página voy a ir almacenando pequeños trucos que me voy encontrando, atajos de teclado útiles en ciertas ocasiones o simplemente cosas que no quiero olvidar.
+Búsqueda insensible Por defecto viene desactivada, la podemos activar para que todas las búsquedas sean insensibles, pero la forma más rápida es agregar al final de nuestra búsqueda \c. Por ejemplo, si estamos buscando en nuestro documento la palabra linux:
+1  /linux\c  </description>
     </item>
     
     <item>
@@ -36,7 +25,7 @@
       <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/recursos/</guid>
-      <description> [LaTeX] Notas y Trucos   </description>
+      <description> [LaTeX] Notas y Trucos  [Vim] Notas y Trucos   </description>
     </item>
     
     <item>
