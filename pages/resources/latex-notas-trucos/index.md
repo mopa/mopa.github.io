@@ -3,6 +3,13 @@
 
 En esta página voy a ir almacenando pequeños trucos para la realización de documentos (no es la típica *cheatsheet*). Se trata más bien de las cosas usuales que nos surgen, como hacer anotaciones al margen, texto que envuelve una imagen, etc. 
 
+### Webs
+
+- [Tables Generator](https://www.tablesgenerator.com/)
+- [Table Convert](https://tableconvert.com/)
+- [Detexify - LaTeX handwritten symbol recognition](http://detexify.kirelabs.org/classify.html)
+- [LaTeX Previewer](http://www.tlhiv.org/ltxpreview/)
+
 
 ### Listas ordenadas por letras
 
