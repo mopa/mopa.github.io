@@ -3,15 +3,15 @@
         <title>Pablo M. | Pablo M.</title>
         <link>/</link>
         <description>Pablo M. | Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml" /><item>
-                <title>Posts</title>
-                <link>/posts/</link>
-                <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate><guid>/posts/</guid>
-                <description></description>
-            </item><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml" /><item>
                 <title>Pages</title>
                 <link>/pages/</link>
                 <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate><guid>/pages/</guid>
+                <description></description>
+            </item><item>
+                <title>Posts</title>
+                <link>/posts/</link>
+                <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate><guid>/posts/</guid>
                 <description></description>
             </item><item>
                 <title>About</title>

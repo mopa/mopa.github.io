@@ -2,14 +2,14 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>/2020/10/error-claves-pgp-aur-en-manjaro/arch/</loc><lastmod>2020-10-25T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/tags/linux/</loc><lastmod>2020-10-25T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/</loc><lastmod>2020-10-25T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/posts/</loc><lastmod>2020-10-25T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/tags/</loc><lastmod>2020-10-25T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/pages/resources/vim-notas-trucos/</loc><lastmod>2020-10-18T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/</loc><lastmod>2020-10-18T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/pages/</loc><lastmod>2020-10-18T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/</loc><lastmod>2020-10-18T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/vim/</loc><lastmod>2020-10-18T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</loc><lastmod>2020-07-21T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/linux/</loc><lastmod>2020-07-21T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/posts/</loc><lastmod>2020-07-21T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</loc><lastmod>2020-07-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/proxmox/</loc><lastmod>2020-07-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2020/06/docker-comandos-%C3%BAtiles/</loc><lastmod>2020-06-15T00:00:00+00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

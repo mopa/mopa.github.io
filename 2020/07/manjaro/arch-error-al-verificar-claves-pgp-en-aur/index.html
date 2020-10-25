@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39; | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>[Manjaro/Arch] Error al verificar claves PGP en AUR | Pablo M.</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
-<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/2020/06/docker-comandos-%C3%BAtiles/" /><link rel="next" href="/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/" /><link rel="canonical" href="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/" />
+<meta name="Description" content="Engineering and Data Science"><link rel="prev" href="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/" /><link rel="canonical" href="/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -13,29 +13,28 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff"><meta property="og:title" content="[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;" />
-<meta property="og:description" content="El error que me he encontrado en alguna ocasión esporádica en Proxmox es que no podía parar un contenedor (en concreto un lxc) ni tampoco apagarlo, por lo que no podía apagar el sistema.
-De hecho, al entrar por SSH al Proxmox también obtenía el mismo error, o sea era imposible apagarlo de la forma correcta.
-Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando lxc." />
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="[Manjaro/Arch] Error al verificar claves PGP en AUR" />
+<meta property="og:description" content="En mi día a día uso Manjaro con XFCE, y también cierto software para escuchar música (Spotify). Para instalarlo tuve que hacerlo por los repositorios AUR, pero en una reciente actualización cual fue mi sorpresa al ver este error: ERROR: One or more PGP signatures could not be verified!.
+Los que usamos Arch y sus derivados estamos siempre con el dilema de los repositorios AUR, proveen una gran cantidad de software pero, ¿a qué precio?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/" />
-<meta property="article:published_time" content="2020-07-05T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-07-05T00:00:00+00:00" />
+<meta property="og:url" content="/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/" />
+<meta property="article:published_time" content="2020-07-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-21T00:00:00+00:00" />
 <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "[Proxmox] Solución al error: can\u0027t lock file \u0027\/run\/lock\/lxc\/pve-config-xxx.lock\u0027",
+        "headline": "[Manjaro\/Arch] Error al verificar claves PGP en AUR",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "\/2020\/07\/proxmox-soluci%C3%B3n-al-error-cant-lock-file-\/run\/lock\/lxc\/pve-config-xxx.lock\/"
+            "@id": "\/2020\/07\/manjaro\/arch-error-al-verificar-claves-pgp-en-aur\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "proxmox","wordcount":  144 ,
-        "url": "\/2020\/07\/proxmox-soluci%C3%B3n-al-error-cant-lock-file-\/run\/lock\/lxc\/pve-config-xxx.lock\/","datePublished": "2020-07-05T00:00:00\u002b00:00","dateModified": "2020-07-05T00:00:00\u002b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            },"genre": "posts","keywords": "linux","wordcount":  194 ,
+        "url": "\/2020\/07\/manjaro\/arch-error-al-verificar-claves-pgp-en-aur\/","datePublished": "2020-07-21T00:00:00\u002b00:00","dateModified": "2020-07-21T00:00:00\u002b00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
                 "@type": "Organization",
                 "name": "Pablo M.",
                 "logo": {
@@ -77,30 +76,40 @@ Después de probar diversos comandos, soluciones, navegar por foros y documentac
     </div>
 </nav>
 <main class="main">
-                <div class="container"><article class="page"><h1 class="post-title flipInX">[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;</h1><div class="post-meta">
+                <div class="container"><article class="page"><h1 class="post-title flipInX">[Manjaro/Arch] Error al verificar claves PGP en AUR</h1><div class="post-meta">
             <div class="post-meta-main"></div>
-            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-05>2020-07-05</time>&nbsp;
+            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-21>2020-07-21</time>&nbsp;
                 <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;</div>
-        </div><div class="post-content"><p>El error que me he encontrado en alguna ocasión esporádica en <a href="https://www.proxmox.com/en/" target="_blank">Proxmox</a>
- es que no podía parar un contenedor (en concreto un <em>lxc</em>) ni tampoco apagarlo, por lo que no podía apagar el sistema.</p>
-<img alt="Este es el error en cuestión" src="/img/proxmox-error.png" width=500>
-<p>De hecho, al entrar por <code>SSH</code> al Proxmox también obtenía el mismo error, o sea era imposible apagarlo de la forma correcta.</p>
-<p>Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando <code>lxc</code>. Seguí los pasos que <a href="https://forum.proxmox.com/threads/cannot-shut-down-container.69514/" target="_blank">describo a continuación</a>
-:</p>
+        </div><div class="post-content"><p>En mi día a día uso Manjaro con XFCE, y también cierto software para escuchar
+música (Spotify). Para instalarlo tuve que hacerlo por los repositorios AUR,
+pero en una reciente actualización cual fue mi sorpresa al ver este error:
+<code>ERROR: One or more PGP signatures could not be verified!</code>.</p>
+<p>Los que usamos Arch y sus derivados estamos siempre con el dilema de los
+repositorios AUR, proveen una gran cantidad de software pero, ¿a qué precio?
+Bueno, la cuestión aquí es resolver el problema de las claves PGP, en concreto
+las de Spotify.</p>
+<p>Primero nos dirigimos a la sección de <a href="https://www.spotify.com/mx/download/linux/" target="_blank">descargas de Spotify</a>
+, y buscamos la parte donde especifica la instalación via línea de comandos (<em>Install via command line</em>). Solo nos ofrece la instalación por <code>Snap</code> y si usamos <code>Debian / Ubuntu</code>. No es ningún problema, buscamos la línea <code>curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - </code>, y la adaptamos a nuestro sistema Manjaro/Arch:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">lxc-ls --fancy
-
-lxc-stop &lt;nombre/numero de la maquina o contenedor&gt;
+<pre class="chroma"><code class="language-bash" data-lang="bash">curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg <span class="p">|</span> gpg --import -
 </code></pre></td></tr></table>
 </div>
-</div><p>Obviamente estos comandos los ejecuté por <code>SSH</code>. He leído varias razones por las que se puede dar esto, y creo que la mas plausible según el uso que le he dado al contenedor en cuestión, es que se quede un proceso colgado o abortado. De modo que, !revisad los procesos!</p>
+</div><p>Ahora solo queda instalarlo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pamac build spotify
+</code></pre></td></tr></table>
+</div>
+</div><p>Con esto ya queda solucionado. Aunque lo haya realizado para Spotify, esta
+solución se puede extrapolar a otras Apps con el mismo problema.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -114,15 +123,14 @@ lxc-stop &lt;nombre/numero de la maquina o contenedor&gt;
 
     <div class="post-info-more">
         <section><span class="tag">
-                        <a href="/tags/proxmox/"><i class="fas fa-tag fa-fw"></i>&nbsp;proxmox</a>&nbsp;
+                        <a href="/tags/linux/"><i class="fas fa-tag fa-fw"></i>&nbsp;linux</a>&nbsp;
                     </span></section>
         <section>
             <span><a href="javascript:window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2020/06/docker-comandos-%C3%BAtiles/" class="prev" rel="prev" title="[Docker] Comandos Útiles"><i class="fas fa-angle-left fa-fw"></i>[Docker] Comandos Útiles</a>
-            <a href="/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/" class="next" rel="next" title="[Manjaro/Arch] Error al verificar claves PGP en AUR">[Manjaro/Arch] Error al verificar claves PGP en AUR<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/" class="prev" rel="prev" title="[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;"><i class="fas fa-angle-left fa-fw"></i>[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;</a></div>
 </div>
 <div class="post-comment"></div>
     </article></div>
