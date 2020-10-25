@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error claves PGP AUR en Manjaro/Arch</title>
+      <link>/2020/10/error-claves-pgp-aur-en-manjaro/arch/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/10/error-claves-pgp-aur-en-manjaro/arch/</guid>
+      <description>En mi día a día uso Manjaro con XFCE, y también cierto software para escuchar música (Spotify). Para instalarlo tuve que hacerlo por los repositorios AUR, pero en una reciente actualización cual fue mi sorpresa al ver este error: ERROR: One or more PGP signatures could not be verified!.
+Los que usamos Arch y sus derivados estamos siempre con el dilema de los repositorios AUR, proveen una gran cantidad de software pero, ¿a qué precio?</description>
+    </item>
+    
     <item>
       <title>[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;</title>
       <link>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</link>
