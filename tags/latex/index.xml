@@ -1,42 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>latex on Pablo M.</title>
-    <link>/tags/latex/</link>
-    <description>Recent content in latex on Pablo M.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es</language>
-    <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 17 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/latex/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[LaTeX/Pandoc] Tutorial Básico</title>
-      <link>/2020/02/latex-pandoc-tutorial-basico/</link>
-      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/02/latex-pandoc-tutorial-basico/</guid>
-      <description>Desde que uso Markdown realizar documentos se ha convertido en una tarea realmente fácil y rápida. Es cierto que en formato RAW no lo podemos enviar de forma general, se vuelve necesario convertirlo a PDF. Y en esta tarea es donde entra en juego Pandoc , el cual es un conversor de documentos libre y de código abierto.
-Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en una combinación perfecta y personalizable.</description>
-    </item>
-    
-    <item>
-      <title>[LaTeX] Notas y Trucos</title>
-      <link>/pages/resources/latex-notas-trucos/</link>
-      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/pages/resources/latex-notas-trucos/</guid>
-      <description>En esta página voy a ir almacenando pequeños trucos para la realización de documentos (no es la típica cheatsheet). Se trata más bien de las cosas usuales que nos surgen, como hacer anotaciones al margen, texto que envuelve una imagen, etc.
-Webs  Tables Generator  Table Convert  Detexify - LaTeX handwritten symbol recognition  LaTeX Previewer   Listas ordenadas por letras Para tener listas ordenadas con letras minúsculas, usamos el paquete enumitem:</description>
-    </item>
-    
-    <item>
-      <title>[LaTeX] Capítulo 1: Compiladores</title>
-      <link>/2018/04/latex-capitulo-1-compiladores/</link>
-      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/04/latex-capitulo-1-compiladores/</guid>
-      <description>Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
-TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>latex - Etiqueta - Pablo M.</title>
+        <link>/tags/latex/</link>
+        <description>latex - Etiqueta - Pablo M.</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 17 Feb 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/latex/" rel="self" type="application/rss+xml" /><item>
+    <title>[LaTeX/Pandoc] Tutorial Básico</title>
+    <link>/2020/02/latex-pandoc-tutorial-basico/</link>
+    <pubDate>Mon, 17 Feb 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/02/latex-pandoc-tutorial-basico/</guid>
+    <description><![CDATA[Desde que uso Markdown realizar documentos se ha convertido en una tarea realmente fácil y rápida. Es cierto que en formato RAW no lo podemos enviar de forma general, se vuelve necesario convertirlo a PDF. Y en esta tarea es donde entra en juego Pandoc, el cual es un conversor de documentos libre y de código abierto.
+Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en una combinación perfecta y personalizable.]]></description>
+</item><item>
+    <title>[LaTeX] Notas y Trucos</title>
+    <link>/pages/resources/latex-notas-trucos/</link>
+    <pubDate>Sun, 26 Jan 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/pages/resources/latex-notas-trucos/</guid>
+    <description><![CDATA[En esta página voy a ir almacenando pequeños trucos para la realización de documentos (no es la típica cheatsheet). Se trata más bien de las cosas usuales que nos surgen, como hacer anotaciones al margen, texto que envuelve una imagen, etc.
+Webs  Tables Generator Table Convert Detexify - LaTeX handwritten symbol recognition LaTeX Previewer  Listas ordenadas por letras Para tener listas ordenadas con letras minúsculas, usamos el paquete enumitem:]]></description>
+</item><item>
+    <title>[LaTeX] Capítulo 1: Compiladores</title>
+    <link>/2018/04/latex-capitulo-1-compiladores/</link>
+    <pubDate>Sun, 01 Apr 2018 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2018/04/latex-capitulo-1-compiladores/</guid>
+    <description><![CDATA[Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
+TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo]]></description>
+</item></channel>
 </rss>

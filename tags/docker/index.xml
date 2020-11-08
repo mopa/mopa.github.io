@@ -1,34 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>docker on Pablo M.</title>
-    <link>/tags/docker/</link>
-    <description>Recent content in docker on Pablo M.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es</language>
-    <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[Docker] Comandos Útiles</title>
-      <link>/2020/06/docker-comandos-%C3%BAtiles/</link>
-      <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/06/docker-comandos-%C3%BAtiles/</guid>
-      <description>Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.
-Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción -i). Además sacamos por pantalla la salida del contenedor (-t):</description>
-    </item>
-    
-    <item>
-      <title>[Docker] Comandos  Básico</title>
-      <link>/2020/05/docker-comandos-b%C3%A1sico/</link>
-      <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/05/docker-comandos-b%C3%A1sico/</guid>
-      <description>En el mundo de los que nos gusta el cacharreo Docker se ha convertido en una herramienta casi obligada, nos evitamos reinstalaciones, «formateos» y demás engorrros con sus correspondientes pérdidas de tiempo.
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>docker - Etiqueta - Pablo M.</title>
+        <link>/tags/docker/</link>
+        <description>docker - Etiqueta - Pablo M.</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 08 Sep 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/docker/" rel="self" type="application/rss+xml" /><item>
+    <title>[Docker] Actualizar nuestros contenedores</title>
+    <link>/2020/09/docker-actualizar-nuestros-contenedores/</link>
+    <pubDate>Tue, 08 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/09/docker-actualizar-nuestros-contenedores/</guid>
+    <description><![CDATA[Cuando llevamos algún tiempo usando Docker surge una nueva necesidad: actualizar nuestros servicios. Tradicionalmente esto siempre lo hacíamos cuando actualizábamos el sistema, con el consecuente problema de si algún paquete queríamos que conservara alguna versión en particular y demás títeres.
+Actualizar los contenedores es realmente fácil, solo hay que asegurarse de donde estamos guardando los datos (me refiero a aquello de los volúmenes). Procedemos de la siguiente manera: 
+Un ejemplo con mysql es el siguiente:]]></description>
+</item><item>
+    <title>[Docker] Comandos Útiles</title>
+    <link>/2020/06/docker-comandos-%C3%BAtiles/</link>
+    <pubDate>Mon, 15 Jun 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/06/docker-comandos-%C3%BAtiles/</guid>
+    <description><![CDATA[Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.
+Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción -i). Además sacamos por pantalla la salida del contenedor (-t):]]></description>
+</item><item>
+    <title>[Docker] Comandos  Básico</title>
+    <link>/2020/05/docker-comandos-b%C3%A1sico/</link>
+    <pubDate>Tue, 19 May 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/05/docker-comandos-b%C3%A1sico/</guid>
+    <description><![CDATA[En el mundo de los que nos gusta el cacharreo Docker se ha convertido en una herramienta casi obligada, nos evitamos reinstalaciones, «formateos» y demás engorrros con sus correspondientes pérdidas de tiempo.
 Se ha escrito mucho sobre Docker, lo que pretendo con esta pequeña introducción es dejar claras algunas deficiones, y ofrecer una serie de comandos básicos.
 Deficiones Docker Es como un gestor de paquetes tipo Snap o AppImage.
-Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servicio.</description>
-    </item>
-    
-  </channel>
+Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servicio.]]></description>
+</item></channel>
 </rss>

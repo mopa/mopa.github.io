@@ -1,31 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>data science on Pablo M.</title>
-    <link>/tags/data-science/</link>
-    <description>Recent content in data science on Pablo M.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es</language>
-    <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 15 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Estadística y la Copa del Rey ACB 18-19</title>
-      <link>/2019/02/estadistica-y-la-copa-del-rey-acb-18-19/</link>
-      <pubDate>Fri, 15 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/02/estadistica-y-la-copa-del-rey-acb-18-19/</guid>
-      <description>canvas { padding: 0; margin: auto; display: block; width: 600px; height: 500px; }  El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la final four de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo PES, FIFA, etc. Para ello tomamos las siguientes variables:</description>
-    </item>
-    
-    <item>
-      <title>Estadística y la Final Four de Belgrado</title>
-      <link>/2018/05/estadisticas-y-la-final-four-de-belgrado/</link>
-      <pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/05/estadisticas-y-la-final-four-de-belgrado/</guid>
-      <description>canvas { padding: 0; margin: auto; display: block; width: 500px; height: 400px; }  Ahora que ya tenemos al caer la Final Four de Belgrado , vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los Playoff. He tomado las siguientes variables:
-3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>data science - Etiqueta - Pablo M.</title>
+        <link>/tags/data-science/</link>
+        <description>data science - Etiqueta - Pablo M.</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 15 Feb 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/data-science/" rel="self" type="application/rss+xml" /><item>
+    <title>Estadística y la Copa del Rey ACB 18-19</title>
+    <link>/2019/02/estadistica-y-la-copa-del-rey-acb-18-19/</link>
+    <pubDate>Fri, 15 Feb 2019 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2019/02/estadistica-y-la-copa-del-rey-acb-18-19/</guid>
+    <description><![CDATA[canvas { padding: 0; margin: auto; display: block; width: 600px; height: 500px; }  El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la final four de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo PES, FIFA, etc. Para ello tomamos las siguientes variables:]]></description>
+</item><item>
+    <title>Estadística y la Final Four de Belgrado</title>
+    <link>/2018/05/estadisticas-y-la-final-four-de-belgrado/</link>
+    <pubDate>Sun, 13 May 2018 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2018/05/estadisticas-y-la-final-four-de-belgrado/</guid>
+    <description><![CDATA[canvas { padding: 0; margin: auto; display: block; width: 500px; height: 400px; }  Ahora que ya tenemos al caer la Final Four de Belgrado, vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los Playoff. He tomado las siguientes variables:
+3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef.]]></description>
+</item></channel>
 </rss>

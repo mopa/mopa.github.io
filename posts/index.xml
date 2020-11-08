@@ -1,154 +1,91 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Pablo M.</title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on Pablo M.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es</language>
-    <copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 21 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[Manjaro/Arch] Error al verificar claves PGP en AUR</title>
-      <link>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</link>
-      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</guid>
-      <description>En mi día a día uso Manjaro con XFCE, y también cierto software para escuchar música (Spotify). Para instalarlo tuve que hacerlo por los repositorios AUR, pero en una reciente actualización cual fue mi sorpresa al ver este error: ERROR: One or more PGP signatures could not be verified!.
-Los que usamos Arch y sus derivados estamos siempre con el dilema de los repositorios AUR, proveen una gran cantidad de software pero, ¿a qué precio?</description>
-    </item>
-    
-    <item>
-      <title>[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;</title>
-      <link>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</link>
-      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</guid>
-      <description>El error que me he encontrado en alguna ocasión esporádica en Proxmox es que no podía parar un contenedor (en concreto un lxc) ni tampoco apagarlo, por lo que no podía apagar el sistema.
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Todo Artículos - Pablo M.</title>
+        <link>/posts/</link>
+        <description>Todo Artículos | Pablo M.</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 08 Sep 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>[Docker] Actualizar nuestros contenedores</title>
+    <link>/2020/09/docker-actualizar-nuestros-contenedores/</link>
+    <pubDate>Tue, 08 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/09/docker-actualizar-nuestros-contenedores/</guid>
+    <description><![CDATA[Cuando llevamos algún tiempo usando Docker surge una nueva necesidad: actualizar nuestros servicios. Tradicionalmente esto siempre lo hacíamos cuando actualizábamos el sistema, con el consecuente problema de si algún paquete queríamos que conservara alguna versión en particular y demás títeres.
+Actualizar los contenedores es realmente fácil, solo hay que asegurarse de donde estamos guardando los datos (me refiero a aquello de los volúmenes). Procedemos de la siguiente manera: 
+Un ejemplo con mysql es el siguiente:]]></description>
+</item><item>
+    <title>[Manjaro/Arch] Error al verificar claves PGP en AUR</title>
+    <link>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</link>
+    <pubDate>Tue, 21 Jul 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</guid>
+    <description><![CDATA[En mi día a día uso Manjaro con XFCE, y también cierto software para escuchar música (Spotify). Para instalarlo tuve que hacerlo por los repositorios AUR, pero en una reciente actualización cual fue mi sorpresa al ver este error: ERROR: One or more PGP signatures could not be verified!.
+Los que usamos Arch y sus derivados estamos siempre con el dilema de los repositorios AUR, proveen una gran cantidad de software pero, ¿a qué precio?]]></description>
+</item><item>
+    <title>[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;</title>
+    <link>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</link>
+    <pubDate>Sun, 05 Jul 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</guid>
+    <description><![CDATA[El error que me he encontrado en alguna ocasión esporádica en Proxmox es que no podía parar un contenedor (en concreto un lxc) ni tampoco apagarlo, por lo que no podía apagar el sistema.
 De hecho, al entrar por SSH al Proxmox también obtenía el mismo error, o sea era imposible apagarlo de la forma correcta.
-Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando lxc.</description>
-    </item>
-    
-    <item>
-      <title>[Docker] Comandos Útiles</title>
-      <link>/2020/06/docker-comandos-%C3%BAtiles/</link>
-      <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/06/docker-comandos-%C3%BAtiles/</guid>
-      <description>Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.
-Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción -i). Además sacamos por pantalla la salida del contenedor (-t):</description>
-    </item>
-    
-    <item>
-      <title>[Docker] Comandos  Básico</title>
-      <link>/2020/05/docker-comandos-b%C3%A1sico/</link>
-      <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/05/docker-comandos-b%C3%A1sico/</guid>
-      <description>En el mundo de los que nos gusta el cacharreo Docker se ha convertido en una herramienta casi obligada, nos evitamos reinstalaciones, «formateos» y demás engorrros con sus correspondientes pérdidas de tiempo.
+Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando lxc.]]></description>
+</item><item>
+    <title>[Docker] Comandos Útiles</title>
+    <link>/2020/06/docker-comandos-%C3%BAtiles/</link>
+    <pubDate>Mon, 15 Jun 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/06/docker-comandos-%C3%BAtiles/</guid>
+    <description><![CDATA[Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.
+Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción -i). Además sacamos por pantalla la salida del contenedor (-t):]]></description>
+</item><item>
+    <title>[Docker] Comandos  Básico</title>
+    <link>/2020/05/docker-comandos-b%C3%A1sico/</link>
+    <pubDate>Tue, 19 May 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/05/docker-comandos-b%C3%A1sico/</guid>
+    <description><![CDATA[En el mundo de los que nos gusta el cacharreo Docker se ha convertido en una herramienta casi obligada, nos evitamos reinstalaciones, «formateos» y demás engorrros con sus correspondientes pérdidas de tiempo.
 Se ha escrito mucho sobre Docker, lo que pretendo con esta pequeña introducción es dejar claras algunas deficiones, y ofrecer una serie de comandos básicos.
 Deficiones Docker Es como un gestor de paquetes tipo Snap o AppImage.
-Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servicio.</description>
-    </item>
-    
-    <item>
-      <title>[Linux] Editar y Modificar PDFs</title>
-      <link>/2020/04/linux-editar-modificar-pdfs/</link>
-      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/04/linux-editar-modificar-pdfs/</guid>
-      <description>Cuando nos iniciamos en el mundo GNU/Linux hay una de las tareas más comunes que puede llegar a ser un suplicio: editar archivos PDF. Para operaciones tan básicas como unir o cortar páginas, encriptar, etc. tenía que recurrir a alguna web que realizaban estos propósitos o resignarme a hacer alguna treta.
-Dado que me estoy empezando a manejar mejor con aplicaciones en CLI (por aquello de automatizar procesos), busqué soluciones de este tipo y me encontré con dos: PDFtk y Xpdf.</description>
-    </item>
-    
-    <item>
-      <title>[LaTeX/Pandoc] Tutorial Básico</title>
-      <link>/2020/02/latex-pandoc-tutorial-basico/</link>
-      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/02/latex-pandoc-tutorial-basico/</guid>
-      <description>Desde que uso Markdown realizar documentos se ha convertido en una tarea realmente fácil y rápida. Es cierto que en formato RAW no lo podemos enviar de forma general, se vuelve necesario convertirlo a PDF. Y en esta tarea es donde entra en juego Pandoc , el cual es un conversor de documentos libre y de código abierto.
-Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en una combinación perfecta y personalizable.</description>
-    </item>
-    
-    <item>
-      <title>[Linux] Matar Procesos</title>
-      <link>/2020/02/linux-matar-procesos/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/02/linux-matar-procesos/</guid>
-      <description>No existen sistemas infalibles y de vez en cuando las aplicaciones se quedan congeladas, no responden y por más que pinchemos el botón de cerrar no quiere cerrarse. En estos casos recurrimos a la terminal y podríamos usar xkill, pero puede pasar que notemos el sistema lento y no sepamos de donde viene. Para estas situaciones y conocer mejor lo que se está ejecutando, voy a mostrar de forma (intentaré que sea breve) ver los procesos que más usan la CPU y la memoria.</description>
-    </item>
-    
-    <item>
-      <title>Abrir con VIM en Xfce</title>
-      <link>/2019/07/abrir-con-vim-en-xfce/</link>
-      <pubDate>Tue, 23 Jul 2019 17:03:39 +0200</pubDate>
-      
-      <guid>/2019/07/abrir-con-vim-en-xfce/</guid>
-      <description>Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&amp;hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
-1 2 3  Exec=xfce4-terminal -e &amp;#34;vim %F&amp;#34; Terminal=false   Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces.</description>
-    </item>
-    
-    <item>
-      <title>[Python/Pandas] Truquitos para ser más ágiles</title>
-      <link>/2019/05/python-pandas-truquitos-para-ser-mas-agiles/</link>
-      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/05/python-pandas-truquitos-para-ser-mas-agiles/</guid>
-      <description>Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien gordo, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.
+Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servicio.]]></description>
+</item><item>
+    <title>[Linux] Editar y Modificar PDFs</title>
+    <link>/2020/04/linux-editar-modificar-pdfs/</link>
+    <pubDate>Tue, 14 Apr 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/04/linux-editar-modificar-pdfs/</guid>
+    <description><![CDATA[Cuando nos iniciamos en el mundo GNU/Linux hay una de las tareas más comunes que puede llegar a ser un suplicio: editar archivos PDF. Para operaciones tan básicas como unir o cortar páginas, encriptar, etc. tenía que recurrir a alguna web que realizaban estos propósitos o resignarme a hacer alguna treta.
+Dado que me estoy empezando a manejar mejor con aplicaciones en CLI (por aquello de automatizar procesos), busqué soluciones de este tipo y me encontré con dos: PDFtk y Xpdf.]]></description>
+</item><item>
+    <title>[LaTeX/Pandoc] Tutorial Básico</title>
+    <link>/2020/02/latex-pandoc-tutorial-basico/</link>
+    <pubDate>Mon, 17 Feb 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/02/latex-pandoc-tutorial-basico/</guid>
+    <description><![CDATA[Desde que uso Markdown realizar documentos se ha convertido en una tarea realmente fácil y rápida. Es cierto que en formato RAW no lo podemos enviar de forma general, se vuelve necesario convertirlo a PDF. Y en esta tarea es donde entra en juego Pandoc, el cual es un conversor de documentos libre y de código abierto.
+Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en una combinación perfecta y personalizable.]]></description>
+</item><item>
+    <title>[Linux] Matar Procesos</title>
+    <link>/2020/02/linux-matar-procesos/</link>
+    <pubDate>Mon, 10 Feb 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/02/linux-matar-procesos/</guid>
+    <description><![CDATA[No existen sistemas infalibles y de vez en cuando las aplicaciones se quedan congeladas, no responden y por más que pinchemos el botón de cerrar no quiere cerrarse. En estos casos recurrimos a la terminal y podríamos usar xkill, pero puede pasar que notemos el sistema lento y no sepamos de donde viene. Para estas situaciones y conocer mejor lo que se está ejecutando, voy a mostrar de forma (intentaré que sea breve) ver los procesos que más usan la CPU y la memoria.]]></description>
+</item><item>
+    <title>Abrir con VIM en Xfce</title>
+    <link>/2019/07/abrir-con-vim-en-xfce/</link>
+    <pubDate>Tue, 23 Jul 2019 17:03:39 &#43;0200</pubDate>
+    <author>Autor</author>
+    <guid>/2019/07/abrir-con-vim-en-xfce/</guid>
+    <description><![CDATA[Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
+1 2 3  Exec=xfce4-terminal -e &#34;vim %F&#34; Terminal=false   Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces.]]></description>
+</item><item>
+    <title>[Python/Pandas] Truquitos para ser más ágiles</title>
+    <link>/2019/05/python-pandas-truquitos-para-ser-mas-agiles/</link>
+    <pubDate>Fri, 03 May 2019 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2019/05/python-pandas-truquitos-para-ser-mas-agiles/</guid>
+    <description><![CDATA[Una de las operaciones más habituales es importar ficheros. Pero cuando tratamos con alguno que es bien gordo, esta simple operación se vuelve una tortura, así que es mejor importar solo algunos datos.
 read_csv Comando archiconocido, y uno de sus argumentos es nrows. Si añadimos, por ejemplo, nrows=5 como argumento de ese gran fichero, estaremos importando una pequeña porción.
-Si usamos GNU/Linux tenemos el comando head para ver las primeras líneas del documento, e.</description>
-    </item>
-    
-    <item>
-      <title>Estadística y la Copa del Rey ACB 18-19</title>
-      <link>/2019/02/estadistica-y-la-copa-del-rey-acb-18-19/</link>
-      <pubDate>Fri, 15 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/02/estadistica-y-la-copa-del-rey-acb-18-19/</guid>
-      <description>canvas { padding: 0; margin: auto; display: block; width: 600px; height: 500px; }  El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la final four de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo PES, FIFA, etc. Para ello tomamos las siguientes variables:</description>
-    </item>
-    
-    <item>
-      <title>[Vim] Corrección Ortográfica</title>
-      <link>/2019/02/vim-correccion-ortografica/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/02/vim-correccion-ortografica/</guid>
-      <description>Poco a poco voy conociendo más cosas sobre Vim, y lo que antes me parecía un tarea ardua ahora lo hago con más rapidez. Cierto es que al principio cuesta y una cosa que echaba de menos era tener un corrector ortográfico (por lo que pudiera pasar). Voy a mostrar varias cositas y trucos para tener lo necesario ante este tema.
-Para activarlo lo hacemos con el comando:
-1  :setlocal spell   Esto puede (probablemente) no escoja por defecto nuestro idioma, pero tranquilos no pasa nada, lo especificamos tal que</description>
-    </item>
-    
-    <item>
-      <title>Estadística y la Final Four de Belgrado</title>
-      <link>/2018/05/estadisticas-y-la-final-four-de-belgrado/</link>
-      <pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/05/estadisticas-y-la-final-four-de-belgrado/</guid>
-      <description>canvas { padding: 0; margin: auto; display: block; width: 500px; height: 400px; }  Ahora que ya tenemos al caer la Final Four de Belgrado , vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los Playoff. He tomado las siguientes variables:
-3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef.</description>
-    </item>
-    
-    <item>
-      <title>[LaTeX] Capítulo 1: Compiladores</title>
-      <link>/2018/04/latex-capitulo-1-compiladores/</link>
-      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/04/latex-capitulo-1-compiladores/</guid>
-      <description>Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
-TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>/2018/03/hello-world/</link>
-      <pubDate>Sat, 31 Mar 2018 11:59:16 +0200</pubDate>
-      
-      <guid>/2018/03/hello-world/</guid>
-      <description>Hello Everyone!</description>
-    </item>
-    
-  </channel>
+Si usamos GNU/Linux tenemos el comando head para ver las primeras líneas del documento, e.]]></description>
+</item></channel>
 </rss>
