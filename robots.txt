@@ -1,3 +1,87 @@
 User-agent: *
-Disallow: 
-Sitemap: https://pablomopa.com/sitemap.xml
+
+
+Disallow: /2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/
+
+Disallow: /tags/math/
+
+Disallow: /
+
+Disallow: /posts/
+
+Disallow: /tags/python/
+
+Disallow: /tags/
+
+Disallow: /pages/resources/vim-notas-trucos/
+
+Disallow: /pages/
+
+Disallow: /tags/vim/
+
+Disallow: /2020/09/docker-actualizar-nuestros-contenedores/
+
+Disallow: /tags/docker/
+
+Disallow: /2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/
+
+Disallow: /tags/linux/
+
+Disallow: /2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/
+
+Disallow: /tags/proxmox/
+
+Disallow: /2020/06/docker-comandos-%C3%BAtiles/
+
+Disallow: /tags/tutorial/
+
+Disallow: /2020/05/docker-comandos-b%C3%A1sico/
+
+Disallow: /2020/04/linux-editar-modificar-pdfs/
+
+Disallow: /tags/pdf/
+
+Disallow: /2020/02/latex-pandoc-tutorial-basico/
+
+Disallow: /tags/latex/
+
+Disallow: /tags/pandoc/
+
+Disallow: /2020/02/linux-matar-procesos/
+
+Disallow: /tags/commands/
+
+Disallow: /tags/tips/
+
+Disallow: /recursos/
+
+Disallow: /pages/resources/latex-notas-trucos/
+
+Disallow: /2019/07/abrir-con-vim-en-xfce/
+
+Disallow: /tags/xfce/
+
+Disallow: /2019/05/python-pandas-truquitos-para-ser-mas-agiles/
+
+Disallow: /tags/data/
+
+Disallow: /tags/pandas/
+
+Disallow: /tags/data-science/
+
+Disallow: /tags/deporte/
+
+Disallow: /2019/02/estadistica-y-la-copa-del-rey-acb-18-19/
+
+Disallow: /2019/02/vim-correccion-ortografica/
+
+Disallow: /2018/05/estadisticas-y-la-final-four-de-belgrado/
+
+Disallow: /2018/04/latex-capitulo-1-compiladores/
+
+Disallow: /about/
+
+Disallow: /2018/03/hello-world/
+
+Disallow: /categories/
+

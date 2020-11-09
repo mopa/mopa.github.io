@@ -3,7 +3,14 @@
         <title>python - Etiqueta - Pablo M.</title>
         <link>/tags/python/</link>
         <description>python - Etiqueta - Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 03 May 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>[Python] Resolver ecuaciones y sistemas de ecuaciones</title>
+    <link>/2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/</link>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/</guid>
+    <description><![CDATA[En ingeniería (y en el ámbito científico en general) es de sobra conocido Matlab para resolver ecuaciones, hacer modelado, simulaciones, etc. Pero ya sea por el precio, forma de trabajar, filosofía de software o cualquier otra razón no queramos usarlo y busquemos un reemplazo. Podemos optar por usar GNU Octave, pero yo me inclino por Python + Jupyter. Así pues, vamos a ver como podemos resolver ecuaciones, ecuaciones cuadráticas, sistemas de ecuaciones lineales y una pequeña introducción al cálculo simbólico.]]></description>
+</item><item>
     <title>[Python/Pandas] Truquitos para ser más ágiles</title>
     <link>/2019/05/python-pandas-truquitos-para-ser-mas-agiles/</link>
     <pubDate>Fri, 03 May 2019 00:00:00 &#43;0000</pubDate>
