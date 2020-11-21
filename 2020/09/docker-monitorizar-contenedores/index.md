@@ -40,17 +40,17 @@ Si queremos ver todos los contenedores:
 docker stats -a
 ```
 
-Podemos usar con la opción `--format` para sacar la información que queramos de la forma que nos guste, por ejemplo:
+Podemos usar la opción `--format` para sacar la información que queramos de la forma que nos guste, por ejemplo:
 ```bash
 docker stats --format "{{.Name}}\t{{.CPUPerc}}" <IDs o nombre contenedorres>
 ```
 
-La salida de este comando es la monitorización de solo el porcentaje de CPU por los contenedores especificados.
+La salida de este comando es la monitorización de solo el porcentaje de CPU a los contenedores especificados.
 
 
 ### Usar un contenedor
 
-Existen contenedores que se encargan de recoger las métricas y usos de otros contenedores, algunos de estos son [cAdvisor](https://github.com/google/cadvisor) o [Prometheus](https://prometheus.io/) (esta es ya una solución cuando tenemos una infraestructura importante). Cualquiera de estas opciones es buena si el fin es que todo funcione correctamente :D
+Existen contenedores que se encargan de recoger las métricas y usos de otros contenedores, algunos de estos son [cAdvisor](https://github.com/google/cadvisor) o [Prometheus](https://prometheus.io/) (esta es ya una solución cuando tenemos una infraestructura importante). Cualquiera de estas opciones es buena si el fin es que todo funcione correctamente :smile:
 
 
 

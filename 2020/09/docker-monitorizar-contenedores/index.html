@@ -33,7 +33,7 @@ docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs d
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "\/2020\/09\/docker-monitorizar-contenedores\/"
-        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "docker","wordcount":  265 ,
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "docker","wordcount":  264 ,
         "url": "\/2020\/09\/docker-monitorizar-contenedores\/","datePublished": "2020-09-15T00:00:00+00:00","dateModified": "2020-09-15T00:00:00+00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Pablo M."},"author": {
@@ -110,7 +110,7 @@ docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs d
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[Docker] Monitorizar contenedores</h1><div class="post-meta">
             <div class="post-meta-line"></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-09-15">2020-09-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;265 palabras&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-09-15">2020-09-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;264 palabras&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutos&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -187,7 +187,7 @@ docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs d
 <pre class="chroma"><code class="language-bash" data-lang="bash">docker stats -a
 </code></pre></td></tr></table>
 </div>
-</div><p>Podemos usar con la opción <code>--format</code> para sacar la información que queramos de la forma que nos guste, por ejemplo:</p>
+</div><p>Podemos usar la opción <code>--format</code> para sacar la información que queramos de la forma que nos guste, por ejemplo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -196,9 +196,9 @@ docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs d
 <pre class="chroma"><code class="language-bash" data-lang="bash">docker stats --format <span class="s2">&#34;{{.Name}}\t{{.CPUPerc}}&#34;</span> &lt;IDs o nombre contenedorres&gt;
 </code></pre></td></tr></table>
 </div>
-</div><p>La salida de este comando es la monitorización de solo el porcentaje de CPU por los contenedores especificados.</p>
+</div><p>La salida de este comando es la monitorización de solo el porcentaje de CPU a los contenedores especificados.</p>
 <h3 id="usar-un-contenedor">Usar un contenedor</h3>
-<p>Existen contenedores que se encargan de recoger las métricas y usos de otros contenedores, algunos de estos son <a href="https://github.com/google/cadvisor" target="_blank" rel="noopener noreffer">cAdvisor</a> o <a href="https://prometheus.io/" target="_blank" rel="noopener noreffer">Prometheus</a> (esta es ya una solución cuando tenemos una infraestructura importante). Cualquiera de estas opciones es buena si el fin es que todo funcione correctamente :D</p>
+<p>Existen contenedores que se encargan de recoger las métricas y usos de otros contenedores, algunos de estos son <a href="https://github.com/google/cadvisor" target="_blank" rel="noopener noreffer">cAdvisor</a> o <a href="https://prometheus.io/" target="_blank" rel="noopener noreffer">Prometheus</a> (esta es ya una solución cuando tenemos una infraestructura importante). Cualquiera de estas opciones es buena si el fin es que todo funcione correctamente 😄</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

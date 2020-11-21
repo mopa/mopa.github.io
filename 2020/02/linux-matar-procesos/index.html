@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "\/2020\/02\/linux-matar-procesos\/"
-        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "linux, commands, tips","wordcount":  554 ,
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "linux, commands, tips","wordcount":  681 ,
         "url": "\/2020\/02\/linux-matar-procesos\/","datePublished": "2020-02-10T00:00:00+00:00","dateModified": "2020-02-10T00:00:00+00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Pablo M."},"author": {
@@ -106,8 +106,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">[Linux] Matar Procesos</h1><div class="post-meta">
             <div class="post-meta-line"></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-02-10">2020-02-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;554 palabras&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutos&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-02-10">2020-02-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;681 palabras&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutos&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contenido</span>
@@ -129,6 +129,7 @@
       </ul>
     </li>
     <li><a href="#matar-un-proceso-zombi">Matar un proceso zombi</a></li>
+    <li><a href="#algunos-comandos-interesantes">Algunos comandos interesantes</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>No existen sistemas infalibles y de vez en cuando las aplicaciones se quedan congeladas, no responden y por más que pinchemos el botón de cerrar no quiere cerrarse. En estos casos recurrimos a la terminal y podríamos usar <code>xkill</code>, pero puede pasar que notemos el sistema lento y no sepamos de donde viene. Para estas situaciones y conocer mejor lo que se está ejecutando, voy a mostrar de forma (intentaré que sea breve) ver los procesos que más usan la CPU y la memoria.</p>
@@ -239,7 +240,43 @@ pidof firefox
 </code></pre></td></tr></table>
 </div>
 </div><p>Este comando nos lista los procesos zombi junto con su PID, por lo que ya solo queda hacer un <code>kill -9 PID</code>.</p>
-</div><div class="post-footer" id="post-footer">
+<h2 id="algunos-comandos-interesantes">Algunos comandos interesantes</h2>
+<p>Expongo a continuación algunos comandos de <code>ps</code> con la salida formateada a ver solo el tanto por ciento de CPU o memoria:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Listamos los procesos que consumen mas CPU</span>
+ps axc -o cmd:18,%cpu --sort<span class="o">=</span>-%cpu <span class="p">|</span> head
+
+<span class="c1"># Saber el uso de CPU de un proceso</span>
+ps axc -o cmd:18,%cpu <span class="p">|</span> grep &lt;Nombre proceso&gt;
+
+<span class="c1"># Listar los procesos que consumen mas Memoria</span>
+ps axc -o cmd:18,%mem --sort<span class="o">=</span>-%mem <span class="p">|</span> head
+
+<span class="c1"># Saber el uso de Memoria de un proceso</span>
+ps axc -o cmd:18,%mem <span class="p">|</span> grep &lt;Nombre proceso&gt;
+
+<span class="c1"># Saber el uso de CPU y Memoria de un proceso mostrandolo de forma jerarquica</span>
+ps axc -H --forest -o cmd:18,%cpu,%mem <span class="p">|</span> grep containerd
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

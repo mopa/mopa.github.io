@@ -85,5 +85,28 @@ Existen ocasiones que ejecutamos un programa y al cerrarlo dicho programa no se 
 ps aux | grep Z
 ```
 
-Este comando nos lista los procesos zombi junto con su PID, por lo que ya solo queda hacer un `kill -9 PID`. 
+Este comando nos lista los procesos zombi junto con su PID, por lo que ya solo queda hacer un `kill -9 PID`.
+
+
+## Algunos comandos interesantes
+
+Expongo a continuación algunos comandos de `ps` con la salida formateada a ver solo el tanto por ciento de CPU o memoria:
+```bash
+# Listamos los procesos que consumen mas CPU
+ps axc -o cmd:18,%cpu --sort=-%cpu | head
+
+# Saber el uso de CPU de un proceso
+ps axc -o cmd:18,%cpu | grep <Nombre proceso>
+
+# Listar los procesos que consumen mas Memoria
+ps axc -o cmd:18,%mem --sort=-%mem | head
+
+# Saber el uso de Memoria de un proceso
+ps axc -o cmd:18,%mem | grep <Nombre proceso>
+
+# Saber el uso de CPU y Memoria de un proceso mostrandolo de forma jerarquica
+ps axc -H --forest -o cmd:18,%cpu,%mem | grep containerd
+```
+
+
 
