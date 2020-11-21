@@ -90,7 +90,7 @@ Este comando nos lista los procesos zombi junto con su PID, por lo que ya solo q
 
 ## Algunos comandos interesantes
 
-Expongo a continuación algunos comandos de `ps` con la salida formateada a ver solo el tanto por ciento de CPU o memoria:
+Expongo a continuación algunos comandos de `ps` con la salida formateada para ver solo el tanto por ciento de CPU o memoria:
 ```bash
 # Listamos los procesos que consumen mas CPU
 ps axc -o cmd:18,%cpu --sort=-%cpu | head
