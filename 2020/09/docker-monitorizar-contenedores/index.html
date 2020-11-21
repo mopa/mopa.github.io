@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[Docker] Monitorizar contenedores - Pablo M.</title><meta name="Description" content="Engineering and Data Science"><meta property="og:title" content="[Docker] Monitorizar contenedores" />
+<meta property="og:description" content="Ya hemos hecho algunas cositas interesantes con los contenedores de Docker y llega un momento en que necesitamos monitorizarlos, saber que está pasando, los recursos que consume o por qué no funciona correctamente. Para ello Docker nos brinda tres comandos: logs, top y stats.
+docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs del contenedor que queramos. La sintaxis sería:
+1  docker logs &lt;ID o nombre contenedor&gt;   Si queremos seguir la salida que va mostrando:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2020/09/docker-monitorizar-contenedores/" />
+<meta property="og:image" content="/logo.png"/>
+<meta property="article:published_time" content="2020-09-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="[Docker] Monitorizar contenedores"/>
+<meta name="twitter:description" content="Ya hemos hecho algunas cositas interesantes con los contenedores de Docker y llega un momento en que necesitamos monitorizarlos, saber que está pasando, los recursos que consume o por qué no funciona correctamente. Para ello Docker nos brinda tres comandos: logs, top y stats.
+docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs del contenedor que queramos. La sintaxis sería:
+1  docker logs &lt;ID o nombre contenedor&gt;   Si queremos seguir la salida que va mostrando:"/>
+<meta name="application-name" content="Pablo M.">
+<meta name="apple-mobile-web-app-title" content="Pablo M."><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/2020/09/docker-monitorizar-contenedores/" /><link rel="prev" href="/2020/09/docker-actualizar-nuestros-contenedores/" /><link rel="next" href="/2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Docker] Monitorizar contenedores",
+        "inLanguage": "es",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/2020\/09\/docker-monitorizar-contenedores\/"
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "docker","wordcount":  265 ,
+        "url": "\/2020\/09\/docker-monitorizar-contenedores\/","datePublished": "2020-09-15T00:00:00+00:00","dateModified": "2020-09-15T00:00:00+00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Pablo M."},"author": {
+                "@type": "Person",
+                "name": "Pablo M."
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pablo M.">Pablo M.</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/recursos/"> Recursos </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pablo M.">Pablo M.</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/recursos/" title="">Recursos</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contenido</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">[Docker] Monitorizar contenedores</h1><div class="post-meta">
+            <div class="post-meta-line"></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-09-15">2020-09-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;265 palabras&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contenido</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-logs">docker logs</a></li>
+        <li><a href="#docker-top">docker top</a></li>
+        <li><a href="#docker-stats">docker stats</a></li>
+        <li><a href="#usar-un-contenedor">Usar un contenedor</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Ya hemos hecho algunas cositas interesantes con los contenedores de Docker y llega un momento en que necesitamos monitorizarlos, saber que está pasando, los recursos que consume o por qué no funciona correctamente. Para ello Docker nos brinda tres comandos: <code>logs</code>, <code>top</code> y <code>stats</code>.</p>
+<h3 id="docker-logs">docker logs</h3>
+<p>Como os podéis imaginar con <code>docker logs</code> nos va a mostrar los logs del contenedor que queramos. La sintaxis sería:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker logs &lt;ID o nombre contenedor&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Si queremos seguir la salida que va mostrando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker logs -f &lt;ID o nombre contenedor&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>O mostrar las últimas diez salidas:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker logs --tail <span class="m">10</span> &lt;ID o nombre contenedor&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="docker-top">docker top</h3>
+<p>Mostramos los procesos que están corriendo de un contenedor:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker top &lt;ID o nombre contenedor&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="docker-stats">docker stats</h3>
+<p>Nos muestra las estadísticas del flujo de recursos de un contenedor o de varios contenedores. Esto es, el uso de CPU, memoria, trafico de red y de disco.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats &lt;IDs o nombre contenedores&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Si queremos ver todos los contenedores:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats -a
+</code></pre></td></tr></table>
+</div>
+</div><p>Podemos usar con la opción <code>--format</code> para sacar la información que queramos de la forma que nos guste, por ejemplo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats --format <span class="s2">&#34;{{.Name}}\t{{.CPUPerc}}&#34;</span> &lt;IDs o nombre contenedorres&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>La salida de este comando es la monitorización de solo el porcentaje de CPU por los contenedores especificados.</p>
+<h3 id="usar-un-contenedor">Usar un contenedor</h3>
+<p>Existen contenedores que se encargan de recoger las métricas y usos de otros contenedores, algunos de estos son <a href="https://github.com/google/cadvisor" target="_blank" rel="noopener noreffer">cAdvisor</a> o <a href="https://prometheus.io/" target="_blank" rel="noopener noreffer">Prometheus</a> (esta es ya una solución cuando tenemos una infraestructura importante). Cualquiera de estas opciones es buena si el fin es que todo funcione correctamente :D</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Actualizado el 2020-09-15</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">docker</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="/">Inicio</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2020/09/docker-actualizar-nuestros-contenedores/" class="prev" rel="prev" title="[Docker] Actualizar nuestros contenedores"><i class="fas fa-angle-left fa-fw"></i>[Docker] Actualizar nuestros contenedores</a>
+            <a href="/2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/" class="next" rel="next" title="[Python] Resolver ecuaciones y sistemas de ecuaciones">[Python] Resolver ecuaciones y sistemas de ecuaciones<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |  Proudly Made on Earth <i class="far fa-heart fa-fw"></i></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Volver arriba">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentarios">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.es.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":20},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"es","maxResultLength":10,"noResultsFound":"No se encontraron resultados","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

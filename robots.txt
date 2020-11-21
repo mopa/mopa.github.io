@@ -19,9 +19,11 @@ Disallow: /pages/
 
 Disallow: /tags/vim/
 
-Disallow: /2020/09/docker-actualizar-nuestros-contenedores/
+Disallow: /2020/09/docker-monitorizar-contenedores/
 
 Disallow: /tags/docker/
+
+Disallow: /2020/09/docker-actualizar-nuestros-contenedores/
 
 Disallow: /2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/
 

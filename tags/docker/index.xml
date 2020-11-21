@@ -3,7 +3,16 @@
         <title>docker - Etiqueta - Pablo M.</title>
         <link>/tags/docker/</link>
         <description>docker - Etiqueta - Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 08 Sep 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/docker/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 15 Sep 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/docker/" rel="self" type="application/rss+xml" /><item>
+    <title>[Docker] Monitorizar contenedores</title>
+    <link>/2020/09/docker-monitorizar-contenedores/</link>
+    <pubDate>Tue, 15 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/09/docker-monitorizar-contenedores/</guid>
+    <description><![CDATA[Ya hemos hecho algunas cositas interesantes con los contenedores de Docker y llega un momento en que necesitamos monitorizarlos, saber que está pasando, los recursos que consume o por qué no funciona correctamente. Para ello Docker nos brinda tres comandos: logs, top y stats.
+docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs del contenedor que queramos. La sintaxis sería:
+1  docker logs &lt;ID o nombre contenedor&gt;   Si queremos seguir la salida que va mostrando:]]></description>
+</item><item>
     <title>[Docker] Actualizar nuestros contenedores</title>
     <link>/2020/09/docker-actualizar-nuestros-contenedores/</link>
     <pubDate>Tue, 08 Sep 2020 00:00:00 &#43;0000</pubDate>
