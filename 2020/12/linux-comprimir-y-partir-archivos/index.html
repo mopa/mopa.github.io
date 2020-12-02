@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[Linux] Comprimir y partir archivos - Pablo M.</title><meta name="Description" content="Engineering and Data Science"><meta property="og:title" content="[Linux] Comprimir y partir archivos" />
+<meta property="og:description" content="Hasta no hace mucho era común encontrarse por las redes archivos comprimidos en varias partes, de este modo carpetas, imagenes, etc. de varios gigabytes se podían compartir de forma más fácil. Como si fuera cosa del pasado, recientemente he tenido varias situaciones de diversa índole en las que he tenido que recurrir a esta solución. Para que no caiga en el olvido, comparto como he hecho esta operación.
+El «algoritmo» sería: primero comprimir los archivos con tar y luego partirlos con split." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2020/12/linux-comprimir-y-partir-archivos/" />
+<meta property="og:image" content="/logo.png"/>
+<meta property="article:published_time" content="2020-12-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="[Linux] Comprimir y partir archivos"/>
+<meta name="twitter:description" content="Hasta no hace mucho era común encontrarse por las redes archivos comprimidos en varias partes, de este modo carpetas, imagenes, etc. de varios gigabytes se podían compartir de forma más fácil. Como si fuera cosa del pasado, recientemente he tenido varias situaciones de diversa índole en las que he tenido que recurrir a esta solución. Para que no caiga en el olvido, comparto como he hecho esta operación.
+El «algoritmo» sería: primero comprimir los archivos con tar y luego partirlos con split."/>
+<meta name="application-name" content="Pablo M.">
+<meta name="apple-mobile-web-app-title" content="Pablo M."><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/2020/12/linux-comprimir-y-partir-archivos/" /><link rel="prev" href="/2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Linux] Comprimir y partir archivos",
+        "inLanguage": "es",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/2020\/12\/linux-comprimir-y-partir-archivos\/"
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "linux, commands, tips","wordcount":  280 ,
+        "url": "\/2020\/12\/linux-comprimir-y-partir-archivos\/","datePublished": "2020-12-02T00:00:00+00:00","dateModified": "2020-12-02T00:00:00+00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Pablo M."},"author": {
+                "@type": "Person",
+                "name": "Pablo M."
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pablo M.">Pablo M.</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/recursos/"> Recursos </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pablo M.">Pablo M.</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/recursos/" title="">Recursos</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">[Linux] Comprimir y partir archivos</h1><div class="post-meta">
+            <div class="post-meta-line"></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-02">2020-12-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;280 palabras&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutos&nbsp;</div>
+        </div><div class="content" id="content"><p>Hasta no hace mucho era común encontrarse por las redes archivos comprimidos en varias partes, de este modo carpetas, imagenes, etc. de varios gigabytes se podían compartir de forma más fácil. Como si fuera cosa del pasado, recientemente he tenido varias situaciones de diversa índole en las que he tenido que recurrir a esta solución. Para que no caiga en el olvido, <a href="https://stackoverflow.com/questions/1120095/split-files-using-tar-gz-zip-or-bzip2" target="_blank" rel="noopener noreffer">comparto como he hecho esta operación</a>.</p>
+<p>El «algoritmo» sería: primero comprimir los archivos con <code>tar</code> y luego partirlos con <code>split</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tar cz fichero_1 fichero_2 <span class="p">|</span> split -b 1024MiB - ficheros.tgz_
+</code></pre></td></tr></table>
+</div>
+</div><p>Este comando nos comprime los ficheros <code>fichero1</code> y <code>fichero2</code> (pueden ser ficheros o carpetas), después los parte en trozos de 1024MiB y además les añade un sufijo de letras (la secuencia es: <code>aa</code>, <code>ab</code>, <code>ac</code>, &hellip;), es decir, el resultado sería:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ficheros.tgz_aa
+ficheros.tgz_ab
+ficheros.tgz_ac
+.
+.
+.
+</code></pre></td></tr></table>
+</div>
+</div><p>Para descomprimir:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">cat ficheros.tgz_* <span class="p">|</span> tar xz
+</code></pre></td></tr></table>
+</div>
+</div><p> </p>
+<p><strong>En caso de tener sólo un archivo</strong>, podemos usar <code>gzip</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gzip -c fichero <span class="p">|</span> split -b 1024MiB - fichero_part.gz_
+</code></pre></td></tr></table>
+</div>
+</div><p>Y para descomprimir:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">cat fichero_part.gz_* <span class="p">|</span> gunzip -c &gt; fichero
+</code></pre></td></tr></table>
+</div>
+</div><p> </p>
+<p>Como indica la documentación de <code>split</code>, en el argumento del tamaño, <code>-b</code>, las unidades son: <code>K,M,G,T,P,E,Z,Y</code> para potencias de 1024 o <code>KB,MB,...</code> para potencias de 1000. Además hay una equivalencia entre las formas <code>KiB=K</code>, <code>MiB=M</code>, etc.</p>
+<p>Otro argumento interesante de <code>split</code> es poder cambiar el sufijo, particularmente me gusta más que sea numérico, de modo que añado <code>-d</code>. Así si quiero partir varios ficheros en trozos de 500MiB y que el sufijo sea con números,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">tar cz fichero1 fichero2 <span class="p">|</span> split -d -b 500M - ficheros.tgz_
+</code></pre></td></tr></table>
+</div>
+</div><p>Espero que el post sea de ayuda 😉</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Actualizado el 2020-12-02</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/commands/">commands</a>,&nbsp;<a href="/tags/tips/">tips</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="/">Inicio</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/" class="prev" rel="prev" title="[Python] Resolver ecuaciones y sistemas de ecuaciones"><i class="fas fa-angle-left fa-fw"></i>[Python] Resolver ecuaciones y sistemas de ecuaciones</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |  Proudly Made on Earth <i class="far fa-heart fa-fw"></i></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Volver arriba">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentarios">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.es.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":20},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"es","maxResultLength":10,"noResultsFound":"No se encontraron resultados","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

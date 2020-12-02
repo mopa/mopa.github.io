@@ -1,17 +1,25 @@
 User-agent: *
 
 
-Disallow: /2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/
+Disallow: /2020/12/linux-comprimir-y-partir-archivos/
 
-Disallow: /tags/math/
+Disallow: /tags/commands/
+
+Disallow: /tags/linux/
 
 Disallow: /
 
 Disallow: /posts/
 
-Disallow: /tags/python/
-
 Disallow: /tags/
+
+Disallow: /tags/tips/
+
+Disallow: /2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/
+
+Disallow: /tags/math/
+
+Disallow: /tags/python/
 
 Disallow: /pages/resources/vim-notas-trucos/
 
@@ -26,8 +34,6 @@ Disallow: /tags/docker/
 Disallow: /2020/09/docker-actualizar-nuestros-contenedores/
 
 Disallow: /2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/
-
-Disallow: /tags/linux/
 
 Disallow: /2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/
 
@@ -50,10 +56,6 @@ Disallow: /tags/latex/
 Disallow: /tags/pandoc/
 
 Disallow: /2020/02/linux-matar-procesos/
-
-Disallow: /tags/commands/
-
-Disallow: /tags/tips/
 
 Disallow: /recursos/
 

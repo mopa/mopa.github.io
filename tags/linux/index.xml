@@ -3,7 +3,15 @@
         <title>linux - Etiqueta - Pablo M.</title>
         <link>/tags/linux/</link>
         <description>linux - Etiqueta - Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 21 Jul 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/linux/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 02 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>[Linux] Comprimir y partir archivos</title>
+    <link>/2020/12/linux-comprimir-y-partir-archivos/</link>
+    <pubDate>Wed, 02 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2020/12/linux-comprimir-y-partir-archivos/</guid>
+    <description><![CDATA[Hasta no hace mucho era común encontrarse por las redes archivos comprimidos en varias partes, de este modo carpetas, imagenes, etc. de varios gigabytes se podían compartir de forma más fácil. Como si fuera cosa del pasado, recientemente he tenido varias situaciones de diversa índole en las que he tenido que recurrir a esta solución. Para que no caiga en el olvido, comparto como he hecho esta operación.
+El «algoritmo» sería: primero comprimir los archivos con tar y luego partirlos con split.]]></description>
+</item><item>
     <title>[Manjaro/Arch] Error al verificar claves PGP en AUR</title>
     <link>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</link>
     <pubDate>Tue, 21 Jul 2020 00:00:00 &#43;0000</pubDate>
