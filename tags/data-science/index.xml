@@ -3,7 +3,15 @@
         <title>data science - Etiqueta - Pablo M.</title>
         <link>/tags/data-science/</link>
         <description>data science - Etiqueta - Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 15 Feb 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/data-science/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 08 Feb 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/data-science/" rel="self" type="application/rss+xml" /><item>
+    <title>[Python] Regresión Lineal</title>
+    <link>/2021/02/python-regresi%C3%B3n-lineal/</link>
+    <pubDate>Mon, 08 Feb 2021 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2021/02/python-regresi%C3%B3n-lineal/</guid>
+    <description><![CDATA[Sigo en mi ruta por ir pasando tareas que hacía en Matlab, y una de las habituales que podemos encontrarnos es una regresión lineal o una no lineal. Mejor no entro en el debate del porqué no se usa Python + Numpy + otras librerías en el ámbito académico, de modo que me limito a describir como poder hacer estas regresiones con Numpy.
+Supongamos que tenemos los datos en dos arrays (ya sea cargando los datos de un csv, un archivo de texto o cualquier otra forma), lo único que tenemos que hacer es especificar el grado del polinomio con el que queremos hacer el ajuste.]]></description>
+</item><item>
     <title>Estadística y la Copa del Rey ACB 18-19</title>
     <link>/2019/02/estadistica-y-la-copa-del-rey-acb-18-19/</link>
     <pubDate>Fri, 15 Feb 2019 00:00:00 &#43;0000</pubDate>

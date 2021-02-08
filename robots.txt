@@ -1,25 +1,31 @@
 User-agent: *
 
 
+Disallow: /2021/02/python-regresi%C3%B3n-lineal/
+
+Disallow: /tags/data-science/
+
+Disallow: /tags/numpy/
+
+Disallow: /
+
+Disallow: /posts/
+
+Disallow: /tags/python/
+
+Disallow: /tags/
+
 Disallow: /2020/12/linux-comprimir-y-partir-archivos/
 
 Disallow: /tags/commands/
 
 Disallow: /tags/linux/
 
-Disallow: /
-
-Disallow: /posts/
-
-Disallow: /tags/
-
 Disallow: /tags/tips/
 
 Disallow: /2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/
 
 Disallow: /tags/math/
-
-Disallow: /tags/python/
 
 Disallow: /pages/resources/vim-notas-trucos/
 
@@ -70,8 +76,6 @@ Disallow: /2019/05/python-pandas-truquitos-para-ser-mas-agiles/
 Disallow: /tags/data/
 
 Disallow: /tags/pandas/
-
-Disallow: /tags/data-science/
 
 Disallow: /tags/deporte/
 

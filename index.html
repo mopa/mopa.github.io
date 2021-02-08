@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-	<meta name="generator" content="Hugo 0.78.2" />
+	<meta name="generator" content="Hugo 0.80.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
 <meta property="og:image" content="/logo.png"/>
-<meta property="og:updated_time" content="2020-12-02T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-02-08T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/logo.png"/>
 
@@ -103,6 +103,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h1 class="home-title">Pablo M.</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/mopa" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:pmopa@pm.me" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2021/02/python-regresi%C3%B3n-lineal/">[Python] Regresión Lineal</a>
+    </h1><div class="post-meta"><span class="post-publish">publicado el <time datetime="2021-02-08">2021-02-08</time></span></div><div class="content">Sigo en mi ruta por ir pasando tareas que hacía en Matlab, y una de las habituales que podemos encontrarnos es una regresión lineal o una no lineal. Mejor no entro en el debate del porqué no se usa Python + Numpy + otras librerías en el ámbito académico, de modo que me limito a describir como poder hacer estas regresiones con Numpy.
+Supongamos que tenemos los datos en dos arrays (ya sea cargando los datos de un csv, un archivo de texto o cualquier otra forma), lo único que tenemos que hacer es especificar el grado del polinomio con el que queremos hacer el ajuste.</div><div class="post-footer">
+        <a href="/2021/02/python-regresi%C3%B3n-lineal/">Leer más</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/python/">python</a>,&nbsp;<a href="/tags/data-science/">data science</a>,&nbsp;<a href="/tags/numpy/">numpy</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2020/12/linux-comprimir-y-partir-archivos/">[Linux] Comprimir y partir archivos</a>
     </h1><div class="post-meta"><span class="post-publish">publicado el <time datetime="2020-12-02">2020-12-02</time></span></div><div class="content">Hasta no hace mucho era común encontrarse por las redes archivos comprimidos en varias partes, de este modo carpetas, imagenes, etc. de varios gigabytes se podían compartir de forma más fácil. Como si fuera cosa del pasado, recientemente he tenido varias situaciones de diversa índole en las que he tenido que recurrir a esta solución. Para que no caiga en el olvido, comparto como he hecho esta operación.
 El «algoritmo» sería: primero comprimir los archivos con tar y luego partirlos con split.</div><div class="post-footer">
@@ -138,14 +145,6 @@ Los que usamos Arch y sus derivados estamos siempre con el dilema de los reposit
         <a href="/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/">Leer más</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a></div></div>
 </article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/">[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;</a>
-    </h1><div class="post-meta"><span class="post-publish">publicado el <time datetime="2020-07-05">2020-07-05</time></span></div><div class="content">El error que me he encontrado en alguna ocasión esporádica en Proxmox es que no podía parar un contenedor (en concreto un lxc) ni tampoco apagarlo, por lo que no podía apagar el sistema.
-De hecho, al entrar por SSH al Proxmox también obtenía el mismo error, o sea era imposible apagarlo de la forma correcta.
-Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando lxc.</div><div class="post-footer">
-        <a href="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/">Leer más</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/proxmox/">proxmox</a></div></div>
-</article>
 <ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -157,6 +156,10 @@ Después de probar diversos comandos, soluciones, navegar por foros y documentac
                 </li><li class="page-item ">
                     <span class="page-link">
                         <a href="/page/3/">3</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/4/">4</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">

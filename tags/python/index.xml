@@ -3,7 +3,15 @@
         <title>python - Etiqueta - Pablo M.</title>
         <link>/tags/python/</link>
         <description>python - Etiqueta - Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 08 Feb 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>[Python] Regresión Lineal</title>
+    <link>/2021/02/python-regresi%C3%B3n-lineal/</link>
+    <pubDate>Mon, 08 Feb 2021 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2021/02/python-regresi%C3%B3n-lineal/</guid>
+    <description><![CDATA[Sigo en mi ruta por ir pasando tareas que hacía en Matlab, y una de las habituales que podemos encontrarnos es una regresión lineal o una no lineal. Mejor no entro en el debate del porqué no se usa Python + Numpy + otras librerías en el ámbito académico, de modo que me limito a describir como poder hacer estas regresiones con Numpy.
+Supongamos que tenemos los datos en dos arrays (ya sea cargando los datos de un csv, un archivo de texto o cualquier otra forma), lo único que tenemos que hacer es especificar el grado del polinomio con el que queremos hacer el ajuste.]]></description>
+</item><item>
     <title>[Python] Resolver ecuaciones y sistemas de ecuaciones</title>
     <link>/2020/11/python-resolver-ecuaciones-y-sistemas-de-ecuaciones/</link>
     <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
