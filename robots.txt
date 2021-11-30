@@ -1,25 +1,29 @@
 User-agent: *
 
 
+Disallow: /2021/03/linux-autocompletado-insensible-en-bash/
+
+Disallow: /tags/bash/
+
+Disallow: /tags/linux/
+
+Disallow: /
+
+Disallow: /posts/
+
+Disallow: /tags/
+
 Disallow: /2021/02/python-regresi%C3%B3n-lineal/
 
 Disallow: /tags/data-science/
 
 Disallow: /tags/numpy/
 
-Disallow: /
-
-Disallow: /posts/
-
 Disallow: /tags/python/
-
-Disallow: /tags/
 
 Disallow: /2020/12/linux-comprimir-y-partir-archivos/
 
 Disallow: /tags/commands/
-
-Disallow: /tags/linux/
 
 Disallow: /tags/tips/
 

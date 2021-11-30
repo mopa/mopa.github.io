@@ -8,10 +8,10 @@
         <title>[Linux] Matar Procesos - Pablo M.</title><meta name="Description" content="Engineering and Data Science"><meta property="og:title" content="[Linux] Matar Procesos" />
 <meta property="og:description" content="No existen sistemas infalibles y de vez en cuando las aplicaciones se quedan congeladas, no responden y por más que pinchemos el botón de cerrar no quiere cerrarse. En estos casos recurrimos a la terminal y podríamos usar xkill, pero puede pasar que notemos el sistema lento y no sepamos de donde viene. Para estas situaciones y conocer mejor lo que se está ejecutando, voy a mostrar de forma (intentaré que sea breve) ver los procesos que más usan la CPU y la memoria." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2020/02/linux-matar-procesos/" />
-<meta property="og:image" content="/logo.png"/>
+<meta property="og:url" content="/2020/02/linux-matar-procesos/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-02-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-02-10T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/logo.png"/>
 
@@ -139,19 +139,19 @@
 <p>Con <code>ps</code> se pueden hacer auténticas maravillas, pero vamos a lo que nos interesa. Vamos a listar los procesos de todos los usuarios (<code>-a</code>), la información del proceso (<code>-u</code>) y listar los procesos de todas las terminales y usuarios (<code>-x</code>):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ps aux
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ps aux
 </code></pre></td></tr></table>
 </div>
 </div><p>Esto nos saca un <em>tochaco</em> que a primera vista no gusta nada, vamos a refinarlo</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ps axc -o cmd:18,%cpu --sort<span class="o">=</span>-%cpu <span class="p">|</span> head
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ps axc -o cmd:18,%cpu --sort<span class="o">=</span>-%cpu <span class="p">|</span> head
 </code></pre></td></tr></table>
 </div>
 </div><p>Ahora mucho mejor, el comando anterior nos muestra de forma ordenada los procesos que están consumuendo mayor cantidad de CPU. <em>Tip</em>: usa un <tt>alias</tt> en tu <code>.bashrc</code> para ejecutarlo rapidamente.</p>
@@ -159,10 +159,10 @@
 <p>Otra forma de ver en vivo y en directo el consumo e información de los procesos, es con el comando <code>htop</code>, que por defecto no viene instalado en algunas distribuciones. Solo hemos de ejecutar:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">htop
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">htop
 </code></pre></td></tr></table>
 </div>
 </div><p>Con <tt>F3</tt> buscamos la aplicación que nos interese, con <tt>F6</tt> tenemos más opciones de ordenar los procesos, etc.</p>
@@ -171,12 +171,12 @@
 <p>Una forma de realizar esta acción es a través del <a href="https://es.wikipedia.org/wiki/Identificador_de_proceso?oldformat=true" target="_blank" rel="noopener noreffer">PID</a> del proceso, para conocer al susodicho tenemos varias opciones. Por ejemplo para conocer el PID de firefox:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ps -ef <span class="p">|</span> grep firefox
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ps -ef <span class="p">|</span> grep firefox
 
 pidof firefox
 </code></pre></td></tr></table>
@@ -184,10 +184,10 @@ pidof firefox
 </div><p>El segundo es mucho más fácil puesto que nos saca directamente lo que buscamos. Ahora para matarlo usamos <code>kill</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">kill</span> -9 PID
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">kill</span> -9 PID
 </code></pre></td></tr></table>
 </div>
 </div><p>El parámetro <code>-9</code> quiere decir que <em>mata al proceso</em>, puede parecer redundante pero tiene que ver con las <a href="https://en.wikipedia.org/wiki/Signal_%28IPC%29?oldformat=true#Sending_signals" target="_blank" rel="noopener noreffer">señales del sistema</a>.</p>
@@ -195,48 +195,48 @@ pidof firefox
 <p>El comando <code>killall</code> termina con todos los programas que conincidan con el nombre que le pasemos. Por ejemplo para matar firefox:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">killall -9 firefox
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">killall -9 firefox
 </code></pre></td></tr></table>
 </div>
 </div><p>Tenemos más opciones, una de ellas es poder terminar todos los procesos que está corriendo un usuario en particular:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo killall -u usuario
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo killall -u usuario
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="usando-parte-del-nombre-del-proceso">Usando parte del nombre del proceso</h3>
 <p>Con <code>pkill</code> matamos los proceso especificando el nombre o parte del nombre. Al igual que en los ejemplos anteriores:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pkill -9 firefox
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pkill -9 firefox
 </code></pre></td></tr></table>
 </div>
 </div><p><code>pkill</code> puede enviar la señal al proceso de un usuario. Esto es, que queremos matar firefox para un usuario particular:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pkill -9 -u usuario firefox
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pkill -9 -u usuario firefox
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="matar-un-proceso-zombi">Matar un proceso zombi</h2>
 <p>Existen ocasiones que ejecutamos un programa y al cerrarlo dicho programa no se elimina de la tabla de procesos. No son dañinos pero ocupan espacio en la RAM. Es poco comun tener este tipo de procesos pero se puede dar el caso, de modo que vamos a buscarlos y eliminarlos.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ps aux <span class="p">|</span> grep Z
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ps aux <span class="p">|</span> grep Z
 </code></pre></td></tr></table>
 </div>
 </div><p>Este comando nos lista los procesos zombi junto con su PID, por lo que ya solo queda hacer un <code>kill -9 PID</code>.</p>
@@ -244,7 +244,7 @@ pidof firefox
 <p>Expongo a continuación algunos comandos de <code>ps</code> con la salida formateada para ver solo el tanto por ciento de CPU o memoria:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -260,7 +260,7 @@ pidof firefox
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Listamos los procesos que consumen mas CPU</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Listamos los procesos que consumen mas CPU</span>
 ps axc -o cmd:18,%cpu --sort<span class="o">=</span>-%cpu <span class="p">|</span> head
 
 <span class="c1"># Saber el uso de CPU de un proceso</span>

@@ -10,10 +10,10 @@
 docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs del contenedor que queramos. La sintaxis sería:
 1  docker logs &lt;ID o nombre contenedor&gt;   Si queremos seguir la salida que va mostrando:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2020/09/docker-monitorizar-contenedores/" />
-<meta property="og:image" content="/logo.png"/>
+<meta property="og:url" content="/2020/09/docker-monitorizar-contenedores/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-09-15T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-09-15T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/logo.png"/>
 
@@ -134,66 +134,66 @@ docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs d
 <p>Como os podéis imaginar con <code>docker logs</code> nos va a mostrar los logs del contenedor que queramos. La sintaxis sería:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker logs &lt;ID o nombre contenedor&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker logs &lt;ID o nombre contenedor&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Si queremos seguir la salida que va mostrando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker logs -f &lt;ID o nombre contenedor&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker logs -f &lt;ID o nombre contenedor&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>O mostrar las últimas diez salidas:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker logs --tail <span class="m">10</span> &lt;ID o nombre contenedor&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker logs --tail <span class="m">10</span> &lt;ID o nombre contenedor&gt;
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="docker-top">docker top</h3>
 <p>Mostramos los procesos que están corriendo de un contenedor:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker top &lt;ID o nombre contenedor&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker top &lt;ID o nombre contenedor&gt;
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="docker-stats">docker stats</h3>
 <p>Nos muestra las estadísticas del flujo de recursos de un contenedor o de varios contenedores. Esto es, el uso de CPU, memoria, trafico de red y de disco.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats &lt;IDs o nombre contenedores&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker stats &lt;IDs o nombre contenedores&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Si queremos ver todos los contenedores:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats -a
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker stats -a
 </code></pre></td></tr></table>
 </div>
 </div><p>Podemos usar la opción <code>--format</code> para sacar la información que queramos de la forma que nos guste, por ejemplo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats --format <span class="s2">&#34;{{.Name}}\t{{.CPUPerc}}&#34;</span> &lt;IDs o nombre contenedorres&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker stats --format <span class="s2">&#34;{{.Name}}\t{{.CPUPerc}}&#34;</span> &lt;IDs o nombre contenedorres&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>La salida de este comando es la monitorización de solo el porcentaje de CPU a los contenedores especificados.</p>

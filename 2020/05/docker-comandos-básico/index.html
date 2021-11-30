@@ -11,10 +11,10 @@ Se ha escrito mucho sobre Docker, lo que pretendo con esta pequeña introducció
 Deficiones Docker Es como un gestor de paquetes tipo Snap o AppImage.
 Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servicio." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2020/05/docker-comandos-b%C3%A1sico/" />
-<meta property="og:image" content="/logo.png"/>
+<meta property="og:url" content="/2020/05/docker-comandos-b%C3%A1sico/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-05-19T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-05-19T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/logo.png"/>
 
@@ -153,22 +153,22 @@ Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servi
 <p>Descargar imágenes:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker pull &lt;nombre imagen o repositorio&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker pull &lt;nombre imagen o repositorio&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Ver imagenes descargadas:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker image ls
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image ls
 
 <span class="c1"># Equivalente</span>
 docker images
@@ -177,137 +177,137 @@ docker images
 </div><p>Ver imagenes intermedias:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker image ls -a
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image ls -a
 </code></pre></td></tr></table>
 </div>
 </div><p>Ver los numeros de identificacion, <code>ID</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker image ls -q
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image ls -q
 </code></pre></td></tr></table>
 </div>
 </div><p>Borrar las imagenes que no estamos utilizando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker image prune
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image prune
 </code></pre></td></tr></table>
 </div>
 </div><p>Borrar una o varias imagenes:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker image rm &lt;nombre imagen&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image rm &lt;nombre imagen&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>O también con:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker rmi &lt;nombre imagen&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker rmi &lt;nombre imagen&gt;
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="contenedores">Contenedores</h3>
 <p>Iniciar un contenedor:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker run hello-world
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run hello-world
 </code></pre></td></tr></table>
 </div>
 </div><p>Ver los contenedores que tenemos:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker ps -a
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker ps -a
 </code></pre></td></tr></table>
 </div>
 </div><p>Para un contenedor:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker stop &lt;nombre o ID&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker stop &lt;nombre o ID&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Iniciar de nuevo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker start &lt;nombre o ID&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker start &lt;nombre o ID&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Reiniciar:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker restart &lt;nombre o ID&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker restart &lt;nombre o ID&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Matando contenedores:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">kill</span> &lt;nombre o ID&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">kill</span> &lt;nombre o ID&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Borrar contenedor:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker rm &lt;nombre contenedor&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker rm &lt;nombre contenedor&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Borrar todos los contenedores que estén parados:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker container prune
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker container prune
 </code></pre></td></tr></table>
 </div>
 </div><p>Ver el proceso del docker:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker top &lt;nombre contenedor&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker top &lt;nombre contenedor&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Ver estadisticas:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">docker stats --no-stream &lt;nombre contenedor&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker stats --no-stream &lt;nombre contenedor&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Lo paramos con <code>Ctrl</code> + <code>c</code>.</p>

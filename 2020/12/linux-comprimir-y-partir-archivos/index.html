@@ -9,10 +9,10 @@
 <meta property="og:description" content="Hasta no hace mucho era común encontrarse por las redes archivos comprimidos en varias partes, de este modo carpetas, imagenes, etc. de varios gigabytes se podían compartir de forma más fácil. Como si fuera cosa del pasado, recientemente he tenido varias situaciones de diversa índole en las que he tenido que recurrir a esta solución. Para que no caiga en el olvido, comparto como he hecho esta operación.
 El «algoritmo» sería: primero comprimir los archivos con tar y luego partirlos con split." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2020/12/linux-comprimir-y-partir-archivos/" />
-<meta property="og:image" content="/logo.png"/>
+<meta property="og:url" content="/2020/12/linux-comprimir-y-partir-archivos/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-12-02T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-12-02T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/logo.png"/>
 
@@ -111,16 +111,16 @@ El «algoritmo» sería: primero comprimir los archivos con tar y luego partirlo
 <p>El «algoritmo» sería: primero comprimir los archivos con <code>tar</code> y luego partirlos con <code>split</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">tar cz fichero_1 fichero_2 <span class="p">|</span> split -b 1024MiB - ficheros.tgz_
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">tar cz fichero_1 fichero_2 <span class="p">|</span> split -b 1024MiB - ficheros.tgz_
 </code></pre></td></tr></table>
 </div>
 </div><p>Este comando nos comprime los ficheros <code>fichero1</code> y <code>fichero2</code> (pueden ser ficheros o carpetas), después los parte en trozos de 1024MiB y además les añade un sufijo de letras (la secuencia es: <code>aa</code>, <code>ab</code>, <code>ac</code>, &hellip;), es decir, el resultado sería:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -128,7 +128,7 @@ El «algoritmo» sería: primero comprimir los archivos con tar y luego partirlo
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ficheros.tgz_aa
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ficheros.tgz_aa
 ficheros.tgz_ab
 ficheros.tgz_ac
 .
@@ -139,29 +139,29 @@ ficheros.tgz_ac
 </div><p>Para descomprimir:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat ficheros.tgz_* <span class="p">|</span> tar xz
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat ficheros.tgz_* <span class="p">|</span> tar xz
 </code></pre></td></tr></table>
 </div>
 </div><p> </p>
 <p><strong>En caso de tener sólo un archivo</strong>, podemos usar <code>gzip</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">gzip -c fichero <span class="p">|</span> split -b 1024MiB - fichero_part.gz_
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">gzip -c fichero <span class="p">|</span> split -b 1024MiB - fichero_part.gz_
 </code></pre></td></tr></table>
 </div>
 </div><p>Y para descomprimir:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cat fichero_part.gz_* <span class="p">|</span> gunzip -c &gt; fichero
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat fichero_part.gz_* <span class="p">|</span> gunzip -c &gt; fichero
 </code></pre></td></tr></table>
 </div>
 </div><p> </p>
@@ -169,10 +169,10 @@ ficheros.tgz_ac
 <p>Otro argumento interesante de <code>split</code> es poder cambiar el sufijo, particularmente me gusta más que sea numérico, de modo que añado <code>-d</code>. Así si quiero partir varios ficheros en trozos de 500MiB y que el sufijo sea con números,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">tar cz fichero1 fichero2 <span class="p">|</span> split -d -b 500M - ficheros.tgz_
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">tar cz fichero1 fichero2 <span class="p">|</span> split -d -b 500M - ficheros.tgz_
 </code></pre></td></tr></table>
 </div>
 </div><p>Espero que el post sea de ayuda 😉</p>

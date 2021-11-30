@@ -10,10 +10,10 @@
 De hecho, al entrar por SSH al Proxmox también obtenía el mismo error, o sea era imposible apagarlo de la forma correcta.
 Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando lxc." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/" />
-<meta property="og:image" content="/logo.png"/>
+<meta property="og:url" content="/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-07-05T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-07-05T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/logo.png"/>
 
@@ -124,12 +124,12 @@ Después de probar diversos comandos, soluciones, navegar por foros y documentac
 <p>Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando <code>lxc</code>. Seguí los pasos que <a href="https://forum.proxmox.com/threads/cannot-shut-down-container.69514/" target="_blank" rel="noopener noreffer">describo a continuación</a>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">lxc-ls --fancy
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lxc-ls --fancy
 
 lxc-stop &lt;nombre/numero de la maquina o contenedor&gt;
 </code></pre></td></tr></table>

@@ -9,10 +9,10 @@
 <meta property="og:description" content="Cuando nos iniciamos en el mundo GNU/Linux hay una de las tareas más comunes que puede llegar a ser un suplicio: editar archivos PDF. Para operaciones tan básicas como unir o cortar páginas, encriptar, etc. tenía que recurrir a alguna web que realizaban estos propósitos o resignarme a hacer alguna treta.
 Dado que me estoy empezando a manejar mejor con aplicaciones en CLI (por aquello de automatizar procesos), busqué soluciones de este tipo y me encontré con dos: PDFtk y Xpdf." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2020/04/linux-editar-modificar-pdfs/" />
-<meta property="og:image" content="/logo.png"/>
+<meta property="og:url" content="/2020/04/linux-editar-modificar-pdfs/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-04-14T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-04-14T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/logo.png"/>
 
@@ -134,11 +134,11 @@ Dado que me estoy empezando a manejar mejor con aplicaciones en CLI (por aquello
 <p>En más de una ocasión he tenido que unir varios PDF, unir páginas de distintos PDF, eliminar páginas&hellip; todo de forma recursiva. Así que eso de ir uno a uno sería una locura, mejor que PDFtk lo haga. Primero instalamos el paquete, que obviamente dependerá de la distribución que uséis:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install pdftk <span class="c1"># Debian</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install pdftk <span class="c1"># Debian</span>
 sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 </code></pre></td></tr></table>
 </div>
@@ -148,10 +148,10 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf in2.pdf in3.pdf cat output out123.pdf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf in2.pdf in3.pdf cat output out123.pdf
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -159,10 +159,10 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk *.pdf cat output out.pdf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk *.pdf cat output out.pdf
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -170,10 +170,10 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf cat 1-12 14-end output out.pdf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf cat 1-12 14-end output out.pdf
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -181,10 +181,10 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk <span class="nv">A</span><span class="o">=</span>in1.pdf <span class="nv">B</span><span class="o">=</span>in2.pdf cat A1-7 B1-5 A8 output out.pdf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk <span class="nv">A</span><span class="o">=</span>in1.pdf <span class="nv">B</span><span class="o">=</span>in2.pdf cat A1-7 B1-5 A8 output out.pdf
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -192,10 +192,10 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf dump_data output informe.txt
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf dump_data output informe.txt
 </code></pre></td></tr></table>
 </div>
 </div><p>Podemos encontrar más ejemplos en <a href="https://www.pdflabs.com/docs/pdftk-cli-examples/" target="_blank" rel="noopener noreffer">PDFtk Server Examples</a>, como <a href="https://www.pdflabs.com/docs/how-to-add-headers-footers-watermarks-and-stamps-to-pdf/" target="_blank" rel="noopener noreffer">añadir marcas de agua</a>, y nunca viene mal echar un vistazo al <a href="https://www.pdflabs.com/docs/pdftk-man-page/" target="_blank" rel="noopener noreffer">manual</a>.</p>
@@ -203,11 +203,11 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 <p>Esta herramienta aunque es un visor (el cual ofrece algunas cosas interesantes), también puede realizar conversiones, extraer texto, extraer imágenes, analizar fuentes, extraer información, etc. Lo primero como siempre es instalar el paquete:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install xpdf <span class="c1"># Debian</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install xpdf <span class="c1"># Debian</span>
 sudo pacman -S xpdf <span class="c1"># Manjaro</span>
 </code></pre></td></tr></table>
 </div>
@@ -217,11 +217,11 @@ sudo pacman -S xpdf <span class="c1"># Manjaro</span>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdftotext in1.pdf out.odt
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftotext in1.pdf out.odt
 pdftotext in1.pdf out.txt
 </code></pre></td></tr></table>
 </div>
@@ -230,10 +230,10 @@ pdftotext in1.pdf out.txt
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdfimages -all in1.pdf /ruta/carpeta
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdfimages -all in1.pdf /ruta/carpeta
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -241,10 +241,10 @@ pdftotext in1.pdf out.txt
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pdfinfo in1.pdf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdfinfo in1.pdf
 </code></pre></td></tr></table>
 </div>
 </div><p>Esta herramienta trae algunas utilidades más que podemos ver en su <a href="https://www.xpdfreader.com/support.html" target="_blank" rel="noopener noreffer">página de soporte</a>.</p>

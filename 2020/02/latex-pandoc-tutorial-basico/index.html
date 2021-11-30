@@ -9,10 +9,10 @@
 <meta property="og:description" content="Desde que uso Markdown realizar documentos se ha convertido en una tarea realmente fácil y rápida. Es cierto que en formato RAW no lo podemos enviar de forma general, se vuelve necesario convertirlo a PDF. Y en esta tarea es donde entra en juego Pandoc, el cual es un conversor de documentos libre y de código abierto.
 Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en una combinación perfecta y personalizable." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2020/02/latex-pandoc-tutorial-basico/" />
-<meta property="og:image" content="/logo.png"/>
+<meta property="og:url" content="/2020/02/latex-pandoc-tutorial-basico/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-02-17T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-02-17T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/logo.png"/>
 
@@ -138,40 +138,40 @@ Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en 
 <p>Dado que uso Manjaro pongo el comando para este, pero para las demás distribuciones habidas y por haber el comando es similar (según se use <em>apt</em>, <em>yum</em>, etc.):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S pandoc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S pandoc
 </code></pre></td></tr></table>
 </div>
 </div><p>Para tener una completa integración instalamos los dos siguientes paquetes:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S pandoc-citeproc pandoc-crossref
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S pandoc-citeproc pandoc-crossref
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="uso-básico">Uso básico</h3>
 <p>El comando más básico de Pandoc es,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pandoc fileINPUT.txt -o fileOUTPUT.pdf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pandoc fileINPUT.txt -o fileOUTPUT.pdf
 </code></pre></td></tr></table>
 </div>
 </div><p>Las extensiones que he puesto son de ejemplo, puedes ver algunas <a href="https://pandoc.org/demos.html" target="_blank" rel="noopener noreffer">demos  aquí</a>.</p>
 <p>Tenemos varias opciones para pasarle a Pandoc, pero como vamos a usar LaTeX, dos que nos interesan son</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">--latex-engine<span class="o">=</span>COMPILADOR
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">--latex-engine<span class="o">=</span>COMPILADOR
 --template<span class="o">=</span>RUTA
 </code></pre></td></tr></table>
 </div>
@@ -179,10 +179,10 @@ Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en 
 <p>Pandoc nos provee de una plantilla por defecto, que podemos extraer con</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pandoc -D latex &gt; plantilla.latex
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pandoc -D latex &gt; plantilla.latex
 </code></pre></td></tr></table>
 </div>
 </div><p>A partir de esta personalizamos nuestra plantilla y la podemos colocar (por ejemplo) en <code>\home\user\.config\pandoc</code>.</p>
@@ -203,7 +203,7 @@ Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en 
 <p>En la plantilla nos aparacen un montón de variables, para poder asiganarle valores de una forma cómoda vamos a usar un archivo <tt>YAML</tt>. Un modelo puede ser el siguiente:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -224,7 +224,7 @@ Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en 
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="c"># Datos</span><span class="w">
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Título</span><span class="w">
 </span><span class="w"></span><span class="nt">author</span><span class="p">:</span><span class="w"> </span><span class="l">Nombre</span><span class="w">
@@ -248,17 +248,17 @@ Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en 
 </div><p>Este bloque <tt>YAML</tt> se puede añadir al inicio de nuestro Markdown o guardarlo en un archivo aparte e incluirlo en el comando de Pandoc:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pandoc datos.yaml input.md -o output.pdf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pandoc datos.yaml input.md -o output.pdf
 </code></pre></td></tr></table>
 </div>
 </div><p>El comando se ha vuelto «manejable» pero aún así es largo por lo que vamos a crear un <strong><tt>Makefile</tt></strong>. Este archivo va a contener todas las órdenes y opciones para compilar nuestro Markdown.</p>
 <p>Primero creamos un archivo de nombre <code>makefile</code> (así tal cual, sin extensión ni nada), lo editamos y vamos a incluir el siguiente bloque de código:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -275,7 +275,7 @@ Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en 
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">FILES = doc_markdown.md
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">FILES = doc_markdown.md
 
 all:
 	pandoc \
@@ -302,19 +302,19 @@ clean:
 <p>Ahora solo nos queda llamar a <code>make</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">make
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">make
 </code></pre></td></tr></table>
 </div>
 </div><p>Si queremos borrar el PDF:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">make clean
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">make clean
 </code></pre></td></tr></table>
 </div>
 </div><p>Este archivo <tt>make</tt> es muy básico, se pueden hacer un montón de cosas a partir de aquí. Esta forma de automatizar el proceso es realmente simple y rápida, aunque dependiendo del editor que se use también es posible sin tener que usar un <tt>makefile</tt>.</p>
