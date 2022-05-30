@@ -3,7 +3,16 @@
         <title>python - Etiqueta - Pablo M.</title>
         <link>/tags/python/</link>
         <description>python - Etiqueta - Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 08 Feb 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Apr 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>[Python] Crear entornos virtuales en Python 3</title>
+    <link>/2021/04/python-crear-entornos-virtuales-en-python-3/</link>
+    <pubDate>Sat, 10 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2021/04/python-crear-entornos-virtuales-en-python-3/</guid>
+    <description><![CDATA[Una de las formas más seguras y eficientes de desarrollar proyectos en Python es usando entornos virtuales. Podemos hacer todo tipo de perrerías y si no va bien simplemente borramos una carpeta y volvemos a empezar.
+Aunque existen varios métodos para tener entornos virtuales, aquí solo vamos a hacerlo de la forma más sencilla posible.
+Sabiendo que estamos usando Python 3 (verifica la versión por defecto conpython --version y si no es la 3, has de usar python3 --version) y estamos en la carpeta de nuestro proyecto, ejecutamos]]></description>
+</item><item>
     <title>[Python] Regresión Lineal</title>
     <link>/2021/02/python-regresi%C3%B3n-lineal/</link>
     <pubDate>Mon, 08 Feb 2021 00:00:00 &#43;0000</pubDate>

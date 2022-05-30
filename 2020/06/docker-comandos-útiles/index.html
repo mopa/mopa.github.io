@@ -139,11 +139,11 @@ Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, p
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run -it ubuntu
-
-<span class="c1"># Entramos al contenedor y lanzamos bash</span>
-docker run -it ubuntu bash
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -it ubuntu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Entramos al contenedor y lanzamos bash</span>
+</span></span><span class="line"><span class="cl">docker run -it ubuntu bash
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Para salir del contenedor solo hay que ejecutar <code>exit</code>, lo cual también parará el propio contenedor.</p>
 <p>OjO! Cada vez que ejecutamos un <code>docker run</code> estamos creando un contenedor nuevo. Dado que al hacer <code>exit</code> lo hemos parado, podemos volver a usarlo con <code>docker start -i &lt;ID o nombre del contenedor&gt;</code>.</p>
@@ -154,8 +154,8 @@ docker run -it ubuntu bash
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run -it --rm --name docker_ubuntu ubuntu
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -it --rm --name docker_ubuntu ubuntu
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Este comando arranca un contenedor interactivo de la imagen de <em>ubuntu</em> con el nombre <em>docker_ubuntu</em>, y además lo borrará una vez lo paremos.</p>
 <h3 id="contenedor-en-backgroundsegundo-plano">Contenedor en Background/Segundo Plano</h3>
@@ -165,8 +165,8 @@ docker run -it ubuntu bash
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run -d php
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d php
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="darle-un-nombre-al-contenedor">Darle un Nombre al Contenedor</h3>
 <p>Para no tener que estar mirando el ID o el nombre <em>random</em> que le da Docker a los contenedores cada vez que creamos uno, vamos a pasarle la opción <code>--name</code> al crearlo:</p>
@@ -175,8 +175,8 @@ docker run -it ubuntu bash
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run -it --name docker_ubuntu ubuntu
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -it --name docker_ubuntu ubuntu
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="ejecutar-comandos">Ejecutar Comandos</h3>
 <p>Teniendo un contenedor en background, por ejemplo un Ubuntu, le podemos pasar comandos con:</p>
@@ -185,8 +185,8 @@ docker run -it ubuntu bash
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">exec</span> docker_ubuntu <span class="nb">echo</span> Hola Mundo
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> docker_ubuntu <span class="nb">echo</span> Hola Mundo
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>La sintaxis sería: <code>docker exec &lt;ID o nombre contenedor&gt; &lt;Comando a ejecutar&gt;</code>.</p>
 <p>Hay contenedores que su modo interactivo es entrar a un intérprete de comandos (php, python, etc.), y en caso de que quisieramos hacer algún cambio en los mismo podemos usar <code>exec</code>. Suponiendo que tenemos un contenedor de php corriendo (<code>docker run -it --name docker_php php</code>):</p>
@@ -195,8 +195,8 @@ docker run -it ubuntu bash
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">exec</span> -it docker_php bash
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">exec</span> -it docker_php bash
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p> </p>
 <hr>

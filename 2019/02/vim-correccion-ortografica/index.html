@@ -125,8 +125,8 @@ Para activarlo lo hacemos con el comando:
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">:setlocal spell
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:setlocal spell
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Esto puede (probablemente) no escoja por defecto nuestro idioma, pero tranquilos no pasa nada, lo especificamos tal que</p>
 <div class="highlight"><div class="chroma">
@@ -134,8 +134,8 @@ Para activarlo lo hacemos con el comando:
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">:setlocal spell spelllang=es
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:setlocal spell spelllang=es
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Bien ahora si marcha la cosa, nos resalta las palabras que tengan algún error. ¿Cómo navego por los errores? Fácil, con <code>]s</code> vamos hacia adelante y con <code>[s</code> hacia atrás. Una vez estemos encima de la palabra con <code>z=</code> nos da un listado de sugerencias, y con <code>zg</code> añadimos la palabra al diccionario o <code>zw</code> para eliminarla.</p>
 <p>Como ya he terminado de corregir las faltas de ortografía quiero desactivarla,</p>
@@ -144,8 +144,8 @@ Para activarlo lo hacemos con el comando:
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">:set nospell
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:set nospell
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Si por defecto al abrir Vim queremos tener la corrección ortográfica, editamos nuestro <code>.vimrc</code> e incluimos lo siguiente</p>
 <div class="highlight"><div class="chroma">
@@ -153,8 +153,8 @@ Para activarlo lo hacemos con el comando:
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">set spelllang=es
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">set spelllang=es
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Otra cosa que se me ocurre es si trabajamos en diferentes idiomas, lo suyo sería poder activar la corrección dependiendo del idioma en que estemos escribiendo, entonces nos creamos un atajo en <code>.vimrc</code>:</p>
 <div class="highlight"><div class="chroma">
@@ -163,9 +163,9 @@ Para activarlo lo hacemos con el comando:
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">nnoremap &lt;silent&gt; &lt;C-g&gt; :set spell spelllang=es&lt;CR&gt;
-nnoremap &lt;silent&gt; &lt;C-f&gt; :set spell spelllang=en&lt;CR&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nnoremap &lt;silent&gt; &lt;C-g&gt; :set spell spelllang=es&lt;CR&gt;
+</span></span><span class="line"><span class="cl">nnoremap &lt;silent&gt; &lt;C-f&gt; :set spell spelllang=en&lt;CR&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Entonces en el modo normal pulsamos <code>Ctrl+g</code> para activar el diccionario español o <code>Ctrl+f</code> para activar el diccionario inglés.</p>
 </div><div class="post-footer" id="post-footer">

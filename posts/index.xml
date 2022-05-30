@@ -3,7 +3,16 @@
         <title>Todo Artículos - Pablo M.</title>
         <link>/posts/</link>
         <description>Todo Artículos | Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 29 Mar 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Apr 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>[Python] Crear entornos virtuales en Python 3</title>
+    <link>/2021/04/python-crear-entornos-virtuales-en-python-3/</link>
+    <pubDate>Sat, 10 Apr 2021 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2021/04/python-crear-entornos-virtuales-en-python-3/</guid>
+    <description><![CDATA[Una de las formas más seguras y eficientes de desarrollar proyectos en Python es usando entornos virtuales. Podemos hacer todo tipo de perrerías y si no va bien simplemente borramos una carpeta y volvemos a empezar.
+Aunque existen varios métodos para tener entornos virtuales, aquí solo vamos a hacerlo de la forma más sencilla posible.
+Sabiendo que estamos usando Python 3 (verifica la versión por defecto conpython --version y si no es la 3, has de usar python3 --version) y estamos en la carpeta de nuestro proyecto, ejecutamos]]></description>
+</item><item>
     <title>[Linux] Autocompletado insensible en Bash</title>
     <link>/2021/03/linux-autocompletado-insensible-en-bash/</link>
     <pubDate>Mon, 29 Mar 2021 00:00:00 &#43;0000</pubDate>
@@ -77,15 +86,5 @@ Después de probar diversos comandos, soluciones, navegar por foros y documentac
     <guid>/2020/06/docker-comandos-%C3%BAtiles/</guid>
     <description><![CDATA[Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.
 Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción -i). Además sacamos por pantalla la salida del contenedor (-t):]]></description>
-</item><item>
-    <title>[Docker] Comandos  Básico</title>
-    <link>/2020/05/docker-comandos-b%C3%A1sico/</link>
-    <pubDate>Tue, 19 May 2020 00:00:00 &#43;0000</pubDate>
-    <author>Autor</author>
-    <guid>/2020/05/docker-comandos-b%C3%A1sico/</guid>
-    <description><![CDATA[En el mundo de los que nos gusta el cacharreo Docker se ha convertido en una herramienta casi obligada, nos evitamos reinstalaciones, «formateos» y demás engorrros con sus correspondientes pérdidas de tiempo.
-Se ha escrito mucho sobre Docker, lo que pretendo con esta pequeña introducción es dejar claras algunas deficiones, y ofrecer una serie de comandos básicos.
-Deficiones Docker Es como un gestor de paquetes tipo Snap o AppImage.
-Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servicio.]]></description>
 </item></channel>
 </rss>

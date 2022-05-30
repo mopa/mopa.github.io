@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "mermaid.min.css",
-	"sourceRoot": "/home/prismo/Sync/1-Staging/Blog_PMopa/hugo-source",
+	"sourceRoot": "/home/prismo/Cloud/1-Staging/Blog_PMopa/hugo-source",
 	"sources": [
 		"themes/LoveIt/assets/lib/mermaid/mermaid.scss",
 		"themes/LoveIt/assets/lib/mermaid/themes/neutral/index.scss",

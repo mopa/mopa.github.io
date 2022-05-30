@@ -124,10 +124,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">Exec</span><span class="o">=</span>xfce4-terminal -e <span class="s2">&#34;vim %F&#34;</span>
-
-<span class="nv">Terminal</span><span class="o">=</span><span class="nb">false</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">Exec</span><span class="o">=</span>xfce4-terminal -e <span class="s2">&#34;vim %F&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">Terminal</span><span class="o">=</span><span class="nb">false</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces. No estoy dispuesto a hacer repetir esta tarea más veces, y la <a href="https://stackoverflow.com/questions/11950038/how-to-open-text-with-vim-from-thunar#11953964" target="_blank" rel="noopener noreffer">solución</a> es crear un fichero <code>.desktop</code> (lo llamamos como nos de la gana) en <code>~/.local/share/applications/</code> con el siguiente contenido:</p>
 <div class="highlight"><div class="chroma">
@@ -142,15 +142,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>Desktop Entry<span class="o">]</span>
-<span class="nv">Encoding</span><span class="o">=</span>UTF-8
-<span class="nv">Version</span><span class="o">=</span>1.0
-<span class="nv">Type</span><span class="o">=</span>Application
-<span class="nv">NoDisplay</span><span class="o">=</span><span class="nb">true</span>
-<span class="nv">Exec</span><span class="o">=</span><span class="s2">&#34;xfce4-terminal -e &#39;vim %F&#39;&#34;</span>
-<span class="nv">Name</span><span class="o">=</span><span class="s2">&#34;VIMMMM&#34;</span>
-<span class="nv">Comment</span><span class="o">=</span>Custom definition <span class="k">for</span> <span class="s2">&#34;xfce4-terminal -e &#39;vim %F&#39;&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>Desktop Entry<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Encoding</span><span class="o">=</span>UTF-8
+</span></span><span class="line"><span class="cl"><span class="nv">Version</span><span class="o">=</span>1.0
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>Application
+</span></span><span class="line"><span class="cl"><span class="nv">NoDisplay</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Exec</span><span class="o">=</span><span class="s2">&#34;xfce4-terminal -e &#39;vim %F&#39;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Name</span><span class="o">=</span><span class="s2">&#34;VIMMMM&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Comment</span><span class="o">=</span>Custom definition <span class="k">for</span> <span class="s2">&#34;xfce4-terminal -e &#39;vim %F&#39;&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><em>NOTA</em>: otra opción sería copiar el archivo <code>/usr/share/applications/vim.desktop</code> y pegarlo en <code>~/.local/share/applications/</code> para posteriormente modificar las líneas <code>Exec=</code> y <code>Terminal=</code>.</p>
 <p>Ahora ya podemos abrir los ficheros en <em>Vim</em> desde <em>Thunar</em> pinchando dos veces sin tener que abrir la terminal ;)</p>

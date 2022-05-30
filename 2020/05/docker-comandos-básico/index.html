@@ -156,8 +156,8 @@ Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servi
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker pull &lt;nombre imagen o repositorio&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull &lt;nombre imagen o repositorio&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ver imagenes descargadas:</p>
 <div class="highlight"><div class="chroma">
@@ -168,11 +168,11 @@ Imagen Es un paquete con todo lo necesario para ejecutar una aplicación o servi
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image ls
-
-<span class="c1"># Equivalente</span>
-docker images
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker image ls
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Equivalente</span>
+</span></span><span class="line"><span class="cl">docker images
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ver imagenes intermedias:</p>
 <div class="highlight"><div class="chroma">
@@ -180,8 +180,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image ls -a
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker image ls -a
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ver los numeros de identificacion, <code>ID</code>:</p>
 <div class="highlight"><div class="chroma">
@@ -189,8 +189,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image ls -q
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker image ls -q
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Borrar las imagenes que no estamos utilizando:</p>
 <div class="highlight"><div class="chroma">
@@ -198,8 +198,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image prune
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker image prune
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Borrar una o varias imagenes:</p>
 <div class="highlight"><div class="chroma">
@@ -207,8 +207,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker image rm &lt;nombre imagen&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker image rm &lt;nombre imagen&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>O también con:</p>
 <div class="highlight"><div class="chroma">
@@ -216,8 +216,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker rmi &lt;nombre imagen&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker rmi &lt;nombre imagen&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="contenedores">Contenedores</h3>
 <p>Iniciar un contenedor:</p>
@@ -226,8 +226,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run hello-world
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run hello-world
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ver los contenedores que tenemos:</p>
 <div class="highlight"><div class="chroma">
@@ -235,8 +235,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker ps -a
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker ps -a
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Para un contenedor:</p>
 <div class="highlight"><div class="chroma">
@@ -244,8 +244,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker stop &lt;nombre o ID&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker stop &lt;nombre o ID&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Iniciar de nuevo:</p>
 <div class="highlight"><div class="chroma">
@@ -253,8 +253,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker start &lt;nombre o ID&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker start &lt;nombre o ID&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Reiniciar:</p>
 <div class="highlight"><div class="chroma">
@@ -262,8 +262,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker restart &lt;nombre o ID&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker restart &lt;nombre o ID&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Matando contenedores:</p>
 <div class="highlight"><div class="chroma">
@@ -271,8 +271,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">kill</span> &lt;nombre o ID&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker <span class="nb">kill</span> &lt;nombre o ID&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Borrar contenedor:</p>
 <div class="highlight"><div class="chroma">
@@ -280,8 +280,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker rm &lt;nombre contenedor&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker rm &lt;nombre contenedor&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Borrar todos los contenedores que estén parados:</p>
 <div class="highlight"><div class="chroma">
@@ -289,8 +289,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker container prune
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker container prune
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ver el proceso del docker:</p>
 <div class="highlight"><div class="chroma">
@@ -298,8 +298,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker top &lt;nombre contenedor&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker top &lt;nombre contenedor&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Ver estadisticas:</p>
 <div class="highlight"><div class="chroma">
@@ -307,8 +307,8 @@ docker images
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker stats --no-stream &lt;nombre contenedor&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker stats --no-stream &lt;nombre contenedor&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Lo paramos con <code>Ctrl</code> + <code>c</code>.</p>
 <h2 id="referencias">Referencias</h2>

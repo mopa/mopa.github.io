@@ -120,10 +120,10 @@ Webs  Tables Generator Table Convert Detexify - LaTeX handwritten symbol recogni
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>[label=<span class="k">\alph*</span>]
-
-<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>[label=<span class="k">\alph*</span>]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Esto no daría una salida como la siguiente:</p>
 <div class="highlight"><div class="chroma">
@@ -133,10 +133,10 @@ Webs  Tables Generator Table Convert Detexify - LaTeX handwritten symbol recogni
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">a) Item
-b) Item
-c) Item
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">a) Item
+</span></span><span class="line"><span class="cl">b) Item
+</span></span><span class="line"><span class="cl">c) Item
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="anotaciones-al-margen">Anotaciones al margen</h3>
 <p>Con el paquete <code>marginnote</code> tenemos más flexibilidad para usar notas al margen, como por ejemplo especificar la geometría de las notas. <a href="https://www.ctan.org/pkg/marginnote" target="_blank" rel="noopener noreffer">Documentación oficial</a></p>
@@ -147,8 +147,8 @@ c) Item
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\usepackage</span><span class="na">[hidelinks]</span><span class="nb">{</span>hyperref<span class="nb">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\usepackage</span><span class="na">[hidelinks]</span><span class="nb">{</span>hyperref<span class="nb">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>o también</p>
 <div class="highlight"><div class="chroma">
@@ -156,8 +156,8 @@ c) Item
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\hypersetup</span><span class="nb">{</span>hidelinks<span class="nb">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\hypersetup</span><span class="nb">{</span>hidelinks<span class="nb">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Sin embargo, si lo que queremos es cambiar el color de los bordes o ponerlos más acordes a nuesro estilo:</p>
 <div class="highlight"><div class="chroma">
@@ -170,13 +170,13 @@ c) Item
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\hypersetup</span><span class="nb">{</span>
-  colorlinks   = true,  <span class="c">% Colorea los enlaces
-</span><span class="c"></span>  urlcolor     = blue,  <span class="c">% Color para los hyperlinks
-</span><span class="c"></span>  linkcolor    = blue,  <span class="c">% Color para los enlaces internos
-</span><span class="c"></span>  citecolor   = red     <span class="c">% Color para las citas
-</span><span class="c"></span><span class="nb">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"><span class="k">\hypersetup</span><span class="nb">{</span>
+</span></span><span class="line"><span class="cl">  colorlinks   = true,  <span class="c">% Colorea los enlaces
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>  urlcolor     = blue,  <span class="c">% Color para los hyperlinks
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>  linkcolor    = blue,  <span class="c">% Color para los enlaces internos
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>  citecolor   = red     <span class="c">% Color para las citas
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nb">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div></div></div>
             </main><footer class="footer">

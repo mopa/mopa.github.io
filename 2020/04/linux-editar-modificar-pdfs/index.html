@@ -138,9 +138,9 @@ Dado que me estoy empezando a manejar mejor con aplicaciones en CLI (por aquello
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install pdftk <span class="c1"># Debian</span>
-sudo pacman -S pdftk <span class="c1"># Manjaro</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install pdftk <span class="c1"># Debian</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S pdftk <span class="c1"># Manjaro</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Voy a poner algunos comandos útiles.</p>
 <ul>
@@ -151,8 +151,8 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf in2.pdf in3.pdf cat output out123.pdf
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdftk in1.pdf in2.pdf in3.pdf cat output out123.pdf
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Lo anterior pero usando <em>wildcards</em>:</li>
@@ -162,8 +162,8 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk *.pdf cat output out.pdf
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdftk *.pdf cat output out.pdf
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Eliminar la página 13 de in1.pdf y crear un documento nuevo:</li>
@@ -173,8 +173,8 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf cat 1-12 14-end output out.pdf
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdftk in1.pdf cat 1-12 14-end output out.pdf
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Seleccionar varias páginas de distintos PDF y crear uno nuevo:</li>
@@ -184,8 +184,8 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk <span class="nv">A</span><span class="o">=</span>in1.pdf <span class="nv">B</span><span class="o">=</span>in2.pdf cat A1-7 B1-5 A8 output out.pdf
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdftk <span class="nv">A</span><span class="o">=</span>in1.pdf <span class="nv">B</span><span class="o">=</span>in2.pdf cat A1-7 B1-5 A8 output out.pdf
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Sacar un informe con los metadatos marcadores y etiquetas;</li>
@@ -195,8 +195,8 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftk in1.pdf dump_data output informe.txt
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdftk in1.pdf dump_data output informe.txt
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Podemos encontrar más ejemplos en <a href="https://www.pdflabs.com/docs/pdftk-cli-examples/" target="_blank" rel="noopener noreffer">PDFtk Server Examples</a>, como <a href="https://www.pdflabs.com/docs/how-to-add-headers-footers-watermarks-and-stamps-to-pdf/" target="_blank" rel="noopener noreffer">añadir marcas de agua</a>, y nunca viene mal echar un vistazo al <a href="https://www.pdflabs.com/docs/pdftk-man-page/" target="_blank" rel="noopener noreffer">manual</a>.</p>
 <h3 id="xpdf">Xpdf</h3>
@@ -207,9 +207,9 @@ sudo pacman -S pdftk <span class="c1"># Manjaro</span>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install xpdf <span class="c1"># Debian</span>
-sudo pacman -S xpdf <span class="c1"># Manjaro</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install xpdf <span class="c1"># Debian</span>
+</span></span><span class="line"><span class="cl">sudo pacman -S xpdf <span class="c1"># Manjaro</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Veamos algunos ejemplos:</p>
 <ul>
@@ -221,9 +221,9 @@ sudo pacman -S xpdf <span class="c1"># Manjaro</span>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdftotext in1.pdf out.odt
-pdftotext in1.pdf out.txt
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdftotext in1.pdf out.odt
+</span></span><span class="line"><span class="cl">pdftotext in1.pdf out.txt
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Extraer las imágenes y guardarlas en una carpeta:</li>
@@ -233,8 +233,8 @@ pdftotext in1.pdf out.txt
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdfimages -all in1.pdf /ruta/carpeta
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdfimages -all in1.pdf /ruta/carpeta
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Ver la información del PDF:</li>
@@ -244,8 +244,8 @@ pdftotext in1.pdf out.txt
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pdfinfo in1.pdf
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdfinfo in1.pdf
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Esta herramienta trae algunas utilidades más que podemos ver en su <a href="https://www.xpdfreader.com/support.html" target="_blank" rel="noopener noreffer">página de soporte</a>.</p>
 <h3 id="master-pdf-editor">Master PDF Editor</h3>
