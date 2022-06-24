@@ -3,7 +3,15 @@
         <title>Todo Artículos - Pablo M.</title>
         <link>/posts/</link>
         <description>Todo Artículos | Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Apr 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 May 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>[Vim] Eliminar líneas siguiendo un patrón</title>
+    <link>/2021/05/vim-eliminar-l%C3%ADneas-siguiendo-un-patr%C3%B3n/</link>
+    <pubDate>Sat, 29 May 2021 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2021/05/vim-eliminar-l%C3%ADneas-siguiendo-un-patr%C3%B3n/</guid>
+    <description><![CDATA[Ya sabemos que Vim es una herramienta con mucha potencia (y con una curva de aprendizaje bastante pronunciada) y a la vez liviana, incluso cuando cargamos plugins. Es por esto mismo por lo que lo uso para hacer limpieza de grandes archivos, y en esta ocasión necesitaba eliminar las líneas de un fichero si las mismas contiene un patrón.
+Tenemos varias formas de hacerlo, una de ellas es buscar en todo el documento la palabra o patrón y directamente eliminar las líneas]]></description>
+</item><item>
     <title>[Python] Crear entornos virtuales en Python 3</title>
     <link>/2021/04/python-crear-entornos-virtuales-en-python-3/</link>
     <pubDate>Sat, 10 Apr 2021 00:00:00 &#43;0000</pubDate>
@@ -78,13 +86,5 @@ Los que usamos Arch y sus derivados estamos siempre con el dilema de los reposit
     <description><![CDATA[El error que me he encontrado en alguna ocasión esporádica en Proxmox es que no podía parar un contenedor (en concreto un lxc) ni tampoco apagarlo, por lo que no podía apagar el sistema.
 De hecho, al entrar por SSH al Proxmox también obtenía el mismo error, o sea era imposible apagarlo de la forma correcta.
 Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando lxc.]]></description>
-</item><item>
-    <title>[Docker] Comandos Útiles</title>
-    <link>/2020/06/docker-comandos-%C3%BAtiles/</link>
-    <pubDate>Mon, 15 Jun 2020 00:00:00 &#43;0000</pubDate>
-    <author>Autor</author>
-    <guid>/2020/06/docker-comandos-%C3%BAtiles/</guid>
-    <description><![CDATA[Siguiendo con la dinámica del anterior post de Docker, voy a describir algunos comandos útiles que cuando comenzamos a usar contenedores nos van a ayudar a entenderlos y aprovechar mejor sus virtudes.
-Contenedor Interactivo La mejor forma de ver esto es con alguna distribución, por ejemplo Ubuntu. Lo que hacemos es crear un contenedor basado en Ubuntu y entrar dentro del mismo (opción -i). Además sacamos por pantalla la salida del contenedor (-t):]]></description>
 </item></channel>
 </rss>

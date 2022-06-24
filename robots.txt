@@ -1,15 +1,19 @@
 User-agent: *
 
 
-Disallow: /2021/04/python-crear-entornos-virtuales-en-python-3/
+Disallow: /2021/05/vim-eliminar-l%C3%ADneas-siguiendo-un-patr%C3%B3n/
 
 Disallow: /
 
 Disallow: /posts/
 
-Disallow: /tags/python/
-
 Disallow: /tags/
+
+Disallow: /tags/vim/
+
+Disallow: /2021/04/python-crear-entornos-virtuales-en-python-3/
+
+Disallow: /tags/python/
 
 Disallow: /2021/03/linux-autocompletado-insensible-en-bash/
 
@@ -36,8 +40,6 @@ Disallow: /tags/math/
 Disallow: /pages/resources/vim-notas-trucos/
 
 Disallow: /pages/
-
-Disallow: /tags/vim/
 
 Disallow: /2020/09/docker-monitorizar-contenedores/
 

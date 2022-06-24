@@ -3,7 +3,15 @@
         <title>vim - Etiqueta - Pablo M.</title>
         <link>/tags/vim/</link>
         <description>vim - Etiqueta - Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 Oct 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/vim/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 May 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/vim/" rel="self" type="application/rss+xml" /><item>
+    <title>[Vim] Eliminar líneas siguiendo un patrón</title>
+    <link>/2021/05/vim-eliminar-l%C3%ADneas-siguiendo-un-patr%C3%B3n/</link>
+    <pubDate>Sat, 29 May 2021 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2021/05/vim-eliminar-l%C3%ADneas-siguiendo-un-patr%C3%B3n/</guid>
+    <description><![CDATA[Ya sabemos que Vim es una herramienta con mucha potencia (y con una curva de aprendizaje bastante pronunciada) y a la vez liviana, incluso cuando cargamos plugins. Es por esto mismo por lo que lo uso para hacer limpieza de grandes archivos, y en esta ocasión necesitaba eliminar las líneas de un fichero si las mismas contiene un patrón.
+Tenemos varias formas de hacerlo, una de ellas es buscar en todo el documento la palabra o patrón y directamente eliminar las líneas]]></description>
+</item><item>
     <title>[LaTeX] Notas y Trucos</title>
     <link>/pages/resources/vim-notas-trucos/</link>
     <pubDate>Sun, 18 Oct 2020 00:00:00 &#43;0000</pubDate>
