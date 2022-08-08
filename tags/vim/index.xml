@@ -19,7 +19,7 @@ Tenemos varias formas de hacerlo, una de ellas es buscar en todo el documento la
     <guid>/pages/resources/vim-notas-trucos/</guid>
     <description><![CDATA[En esta página voy a ir almacenando pequeños trucos que me voy encontrando, atajos de teclado útiles en ciertas ocasiones o simplemente cosas que no quiero olvidar.
 Búsqueda insensible Por defecto viene desactivada, la podemos activar para que todas las búsquedas sean insensibles, pero la forma más rápida es agregar al final de nuestra búsqueda \c. Por ejemplo, si estamos buscando en nuestro documento la palabra linux:
-1  /linux\c  ]]></description>
+1 /linux\c ]]></description>
 </item><item>
     <title>Abrir con VIM en Xfce</title>
     <link>/2019/07/abrir-con-vim-en-xfce/</link>
@@ -27,7 +27,7 @@ Búsqueda insensible Por defecto viene desactivada, la podemos activar para que 
     <author>Autor</author>
     <guid>/2019/07/abrir-con-vim-en-xfce/</guid>
     <description><![CDATA[Suelo usar Vim con regularidad junto con Xfce como entorno de escritorio. Al hacer la típica operación de Abrir con&hellip; un archivo de texto, markdown o lo que sea, la quería hacer con (obviamente) Vim. Bien, estuve buscando información y lo que encontré es que debemos editar el fichero /usr/share/applications/vim.desktop y cambiar los siguientes valores:
-1 2 3  Exec=xfce4-terminal -e &#34;vim %F&#34; Terminal=false   Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces.]]></description>
+1 2 3 Exec=xfce4-terminal -e &#34;vim %F&#34; Terminal=false Pero esto me funcionó un tiempo (no estoy seguro de si fue después de alguna actualización) y tuve que volver a repetir lo anterior varias veces.]]></description>
 </item><item>
     <title>[Vim] Corrección Ortográfica</title>
     <link>/2019/02/vim-correccion-ortografica/</link>
@@ -36,6 +36,6 @@ Búsqueda insensible Por defecto viene desactivada, la podemos activar para que 
     <guid>/2019/02/vim-correccion-ortografica/</guid>
     <description><![CDATA[Poco a poco voy conociendo más cosas sobre Vim, y lo que antes me parecía un tarea ardua ahora lo hago con más rapidez. Cierto es que al principio cuesta y una cosa que echaba de menos era tener un corrector ortográfico (por lo que pudiera pasar). Voy a mostrar varias cositas y trucos para tener lo necesario ante este tema.
 Para activarlo lo hacemos con el comando:
-1  :setlocal spell   Esto puede (probablemente) no escoja por defecto nuestro idioma, pero tranquilos no pasa nada, lo especificamos tal que]]></description>
+1 :setlocal spell Esto puede (probablemente) no escoja por defecto nuestro idioma, pero tranquilos no pasa nada, lo especificamos tal que]]></description>
 </item></channel>
 </rss>

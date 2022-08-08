@@ -18,7 +18,8 @@ Pandoc usa nuestro amado LaTeX para convertir a PDF, con lo que se convierte en 
     <author>Autor</author>
     <guid>/pages/resources/latex-notas-trucos/</guid>
     <description><![CDATA[En esta página voy a ir almacenando pequeños trucos para la realización de documentos (no es la típica cheatsheet). Se trata más bien de las cosas usuales que nos surgen, como hacer anotaciones al margen, texto que envuelve una imagen, etc.
-Webs  Tables Generator Table Convert Detexify - LaTeX handwritten symbol recognition LaTeX Previewer  Listas ordenadas por letras Para tener listas ordenadas con letras minúsculas, usamos el paquete enumitem:]]></description>
+Webs Tables Generator Table Convert Detexify - LaTeX handwritten symbol recognition LaTeX Previewer Listas ordenadas por letras Para tener listas ordenadas con letras minúsculas, usamos el paquete enumitem:
+1 2 3 \begin{enumerate}[label=\alph*] \end{enumerate} Esto no daría una salida como la siguiente:]]></description>
 </item><item>
     <title>[LaTeX] Capítulo 1: Compiladores</title>
     <link>/2018/04/latex-capitulo-1-compiladores/</link>
@@ -26,6 +27,6 @@ Webs  Tables Generator Table Convert Detexify - LaTeX handwritten symbol recogni
     <author>Autor</author>
     <guid>/2018/04/latex-capitulo-1-compiladores/</guid>
     <description><![CDATA[Para empezar a comprender el mundo (La)TeX hay que tener unas nociones básicas de que es en sí y sus distintas variantes.
-TeX  TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo]]></description>
+TeX TeX es un nuevo sistema de composición tipográfica dirigido a la creación de libros bonitos, y especialmente para libros que contienen un montón de matemáticas. Al preparar un manuscrito en formato TeX, estarás diciendo a la computadora exactamente como el manuscrito debe ser transformado en páginas cuyas calidad tipográfica es comparable a la de los mejores impresores del mundo]]></description>
 </item></channel>
 </rss>

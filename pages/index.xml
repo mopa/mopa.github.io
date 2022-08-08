@@ -16,7 +16,7 @@
       <guid>/pages/resources/vim-notas-trucos/</guid>
       <description>En esta página voy a ir almacenando pequeños trucos que me voy encontrando, atajos de teclado útiles en ciertas ocasiones o simplemente cosas que no quiero olvidar.
 Búsqueda insensible Por defecto viene desactivada, la podemos activar para que todas las búsquedas sean insensibles, pero la forma más rápida es agregar al final de nuestra búsqueda \c. Por ejemplo, si estamos buscando en nuestro documento la palabra linux:
-1  /linux\c  </description>
+1 /linux\c </description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@ Búsqueda insensible Por defecto viene desactivada, la podemos activar para que 
       <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/recursos/</guid>
-      <description> [LaTeX] Notas y Trucos [Vim] Notas y Trucos  </description>
+      <description> [LaTeX] Notas y Trucos [Vim] Notas y Trucos </description>
     </item>
     
     <item>
@@ -35,7 +35,8 @@ Búsqueda insensible Por defecto viene desactivada, la podemos activar para que 
       
       <guid>/pages/resources/latex-notas-trucos/</guid>
       <description>En esta página voy a ir almacenando pequeños trucos para la realización de documentos (no es la típica cheatsheet). Se trata más bien de las cosas usuales que nos surgen, como hacer anotaciones al margen, texto que envuelve una imagen, etc.
-Webs  Tables Generator Table Convert Detexify - LaTeX handwritten symbol recognition LaTeX Previewer  Listas ordenadas por letras Para tener listas ordenadas con letras minúsculas, usamos el paquete enumitem:</description>
+Webs Tables Generator Table Convert Detexify - LaTeX handwritten symbol recognition LaTeX Previewer Listas ordenadas por letras Para tener listas ordenadas con letras minúsculas, usamos el paquete enumitem:
+1 2 3 \begin{enumerate}[label=\alph*] \end{enumerate} Esto no daría una salida como la siguiente:</description>
     </item>
     
   </channel>

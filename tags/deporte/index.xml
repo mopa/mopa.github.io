@@ -9,14 +9,15 @@
     <pubDate>Fri, 15 Feb 2019 00:00:00 &#43;0000</pubDate>
     <author>Autor</author>
     <guid>/2019/02/estadistica-y-la-copa-del-rey-acb-18-19/</guid>
-    <description><![CDATA[canvas { padding: 0; margin: auto; display: block; width: 600px; height: 500px; }  El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la final four de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo PES, FIFA, etc. Para ello tomamos las siguientes variables:]]></description>
+    <description><![CDATA[El deporte y los datos, que gran combinación ;-) La copa del rey de baloncesto es una competición al más puro estilo de la final four de la Euroliga, por ello y como ya hice anteriormente, vamos a analizar los partidos mediante una gráfica tipo PES, FIFA, etc. Para ello tomamos las siguientes variables:
+3PA 3-Point Attempted 3-Puntos Intentados 3PM 3-Point Made 3-Puntos Anotados FGA Field Goals Attempted Tiros de Campo Intentados FGM Field Goals Made Tiros de Campo Anotados PTS Points Puntos BLK Blocks Tapones TO Turnovers Pérdidas STL Steals Robos AST Assists Asistencias Def.]]></description>
 </item><item>
     <title>Estadística y la Final Four de Belgrado</title>
     <link>/2018/05/estadisticas-y-la-final-four-de-belgrado/</link>
     <pubDate>Sun, 13 May 2018 00:00:00 &#43;0000</pubDate>
     <author>Autor</author>
     <guid>/2018/05/estadisticas-y-la-final-four-de-belgrado/</guid>
-    <description><![CDATA[canvas { padding: 0; margin: auto; display: block; width: 500px; height: 400px; }  Ahora que ya tenemos al caer la Final Four de Belgrado, vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los Playoff. He tomado las siguientes variables:
-3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef.]]></description>
+    <description><![CDATA[Ahora que ya tenemos al caer la Final Four de Belgrado, vamos echar un vistazo atrás y ver como ha sido la temporada para los equipos implicados. Empezamos por la temporada regular, es decir, sin contar los Playoff. He tomado las siguientes variables:
+3PA3-Point Attempted3-Puntos Intentados3PM3-Point Made3-Puntos AnotadosFGAField Goals AttemptedTiros de Campo IntentadosFGMField Goals MadeTiros de Campo AnotadosPTSPointsPuntosBLKBlocksTaponesTOTurnoversPérdidasSTLStealsRobosASTAssistsAsistenciasDef. REBDefensive ReboundsRebotes DefensivosOff. REBOffensive ReboundsRebotes Ofensivos He elegido estas porque creo que son bastante representativas a la hora de comparar dos equipos.]]></description>
 </item></channel>
 </rss>

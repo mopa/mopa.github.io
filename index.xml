@@ -3,9 +3,18 @@
         <title>Pablo M.</title>
         <link>/</link>
         <description>Engineering and Data Science</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 May 2021 00:00:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 Sep 2021 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>[Linux] Teclado Keychron y teclas multimedia</title>
+    <link>/2021/09/linux-teclado-keychron-y-teclas-multimedia/</link>
+    <pubDate>Tue, 07 Sep 2021 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2021/09/linux-teclado-keychron-y-teclas-multimedia/</guid>
+    <description><![CDATA[Hace tiempo que llevo escuchando las bondades de los teclados mecánicos de la marca Keychron, y como necesitaba uno adquirí el modelo K3.
+En la parte trasera hay dos botones, con los que podemos elegir si estamos usando cable o bluetooh, mac o windows, pero uso GNU/Linux por lo que las teclas multimedia no funcionan de forma correcta.
+Los teclados Keychron en Linux usan el driver hid_apple, el cual por defecto usa las teclas F como las multimedia y necesitamos pulsar Fn + tecla para usar el F1 y sus consecutivas.]]></description>
+</item><item>
     <title>[Vim] Eliminar líneas siguiendo un patrón</title>
     <link>/2021/05/vim-eliminar-l%C3%ADneas-siguiendo-un-patr%C3%B3n/</link>
     <pubDate>Sat, 29 May 2021 00:00:00 &#43;0000</pubDate>
@@ -61,7 +70,7 @@ El «algoritmo» sería: primero comprimir los archivos con tar y luego partirlo
     <guid>/2020/09/docker-monitorizar-contenedores/</guid>
     <description><![CDATA[Ya hemos hecho algunas cositas interesantes con los contenedores de Docker y llega un momento en que necesitamos monitorizarlos, saber que está pasando, los recursos que consume o por qué no funciona correctamente. Para ello Docker nos brinda tres comandos: logs, top y stats.
 docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs del contenedor que queramos. La sintaxis sería:
-1  docker logs &lt;ID o nombre contenedor&gt;   Si queremos seguir la salida que va mostrando:]]></description>
+1 docker logs &lt;ID o nombre contenedor&gt; Si queremos seguir la salida que va mostrando:]]></description>
 </item><item>
     <title>[Docker] Actualizar nuestros contenedores</title>
     <link>/2020/09/docker-actualizar-nuestros-contenedores/</link>
@@ -69,8 +78,7 @@ docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs d
     <author>Autor</author>
     <guid>/2020/09/docker-actualizar-nuestros-contenedores/</guid>
     <description><![CDATA[Cuando llevamos algún tiempo usando Docker surge una nueva necesidad: actualizar nuestros servicios. Tradicionalmente esto siempre lo hacíamos cuando actualizábamos el sistema, con el consecuente problema de si algún paquete queríamos que conservara alguna versión en particular y demás títeres.
-Actualizar los contenedores es realmente fácil, solo hay que asegurarse de donde estamos guardando los datos (me refiero a aquello de los volúmenes). Procedemos de la siguiente manera: 
-Un ejemplo con mysql es el siguiente:]]></description>
+Actualizar los contenedores es realmente fácil, solo hay que asegurarse de donde estamos guardando los datos (me refiero a aquello de los volúmenes). Procedemos de la siguiente manera: Un ejemplo con mysql es el siguiente:]]></description>
 </item><item>
     <title>[Manjaro/Arch] Error al verificar claves PGP en AUR</title>
     <link>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</link>
@@ -79,14 +87,5 @@ Un ejemplo con mysql es el siguiente:]]></description>
     <guid>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</guid>
     <description><![CDATA[En mi día a día uso Manjaro con XFCE, y también cierto software para escuchar música (Spotify). Para instalarlo tuve que hacerlo por los repositorios AUR, pero en una reciente actualización cual fue mi sorpresa al ver este error: ERROR: One or more PGP signatures could not be verified!.
 Los que usamos Arch y sus derivados estamos siempre con el dilema de los repositorios AUR, proveen una gran cantidad de software pero, ¿a qué precio?]]></description>
-</item><item>
-    <title>[Proxmox] Solución al error: can&#39;t lock file &#39;/run/lock/lxc/pve-config-xxx.lock&#39;</title>
-    <link>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</link>
-    <pubDate>Sun, 05 Jul 2020 00:00:00 &#43;0000</pubDate>
-    <author>Autor</author>
-    <guid>/2020/07/proxmox-soluci%C3%B3n-al-error-cant-lock-file-/run/lock/lxc/pve-config-xxx.lock/</guid>
-    <description><![CDATA[El error que me he encontrado en alguna ocasión esporádica en Proxmox es que no podía parar un contenedor (en concreto un lxc) ni tampoco apagarlo, por lo que no podía apagar el sistema.
-De hecho, al entrar por SSH al Proxmox también obtenía el mismo error, o sea era imposible apagarlo de la forma correcta.
-Después de probar diversos comandos, soluciones, navegar por foros y documentación, encontré la solución con el comando lxc.]]></description>
 </item></channel>
 </rss>
