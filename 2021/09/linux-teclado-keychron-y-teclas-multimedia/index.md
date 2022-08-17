@@ -41,6 +41,9 @@ echo "options hid_apple fnmode=2" | sudo tee /etc/modprobe.d/hid_apple.conf
 
 Después de esto la configuración será permenente.
 
+---
+*Update*
+
 Referencias:
 - https://douglastofoli.dev/en/posts/keychron-linux/
 - https://gist.github.com/andrebrait/961cefe730f4a2c41f57911e6195e444
