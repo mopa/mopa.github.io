@@ -1,9 +1,7 @@
 User-agent: *
 
 
-Disallow: /2021/09/linux-teclado-keychron-y-teclas-multimedia/
-
-Disallow: /tags/linux/
+Disallow: /2021/10/vim-b%C3%BAsquedas-y-reemplazo/
 
 Disallow: /
 
@@ -11,9 +9,13 @@ Disallow: /posts/
 
 Disallow: /tags/
 
-Disallow: /2021/05/vim-eliminar-l%C3%ADneas-siguiendo-un-patr%C3%B3n/
-
 Disallow: /tags/vim/
+
+Disallow: /2021/09/linux-teclado-keychron-y-teclas-multimedia/
+
+Disallow: /tags/linux/
+
+Disallow: /2021/05/vim-eliminar-l%C3%ADneas-siguiendo-un-patr%C3%B3n/
 
 Disallow: /2021/04/python-crear-entornos-virtuales-en-python-3/
 

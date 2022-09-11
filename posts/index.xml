@@ -3,7 +3,17 @@
         <title>Todo Artículos - Pablo M.</title>
         <link>/posts/</link>
         <description>Todo Artículos | Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 Sep 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 24 Oct 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>[Vim] Búsquedas  y Reemplazo</title>
+    <link>/2021/10/vim-b%C3%BAsquedas-y-reemplazo/</link>
+    <pubDate>Sun, 24 Oct 2021 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2021/10/vim-b%C3%BAsquedas-y-reemplazo/</guid>
+    <description><![CDATA[Esta operación tan básica no puede faltar en cualquier editor, y en Vim (realmente uso Neovim) me resulta muy fácil hacerla.
+Forma 1 Normalmente lo que me suele pasar es que mientras estoy escribiendo o programando, me encuentro con la palabra que quiero sustituir y directamente hacer el cambio.
+Para esto, estando en el modo Normal y con el cursor encima de la palabra
+Pulsamos la tecla * Escribimos ciw (change inner word) y seguidamente la palabra que queramos Pulsamos Esc Con la tecla n nos movemos a la siguiente ocurrencia y para repetir lo anterior pulsamos .]]></description>
+</item><item>
     <title>[Linux] Teclado Keychron y teclas multimedia</title>
     <link>/2021/09/linux-teclado-keychron-y-teclas-multimedia/</link>
     <pubDate>Tue, 07 Sep 2021 00:00:00 &#43;0000</pubDate>
@@ -77,13 +87,5 @@ docker logs Como os podéis imaginar con docker logs nos va a mostrar los logs d
     <guid>/2020/09/docker-actualizar-nuestros-contenedores/</guid>
     <description><![CDATA[Cuando llevamos algún tiempo usando Docker surge una nueva necesidad: actualizar nuestros servicios. Tradicionalmente esto siempre lo hacíamos cuando actualizábamos el sistema, con el consecuente problema de si algún paquete queríamos que conservara alguna versión en particular y demás títeres.
 Actualizar los contenedores es realmente fácil, solo hay que asegurarse de donde estamos guardando los datos (me refiero a aquello de los volúmenes). Procedemos de la siguiente manera: Un ejemplo con mysql es el siguiente:]]></description>
-</item><item>
-    <title>[Manjaro/Arch] Error al verificar claves PGP en AUR</title>
-    <link>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</link>
-    <pubDate>Tue, 21 Jul 2020 00:00:00 &#43;0000</pubDate>
-    <author>Autor</author>
-    <guid>/2020/07/manjaro/arch-error-al-verificar-claves-pgp-en-aur/</guid>
-    <description><![CDATA[En mi día a día uso Manjaro con XFCE, y también cierto software para escuchar música (Spotify). Para instalarlo tuve que hacerlo por los repositorios AUR, pero en una reciente actualización cual fue mi sorpresa al ver este error: ERROR: One or more PGP signatures could not be verified!.
-Los que usamos Arch y sus derivados estamos siempre con el dilema de los repositorios AUR, proveen una gran cantidad de software pero, ¿a qué precio?]]></description>
 </item></channel>
 </rss>
