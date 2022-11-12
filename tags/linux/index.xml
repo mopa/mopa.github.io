@@ -3,7 +3,17 @@
         <title>linux - Etiqueta - Pablo M.</title>
         <link>/tags/linux/</link>
         <description>linux - Etiqueta - Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 Sep 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/linux/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 18 Jan 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>[Linux] Búsquedas por la terminal</title>
+    <link>/2022/01/linux-b%C3%BAsquedas-por-la-terminal/</link>
+    <pubDate>Tue, 18 Jan 2022 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2022/01/linux-b%C3%BAsquedas-por-la-terminal/</guid>
+    <description><![CDATA[Tarde o temprano vamos a tener la necesidad de buscar algo en la terminal, ya sean archivos, directorios, ejecutables, etc. Pues bien tenemos poderosas herramientas que por si solas o combinadas nos van a solucionar este menester
+whereis Con este buscamos la localización de algún binario, fuente o manual de un comando (el famoso man).
+1 whereis bash Para buscar los ficheros fuente
+1 whereis -s bash Para buscar los ficheros man]]></description>
+</item><item>
     <title>[Linux] Teclado Keychron y teclas multimedia</title>
     <link>/2021/09/linux-teclado-keychron-y-teclas-multimedia/</link>
     <pubDate>Tue, 07 Sep 2021 00:00:00 &#43;0000</pubDate>

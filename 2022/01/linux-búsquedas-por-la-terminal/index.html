@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[Linux] Búsquedas por la terminal - Pablo M.</title><meta name="Description" content="Engineering and Data Science"><meta property="og:title" content="[Linux] Búsquedas por la terminal" />
+<meta property="og:description" content="Tarde o temprano vamos a tener la necesidad de buscar algo en la terminal, ya sean archivos, directorios, ejecutables, etc. Pues bien tenemos poderosas herramientas que por si solas o combinadas nos van a solucionar este menester
+whereis Con este buscamos la localización de algún binario, fuente o manual de un comando (el famoso man).
+1 whereis bash Para buscar los ficheros fuente
+1 whereis -s bash Para buscar los ficheros man" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2022/01/linux-b%C3%BAsquedas-por-la-terminal/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-18T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="[Linux] Búsquedas por la terminal"/>
+<meta name="twitter:description" content="Tarde o temprano vamos a tener la necesidad de buscar algo en la terminal, ya sean archivos, directorios, ejecutables, etc. Pues bien tenemos poderosas herramientas que por si solas o combinadas nos van a solucionar este menester
+whereis Con este buscamos la localización de algún binario, fuente o manual de un comando (el famoso man).
+1 whereis bash Para buscar los ficheros fuente
+1 whereis -s bash Para buscar los ficheros man"/>
+<meta name="application-name" content="Pablo M.">
+<meta name="apple-mobile-web-app-title" content="Pablo M."><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/2022/01/linux-b%C3%BAsquedas-por-la-terminal/" /><link rel="prev" href="/2021/10/vim-b%C3%BAsquedas-y-reemplazo/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Linux] Búsquedas por la terminal",
+        "inLanguage": "es",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/2022\/01\/linux-b%C3%BAsquedas-por-la-terminal\/"
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "linux, bash, commands","wordcount":  410 ,
+        "url": "\/2022\/01\/linux-b%C3%BAsquedas-por-la-terminal\/","datePublished": "2022-01-18T00:00:00+00:00","dateModified": "2022-01-18T00:00:00+00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Pablo M."},"author": {
+                "@type": "Person",
+                "name": "Pablo M."
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pablo M.">Pablo M.</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/recursos/"> Recursos </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pablo M.">Pablo M.</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/recursos/" title="">Recursos</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contenido</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">[Linux] Búsquedas por la terminal</h1><div class="post-meta">
+            <div class="post-meta-line"></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-18">2022-01-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;410 palabras&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contenido</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#whereis"><code>whereis</code></a></li>
+    <li><a href="#which"><code>which</code></a>
+      <ul>
+        <li><a href="#type"><code>type</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#locate"><code>locate</code></a></li>
+    <li><a href="#find"><code>find</code></a>
+      <ul>
+        <li><a href="#buscar-directorios-o-carpetas">Buscar directorios o carpetas</a></li>
+        <li><a href="#buscar-ficheros-por-nombre">Buscar ficheros por nombre</a></li>
+        <li><a href="#buscar-ficheros-por-extensión">Buscar ficheros por extensión</a></li>
+      </ul>
+    </li>
+    <li><a href="#fd"><code>fd</code></a></li>
+    <li><a href="#ag-o-the-silver-searcher"><code>ag</code> o The Silver Searcher</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Tarde o temprano vamos a tener la necesidad de buscar algo en la terminal, ya sean archivos, directorios, ejecutables, etc. Pues bien tenemos poderosas herramientas que por si solas o combinadas nos van a solucionar este menester</p>
+<h2 id="whereis"><code>whereis</code></h2>
+<p>Con este buscamos la localización de algún binario, fuente o manual de un comando (el famoso <code>man</code>).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">whereis bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para buscar los ficheros fuente</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">whereis -s bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para buscar los ficheros <code>man</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">whereis -m bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="which"><code>which</code></h2>
+<p>Si sólo queremos la localización de un ejecutable la mejor opción es usar <code>which</code>. Esto es porque este comando busca el ejecutable como argumento en los directorios listados en las variables de entorno del <code>PATH</code> (le dice a la <em>shell</em> y a otros programas en que directorios buscar los ficheros ejecutables).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">which bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="type"><code>type</code></h3>
+<p>Este comando lo anido aquí porque está muy relacionado con el anterior. Lo bueno de este, es que aparte de dar información acerca del comando buscado, nos muestra como es interpretado. Esto es que si tenemos un <em>alias</em> definido nos lo va a indicar.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">type</span> bash
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="locate"><code>locate</code></h2>
+<p>Con <code>locate</code> partimos de que tenga ya una indexación de los ficheros, esto es que antes de poder usarlo hemos de ejecutar</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">updatedb
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Una vez haya terminado ya si podemos buscar cualquier fichero o directorio por el nombre (aunque también podemos hacer búsquedas por patrones)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locate myfile.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="find"><code>find</code></h2>
+<p>Es el más conocido y tiene <em>tropocientas</em> opciones y combinaciones posibles, pero aquí nos vamos a quedar con lo más práctico. Su sintaxis básica es</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>path...<span class="o">]</span> <span class="o">[</span>expression<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="buscar-directorios-o-carpetas">Buscar directorios o carpetas</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find /home/linuxize -type d -name documents
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="buscar-ficheros-por-nombre">Buscar ficheros por nombre</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find /home/user -type f -name document.pdf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Para buscar en el mismo directorio donde nos encontramos</span>
+</span></span><span class="line"><span class="cl">find . -type f -name document.pdf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Busquedas sin distincion de mayusculas y minusculas</span>
+</span></span><span class="line"><span class="cl">find /home/user -type f -iname document.pdf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="buscar-ficheros-por-extensión">Buscar ficheros por extensión</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find /home/user -type f -name <span class="s1">&#39;*.pdf&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Lo contrario de lo anterior</span>
+</span></span><span class="line"><span class="cl">find /home/user -type f -not -name <span class="s1">&#39;*.pdf&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Tenemos muchas más opciones como buscar recursivamente, por tamaño, fecha de modificación, permisos, usuario, etc.</p>
+<h2 id="fd"><code>fd</code></h2>
+<p>Se auto define como <a href="https://github.com/sharkdp/fd" target="_blank" rel="noopener noreffer">una alternativa</a> simple, rápida, <em>user-friendly</em>… y tiene toda la razón, para buscar solo tenemos que hacer</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fd document
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ag-o-the-silver-searcher"><code>ag</code> o The Silver Searcher</h2>
+<p><a href="https://github.com/ggreer/the_silver_searcher" target="_blank" rel="noopener noreffer">Esta alternativa</a> también es muy rápida y al igual que la anterior buscar es simplemente escribir lo siguiente</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ag docu
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Actualizado el 2022-01-18</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/bash/">bash</a>,&nbsp;<a href="/tags/commands/">commands</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="/">Inicio</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2021/10/vim-b%C3%BAsquedas-y-reemplazo/" class="prev" rel="prev" title="[Vim] Búsquedas  y Reemplazo"><i class="fas fa-angle-left fa-fw"></i>[Vim] Búsquedas  y Reemplazo</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |  Proudly Made on Earth <i class="far fa-heart fa-fw"></i></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Volver arriba">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentarios">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.es.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":20},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"es","maxResultLength":10,"noResultsFound":"No se encontraron resultados","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
