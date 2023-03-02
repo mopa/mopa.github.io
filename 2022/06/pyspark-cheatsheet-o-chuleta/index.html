@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[PySpark] CheatSheet o Chuleta - Pablo M.</title><meta name="Description" content="Engineering and Data Science"><meta property="og:title" content="[PySpark] CheatSheet o Chuleta" />
+<meta property="og:description" content="Como bien indica el título de este post es para dejar por aquí una chuleta para PySpark.
+Principales comandos Acción Comando Importar SparkSession from pyspark.sql import SparkSession Crear SparkSession spark = SparkSession.builder.appName(&quot;MiAplicacion&quot;).getOrCreate() Crear RDD a partir de una lista rdd = spark.sparkContext.parallelize([1, 2, 3, 4, 5]) Crear DataFrame a partir de un archivo CSV df = spark.read.csv(&quot;archivo.csv&quot;, header=True, inferSchema=True) Ver los primeros n elementos de un RDD o DataFrame rdd.take(5) / df." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2022/06/pyspark-cheatsheet-o-chuleta/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="[PySpark] CheatSheet o Chuleta"/>
+<meta name="twitter:description" content="Como bien indica el título de este post es para dejar por aquí una chuleta para PySpark.
+Principales comandos Acción Comando Importar SparkSession from pyspark.sql import SparkSession Crear SparkSession spark = SparkSession.builder.appName(&quot;MiAplicacion&quot;).getOrCreate() Crear RDD a partir de una lista rdd = spark.sparkContext.parallelize([1, 2, 3, 4, 5]) Crear DataFrame a partir de un archivo CSV df = spark.read.csv(&quot;archivo.csv&quot;, header=True, inferSchema=True) Ver los primeros n elementos de un RDD o DataFrame rdd.take(5) / df."/>
+<meta name="application-name" content="Pablo M.">
+<meta name="apple-mobile-web-app-title" content="Pablo M."><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/2022/06/pyspark-cheatsheet-o-chuleta/" /><link rel="prev" href="/2022/01/linux-b%C3%BAsquedas-por-la-terminal/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[PySpark] CheatSheet o Chuleta",
+        "inLanguage": "es",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/2022\/06\/pyspark-cheatsheet-o-chuleta\/"
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "pyspark, python","wordcount":  404 ,
+        "url": "\/2022\/06\/pyspark-cheatsheet-o-chuleta\/","datePublished": "2022-06-07T00:00:00+00:00","dateModified": "2022-06-07T00:00:00+00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Pablo M."},"author": {
+                "@type": "Person",
+                "name": "Pablo M."
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pablo M.">Pablo M.</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/recursos/"> Recursos </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pablo M.">Pablo M.</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/recursos/" title="">Recursos</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">[PySpark] CheatSheet o Chuleta</h1><div class="post-meta">
+            <div class="post-meta-line"></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-07">2022-06-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;404 palabras&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutos&nbsp;</div>
+        </div><div class="content" id="content"><p>Como bien indica el título de este post es para dejar por aquí una chuleta para PySpark.</p>
+<h2 id="principales-comandos">Principales comandos</h2>
+<table>
+<thead>
+<tr>
+<th>Acción</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Importar SparkSession</td>
+<td><code>from pyspark.sql import SparkSession</code></td>
+</tr>
+<tr>
+<td>Crear SparkSession</td>
+<td><code>spark = SparkSession.builder.appName(&quot;MiAplicacion&quot;).getOrCreate()</code></td>
+</tr>
+<tr>
+<td>Crear RDD a partir de una lista</td>
+<td><code>rdd = spark.sparkContext.parallelize([1, 2, 3, 4, 5])</code></td>
+</tr>
+<tr>
+<td>Crear DataFrame a partir de un archivo CSV</td>
+<td><code>df = spark.read.csv(&quot;archivo.csv&quot;, header=True, inferSchema=True)</code></td>
+</tr>
+<tr>
+<td>Ver los primeros n elementos de un RDD o DataFrame</td>
+<td><code>rdd.take(5)</code> / <code>df.show(5)</code></td>
+</tr>
+<tr>
+<td>Ver el esquema de un DataFrame</td>
+<td><code>df.printSchema()</code></td>
+</tr>
+<tr>
+<td>Seleccionar columnas de un DataFrame</td>
+<td><code>df.select(&quot;col1&quot;, &quot;col2&quot;)</code></td>
+</tr>
+<tr>
+<td>Filtrar un DataFrame</td>
+<td><code>df.filter(df.col1 &gt; 10)</code></td>
+</tr>
+<tr>
+<td>Agrupar y contar elementos en un DataFrame</td>
+<td><code>df.groupBy(&quot;col1&quot;).count()</code></td>
+</tr>
+<tr>
+<td>Crear una nueva columna en un DataFrame</td>
+<td><code>df.withColumn(&quot;nueva_col&quot;, df.col1 + df.col2)</code></td>
+</tr>
+<tr>
+<td>Eliminar una columna de un DataFrame</td>
+<td><code>df.drop(&quot;col1&quot;)</code></td>
+</tr>
+<tr>
+<td>Renombrar una columna de un DataFrame</td>
+<td><code>df.withColumnRenamed(&quot;col1&quot;, &quot;nuevo_nombre&quot;)</code></td>
+</tr>
+<tr>
+<td>Unir dos DataFrames</td>
+<td><code>df1.join(df2, on=&quot;clave&quot;)</code></td>
+</tr>
+<tr>
+<td>Crear una tabla temporal a partir de un DataFrame</td>
+<td><code>df.createOrReplaceTempView(&quot;tabla_temp&quot;)</code></td>
+</tr>
+<tr>
+<td>Ejecutar una consulta SQL en una tabla temporal</td>
+<td><code>spark.sql(&quot;SELECT * FROM tabla_temp&quot;)</code></td>
+</tr>
+<tr>
+<td>Escribir un DataFrame en un archivo CSV</td>
+<td><code>df.write.csv(&quot;archivo_salida.csv&quot;, header=True)</code></td>
+</tr>
+<tr>
+<td>Detener la sesión de Spark</td>
+<td><code>spark.stop()</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="transformaciones-a-un-rdd">Transformaciones a un RDD</h2>
+<table>
+<thead>
+<tr>
+<th>Transformación</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>map</td>
+<td>Aplica una función a cada elemento del RDD</td>
+<td><code>rdd.map(lambda x: x * 2)</code></td>
+</tr>
+<tr>
+<td>filter</td>
+<td>Filtra los elementos que cumplan una condición</td>
+<td><code>rdd.filter(lambda x: x &gt; 5)</code></td>
+</tr>
+<tr>
+<td>flatMap</td>
+<td>Aplica una función a cada elemento del RDD y devuelve una lista de resultados</td>
+<td><code>rdd.flatMap(lambda x: [x, x**2])</code></td>
+</tr>
+<tr>
+<td>distinct</td>
+<td>Elimina los elementos duplicados del RDD</td>
+<td><code>rdd.distinct()</code></td>
+</tr>
+<tr>
+<td>sample</td>
+<td>Devuelve una muestra aleatoria del RDD</td>
+<td><code>rdd.sample(withReplacement=True, fraction=0.5)</code></td>
+</tr>
+<tr>
+<td>union</td>
+<td>Une dos RDDs</td>
+<td><code>rdd1.union(rdd2)</code></td>
+</tr>
+<tr>
+<td>intersection</td>
+<td>Devuelve los elementos que se encuentran en ambos RDDs</td>
+<td><code>rdd1.intersection(rdd2)</code></td>
+</tr>
+<tr>
+<td>subtract</td>
+<td>Elimina los elementos del primer RDD que se encuentran en el segundo RDD</td>
+<td><code>rdd1.subtract(rdd2)</code></td>
+</tr>
+<tr>
+<td>cartesian</td>
+<td>Crea todas las posibles parejas de elementos entre dos RDDs</td>
+<td><code>rdd1.cartesian(rdd2)</code></td>
+</tr>
+<tr>
+<td>sortBy</td>
+<td>Ordena los elementos del RDD según una clave</td>
+<td><code>rdd.sortBy(lambda x: x, ascending=False)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="acciones-de-un-rdd">Acciones de un RDD</h2>
+<table>
+<thead>
+<tr>
+<th>Acción</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>collect</td>
+<td>Devuelve todos los elementos del RDD</td>
+<td><code>rdd.collect()</code></td>
+</tr>
+<tr>
+<td>count</td>
+<td>Devuelve el número de elementos del RDD</td>
+<td><code>rdd.count()</code></td>
+</tr>
+<tr>
+<td>first</td>
+<td>Devuelve el primer elemento del RDD</td>
+<td><code>rdd.first()</code></td>
+</tr>
+<tr>
+<td>take</td>
+<td>Devuelve los primeros n elementos del RDD</td>
+<td><code>rdd.take(5)</code></td>
+</tr>
+<tr>
+<td>top</td>
+<td>Devuelve los n elementos más grandes del RDD</td>
+<td><code>rdd.top(5)</code></td>
+</tr>
+<tr>
+<td>reduce</td>
+<td>Combina los elementos del RDD aplicando una función</td>
+<td><code>rdd.reduce(lambda x, y: x + y)</code></td>
+</tr>
+<tr>
+<td>foreach</td>
+<td>Aplica una función a cada elemento del RDD</td>
+<td><code>rdd.foreach(lambda x: print(x))</code></td>
+</tr>
+<tr>
+<td>saveAsTextFile</td>
+<td>Guarda el RDD en un archivo de texto</td>
+<td><code>rdd.saveAsTextFile(&quot;ruta/al/archivo&quot;)</code></td>
+</tr>
+<tr>
+<td>countByKey</td>
+<td>Cuenta el número de elementos para cada clave del RDD</td>
+<td><code>rdd.countByKey()</code></td>
+</tr>
+<tr>
+<td>takeOrdered</td>
+<td>Devuelve los n elementos más pequeños del RDD</td>
+<td><code>rdd.takeOrdered(5)</code></td>
+</tr>
+</tbody>
+</table>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Actualizado el 2022-06-07</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pyspark/">pyspark</a>,&nbsp;<a href="/tags/python/">python</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="/">Inicio</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2022/01/linux-b%C3%BAsquedas-por-la-terminal/" class="prev" rel="prev" title="[Linux] Búsquedas por la terminal"><i class="fas fa-angle-left fa-fw"></i>[Linux] Búsquedas por la terminal</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |  Proudly Made on Earth <i class="far fa-heart fa-fw"></i></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Volver arriba">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentarios">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.es.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":20},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"es","maxResultLength":10,"noResultsFound":"No se encontraron resultados","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

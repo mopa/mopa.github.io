@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-	<meta name="generator" content="Hugo 0.104.3" />
+	<meta name="generator" content="Hugo 0.110.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -10,7 +10,6 @@
 <meta property="og:description" content="Engineering and Data Science" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" /><meta property="og:image" content="/logo.png"/>
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/logo.png"/>
 
@@ -102,6 +101,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h1 class="home-title">Pablo M.</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/mopa" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="mailto:pmopa@pm.me" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2022/06/pyspark-cheatsheet-o-chuleta/">[PySpark] CheatSheet o Chuleta</a>
+    </h1><div class="post-meta"><span class="post-publish">publicado el <time datetime="2022-06-07">2022-06-07</time></span></div><div class="content">Como bien indica el título de este post es para dejar por aquí una chuleta para PySpark.
+Principales comandos Acción Comando Importar SparkSession from pyspark.sql import SparkSession Crear SparkSession spark = SparkSession.builder.appName(&quot;MiAplicacion&quot;).getOrCreate() Crear RDD a partir de una lista rdd = spark.sparkContext.parallelize([1, 2, 3, 4, 5]) Crear DataFrame a partir de un archivo CSV df = spark.read.csv(&quot;archivo.csv&quot;, header=True, inferSchema=True) Ver los primeros n elementos de un RDD o DataFrame rdd.take(5) / df.</div><div class="post-footer">
+        <a href="/2022/06/pyspark-cheatsheet-o-chuleta/">Leer más</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/pyspark/">pyspark</a>,&nbsp;<a href="/tags/python/">python</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2022/01/linux-b%C3%BAsquedas-por-la-terminal/">[Linux] Búsquedas por la terminal</a>
     </h1><div class="post-meta"><span class="post-publish">publicado el <time datetime="2022-01-18">2022-01-18</time></span></div><div class="content">Tarde o temprano vamos a tener la necesidad de buscar algo en la terminal, ya sean archivos, directorios, ejecutables, etc. Pues bien tenemos poderosas herramientas que por si solas o combinadas nos van a solucionar este menester
 whereis Con este buscamos la localización de algún binario, fuente o manual de un comando (el famoso man).
@@ -141,13 +147,6 @@ Aunque existen varios métodos para tener entornos virtuales, aquí solo vamos a
 Sabiendo que estamos usando Python 3 (verifica la versión por defecto conpython --version y si no es la 3, has de usar python3 --version) y estamos en la carpeta de nuestro proyecto, ejecutamos</div><div class="post-footer">
         <a href="/2021/04/python-crear-entornos-virtuales-en-python-3/">Leer más</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/python/">python</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/2021/03/linux-autocompletado-insensible-en-bash/">[Linux] Autocompletado insensible en Bash</a>
-    </h1><div class="post-meta"><span class="post-publish">publicado el <time datetime="2021-03-29">2021-03-29</time></span></div><div class="content">Aunque el título suene engañoso y a Bash le demos este horrible adjetivo que tienen algunas personas, el caso al que me refiero con insensible es que no distinga entre mayúsculas y minúsculas.
-Cuando uso el comando cd para moverme entre directorios (aunque cada día uso más ranger, me resultaba ciertamente molesto estar pulsando la tecla shift cada vez que me encontraba con una carpeta o archivo con la primera letra en mayúsculas.</div><div class="post-footer">
-        <a href="/2021/03/linux-autocompletado-insensible-en-bash/">Leer más</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/bash/">bash</a></div></div>
 </article>
 <ul class="pagination"><li class="page-item active">
                     <span class="page-link">

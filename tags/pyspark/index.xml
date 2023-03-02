@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>pyspark - Etiqueta - Pablo M.</title>
+        <link>/tags/pyspark/</link>
+        <description>pyspark - Etiqueta - Pablo M.</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/pyspark/" rel="self" type="application/rss+xml" /><item>
+    <title>[PySpark] CheatSheet o Chuleta</title>
+    <link>/2022/06/pyspark-cheatsheet-o-chuleta/</link>
+    <pubDate>Tue, 07 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2022/06/pyspark-cheatsheet-o-chuleta/</guid>
+    <description><![CDATA[Como bien indica el título de este post es para dejar por aquí una chuleta para PySpark.
+Principales comandos Acción Comando Importar SparkSession from pyspark.sql import SparkSession Crear SparkSession spark = SparkSession.builder.appName(&quot;MiAplicacion&quot;).getOrCreate() Crear RDD a partir de una lista rdd = spark.sparkContext.parallelize([1, 2, 3, 4, 5]) Crear DataFrame a partir de un archivo CSV df = spark.read.csv(&quot;archivo.csv&quot;, header=True, inferSchema=True) Ver los primeros n elementos de un RDD o DataFrame rdd.take(5) / df.]]></description>
+</item></channel>
+</rss>

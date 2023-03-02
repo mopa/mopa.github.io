@@ -1,6 +1,18 @@
 User-agent: *
 
 
+Disallow: /2022/06/pyspark-cheatsheet-o-chuleta/
+
+Disallow: /
+
+Disallow: /posts/
+
+Disallow: /tags/pyspark/
+
+Disallow: /tags/python/
+
+Disallow: /tags/
+
 Disallow: /2022/01/linux-b%C3%BAsquedas-por-la-terminal/
 
 Disallow: /tags/bash/
@@ -8,12 +20,6 @@ Disallow: /tags/bash/
 Disallow: /tags/commands/
 
 Disallow: /tags/linux/
-
-Disallow: /
-
-Disallow: /posts/
-
-Disallow: /tags/
 
 Disallow: /2021/10/vim-b%C3%BAsquedas-y-reemplazo/
 
@@ -24,8 +30,6 @@ Disallow: /2021/09/linux-teclado-keychron-y-teclas-multimedia/
 Disallow: /2021/05/vim-eliminar-l%C3%ADneas-siguiendo-un-patr%C3%B3n/
 
 Disallow: /2021/04/python-crear-entornos-virtuales-en-python-3/
-
-Disallow: /tags/python/
 
 Disallow: /2021/03/linux-autocompletado-insensible-en-bash/
 
