@@ -3,7 +3,15 @@
         <title>python - Etiqueta - Pablo M.</title>
         <link>/tags/python/</link>
         <description>python - Etiqueta - Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 28 Jan 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>[Python] Desarrollo usando contenedores de Docker</title>
+    <link>/2023/01/python-desarrollo-usando-contenedores-de-docker/</link>
+    <pubDate>Sat, 28 Jan 2023 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2023/01/python-desarrollo-usando-contenedores-de-docker/</guid>
+    <description><![CDATA[Aquellos que comienzan en el mundo de Python pueden verse confundidos por como pueden tener un entorno de desarrollo local sin ensuciar demasiado su sistema. Cierto es que se pueden usar los entornos virtuales, pero cuando los proyectos se van volviendo más complejos usar Docker se vuelve algo prácticamente obligatorio.
+Tal es así que cuando necesitamos tener control sobre las dependencias/librerías que estamos usando, vamos a tener que usar alguna herramienta adicional, bien sea con el típico requirements.]]></description>
+</item><item>
     <title>[PySpark] CheatSheet o Chuleta</title>
     <link>/2022/06/pyspark-cheatsheet-o-chuleta/</link>
     <pubDate>Tue, 07 Jun 2022 00:00:00 &#43;0000</pubDate>

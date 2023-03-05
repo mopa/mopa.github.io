@@ -1,17 +1,21 @@
 User-agent: *
 
 
-Disallow: /2022/06/pyspark-cheatsheet-o-chuleta/
+Disallow: /2023/01/python-desarrollo-usando-contenedores-de-docker/
+
+Disallow: /tags/development/
 
 Disallow: /
 
 Disallow: /posts/
 
-Disallow: /tags/pyspark/
-
 Disallow: /tags/python/
 
 Disallow: /tags/
+
+Disallow: /2022/06/pyspark-cheatsheet-o-chuleta/
+
+Disallow: /tags/pyspark/
 
 Disallow: /2022/01/linux-b%C3%BAsquedas-por-la-terminal/
 
