@@ -3,7 +3,15 @@
         <title>Todo Artículos - Pablo M.</title>
         <link>/posts/</link>
         <description>Todo Artículos | Pablo M.</description>
-        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 28 Jan 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 15 Feb 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>[Linux] Compresión de PDFs</title>
+    <link>/2023/02/linux-compresi%C3%B3n-de-pdfs/</link>
+    <pubDate>Wed, 15 Feb 2023 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2023/02/linux-compresi%C3%B3n-de-pdfs/</guid>
+    <description><![CDATA[Con el volumen de documentos digitales que manejamos estos días, puede que hayamos llegado a una situación en la que necesitemos comprimir archivos PDF. Afortunadamente, en el mundo de Linux, contamos con varias herramientas eficientes para esto. En este post, vamos a explorar algunas de las más destacadas, siguiendo por supuesto aquellas que sean para la terminal, ya que es mi forma habitual de trabajar.
+Voy a ir mostrando desde las que me dan un peor resultado al mejor.]]></description>
+</item><item>
     <title>[Python] Desarrollo usando contenedores de Docker</title>
     <link>/2023/01/python-desarrollo-usando-contenedores-de-docker/</link>
     <pubDate>Sat, 28 Jan 2023 00:00:00 &#43;0000</pubDate>
@@ -81,13 +89,5 @@ Cuando uso el comando cd para moverme entre directorios (aunque cada día uso m�
     <guid>/2021/02/python-regresi%C3%B3n-lineal/</guid>
     <description><![CDATA[Sigo en mi ruta por ir pasando tareas que hacía en Matlab, y una de las habituales que podemos encontrarnos es una regresión lineal o una no lineal. Mejor no entro en el debate del porqué no se usa Python + Numpy + otras librerías en el ámbito académico, de modo que me limito a describir como poder hacer estas regresiones con Numpy.
 Supongamos que tenemos los datos en dos arrays (ya sea cargando los datos de un csv, un archivo de texto o cualquier otra forma), lo único que tenemos que hacer es especificar el grado del polinomio con el que queremos hacer el ajuste.]]></description>
-</item><item>
-    <title>[Linux] Comprimir y partir archivos</title>
-    <link>/2020/12/linux-comprimir-y-partir-archivos/</link>
-    <pubDate>Wed, 02 Dec 2020 00:00:00 &#43;0000</pubDate>
-    <author>Autor</author>
-    <guid>/2020/12/linux-comprimir-y-partir-archivos/</guid>
-    <description><![CDATA[Hasta no hace mucho era común encontrarse por las redes archivos comprimidos en varias partes, de este modo carpetas, imagenes, etc. de varios gigabytes se podían compartir de forma más fácil. Como si fuera cosa del pasado, recientemente he tenido varias situaciones de diversa índole en las que he tenido que recurrir a esta solución. Para que no caiga en el olvido, comparto como he hecho esta operación.
-El «algoritmo» sería: primero comprimir los archivos con tar y luego partirlos con split.]]></description>
 </item></channel>
 </rss>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[Linux] Compresión de PDFs - Pablo M.</title><meta name="Description" content="Engineering and Data Science"><meta property="og:title" content="[Linux] Compresión de PDFs" />
+<meta property="og:description" content="Con el volumen de documentos digitales que manejamos estos días, puede que hayamos llegado a una situación en la que necesitemos comprimir archivos PDF. Afortunadamente, en el mundo de Linux, contamos con varias herramientas eficientes para esto. En este post, vamos a explorar algunas de las más destacadas, siguiendo por supuesto aquellas que sean para la terminal, ya que es mi forma habitual de trabajar.
+Voy a ir mostrando desde las que me dan un peor resultado al mejor." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2023/02/linux-compresi%C3%B3n-de-pdfs/" /><meta property="og:image" content="/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/logo.png"/>
+
+<meta name="twitter:title" content="[Linux] Compresión de PDFs"/>
+<meta name="twitter:description" content="Con el volumen de documentos digitales que manejamos estos días, puede que hayamos llegado a una situación en la que necesitemos comprimir archivos PDF. Afortunadamente, en el mundo de Linux, contamos con varias herramientas eficientes para esto. En este post, vamos a explorar algunas de las más destacadas, siguiendo por supuesto aquellas que sean para la terminal, ya que es mi forma habitual de trabajar.
+Voy a ir mostrando desde las que me dan un peor resultado al mejor."/>
+<meta name="application-name" content="Pablo M.">
+<meta name="apple-mobile-web-app-title" content="Pablo M."><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/2023/02/linux-compresi%C3%B3n-de-pdfs/" /><link rel="prev" href="/2023/01/python-desarrollo-usando-contenedores-de-docker/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Linux] Compresión de PDFs",
+        "inLanguage": "es",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/2023\/02\/linux-compresi%C3%B3n-de-pdfs\/"
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "linux, tools","wordcount":  357 ,
+        "url": "\/2023\/02\/linux-compresi%C3%B3n-de-pdfs\/","datePublished": "2023-02-15T00:00:00+00:00","dateModified": "2023-02-15T00:00:00+00:00","license": "Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Pablo M."},"author": {
+                "@type": "Person",
+                "name": "Pablo M."
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Pablo M.">Pablo M.</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/recursos/"> Recursos </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Pablo M.">Pablo M.</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Busca títulos o contenido..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Buscar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Limpiar">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancelar
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/recursos/" title="">Recursos</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Cambia el tema">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contenido</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">[Linux] Compresión de PDFs</h1><div class="post-meta">
+            <div class="post-meta-line"></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-02-15">2023-02-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;357 palabras&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contenido</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#pdftk">pdftk</a></li>
+    <li><a href="#pdfjam">pdfjam</a></li>
+    <li><a href="#ghostscript">ghostscript</a></li>
+    <li><a href="#shrinkpdf">shrinkpdf</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Con el volumen de documentos digitales que manejamos estos días, puede que hayamos llegado a una situación en la que necesitemos comprimir archivos PDF. Afortunadamente, en el mundo de Linux, contamos con varias herramientas eficientes para esto.  En este post, vamos a explorar algunas de las más destacadas, siguiendo por supuesto aquellas que sean para la terminal, ya que es mi forma habitual de trabajar.</p>
+<p>Voy a ir mostrando desde las que me dan un peor resultado al mejor. Partimos de un PDF base que tiene un tamaño de 6.2 MB.</p>
+<img alt="Keychron K3" src="/img/pdf-compress-results.jpg" width=750>
+<h2 id="pdftk">pdftk</h2>
+<p>Es una de las <a href="https://www.pdflabs.com/" target="_blank" rel="noopener noreffer">opciones más conocidas</a> y aparte de la compresión ofrece una gran cantidad de funciones para manipular PDFs. Seguramente se encuentre en los repositorios de tu distribución y una vez instalada realizamos la compresión con</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdftk input.pdf output output.pdf compress
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="pdfjam">pdfjam</h2>
+<p>Al igual que la anterior también nos ofrece más <a href="https://github.com/rrthomas/pdfjam" target="_blank" rel="noopener noreffer">opciones para la manipulación</a> de PDFs, pero nos interesa la compresión, la cual podemos ir variando con el parámetro <code>scale</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pdfjam --scale 0.5 input.pdf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ghostscript">ghostscript</h2>
+<p>Sin duda uno de los <a href="https://www.ghostscript.com/" target="_blank" rel="noopener noreffer">programas más conocidos</a> y utilizados para manipular estos archivos. El «problema» que nos encontramos con él es debido a la <a href="https://askubuntu.com/questions/113544/how-can-i-reduce-the-file-size-of-a-scanned-pdf-file" target="_blank" rel="noopener noreffer">gran cantidad de opciones</a> de las que dispone. Para comprimir manteniendo el equilibrio entre tamaño y calidad,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gs -sDEVICE<span class="o">=</span>pdfwrite -dCompatibilityLevel<span class="o">=</span>1.4 -dPDFSETTINGS<span class="o">=</span>/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile<span class="o">=</span>output.pdf input.pdf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="shrinkpdf">shrinkpdf</h2>
+<p>Aunque <em>Ghostscript</em> nos ofrece mucho juego para poder realizar este trabajo, llega un momento en el que necesitamos que las cosas sean un poquito más simples y directas. Aquí es donde encontré una alternativa con <a href="https://github.com/aklomp/shrinkpdf" target="_blank" rel="noopener noreffer">Shrinkpdf</a>. Existen algunos repositorios (como los <a href="https://aur.archlinux.org/packages/shrinkpdf" target="_blank" rel="noopener noreffer">AUR</a> de Arch y derivadas) donde tenemos disponible la herramienta lista para instalar, también podemos descargarlo desde el repositorio de Github.</p>
+<p>Su uso es bastante sencillo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">shrinkpdf -o output.pdf input.pdf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Además podemos controlar la resolución de salida en DPI</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">shrinkpdf -r 90 -o output.pdf input.pdf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>O incluso hacer un conversión a escala de grises</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">shrinkpdf -g -r <span class="m">90</span> -o output.pdf input.pdf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Con estas herramientas, deberías poder manejar cualquier necesidad de compresión de PDFs que puedas tener. Recuerda siempre hacer una copia de tus archivos originales antes de comprimirlos.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Actualizado el 2023-02-15</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/tools/">tools</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="/">Inicio</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2023/01/python-desarrollo-usando-contenedores-de-docker/" class="prev" rel="prev" title="[Python] Desarrollo usando contenedores de Docker"><i class="fas fa-angle-left fa-fw"></i>[Python] Desarrollo usando contenedores de Docker</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>  |  Proudly Made on Earth <i class="far fa-heart fa-fw"></i></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Volver arriba">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentarios">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.es.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":40},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"es","maxResultLength":10,"noResultsFound":"No se encontraron resultados","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

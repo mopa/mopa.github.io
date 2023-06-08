@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>tools - Etiqueta - Pablo M.</title>
+        <link>/tags/tools/</link>
+        <description>tools - Etiqueta - Pablo M.</description>
+        <generator>Hugo -- gohugo.io</generator><language>es</language><copyright>Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 15 Feb 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="/tags/tools/" rel="self" type="application/rss+xml" /><item>
+    <title>[Linux] Compresión de PDFs</title>
+    <link>/2023/02/linux-compresi%C3%B3n-de-pdfs/</link>
+    <pubDate>Wed, 15 Feb 2023 00:00:00 &#43;0000</pubDate>
+    <author>Autor</author>
+    <guid>/2023/02/linux-compresi%C3%B3n-de-pdfs/</guid>
+    <description><![CDATA[Con el volumen de documentos digitales que manejamos estos días, puede que hayamos llegado a una situación en la que necesitemos comprimir archivos PDF. Afortunadamente, en el mundo de Linux, contamos con varias herramientas eficientes para esto. En este post, vamos a explorar algunas de las más destacadas, siguiendo por supuesto aquellas que sean para la terminal, ya que es mi forma habitual de trabajar.
+Voy a ir mostrando desde las que me dan un peor resultado al mejor.]]></description>
+</item></channel>
+</rss>

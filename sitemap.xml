@@ -2,18 +2,20 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>/2023/02/linux-compresi%C3%B3n-de-pdfs/</loc><lastmod>2023-02-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/linux/</loc><lastmod>2023-02-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/</loc><lastmod>2023-02-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/posts/</loc><lastmod>2023-02-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/</loc><lastmod>2023-02-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>/tags/tools/</loc><lastmod>2023-02-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2023/01/python-desarrollo-usando-contenedores-de-docker/</loc><lastmod>2023-01-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/development/</loc><lastmod>2023-01-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/</loc><lastmod>2023-01-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/posts/</loc><lastmod>2023-01-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/python/</loc><lastmod>2023-01-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/tags/</loc><lastmod>2023-01-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2022/06/pyspark-cheatsheet-o-chuleta/</loc><lastmod>2022-06-07T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/pyspark/</loc><lastmod>2022-06-07T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2022/01/linux-b%C3%BAsquedas-por-la-terminal/</loc><lastmod>2022-01-18T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/bash/</loc><lastmod>2022-01-18T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/commands/</loc><lastmod>2022-01-18T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>/tags/linux/</loc><lastmod>2022-08-10T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2021/10/vim-b%C3%BAsquedas-y-reemplazo/</loc><lastmod>2021-10-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/tags/vim/</loc><lastmod>2021-10-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>/2021/09/linux-teclado-keychron-y-teclas-multimedia/</loc><lastmod>2022-08-10T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
